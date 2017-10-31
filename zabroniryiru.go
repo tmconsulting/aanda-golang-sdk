@@ -3,6 +3,7 @@ package zabroniryiru
 import (
 	"bytes"
 	"encoding/json"
+	"errors"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -10,16 +11,36 @@ import (
 
 const apiUrl = "http://api.aanda.ru/xml_gateway/"
 
-func main() {
-
+type Api struct {
+	BuyerId  string
+	UserId   string
+	Password string
+	Language string
 }
-func HotelSearchRequest() []HotelSearchAnswer {
-	jsonReq := `{"BuyerId":"TMCon","UserId":"tmcon","Password":"vcxq11cz!","Language":"ru","City":"2","Lat":"","Lng":"","ArrivalDate":"30.10.2017","DepartureDate":"31.10.2017","PriceFrom":"4000","PriceTo":"5000","NumberOfGuests":"1"}`
+
+func NewApi(auth Auth) *Api {
+	return &Api{
+		BuyerId:  auth.BuyerId,
+		UserId:   auth.UserId,
+		Password: auth.Password,
+		Language: auth.Language,
+	}
+}
+func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchAnswer, error) {
+	searchReq.BuyerId = self.BuyerId
+	searchReq.UserId = self.UserId
+	searchReq.Password = self.Password
+	searchReq.Language = self.Language
+
+	jsonReq, err := json.Marshal(searchReq)
+	if err != nil {
+		panic(err)
+	}
+
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "HotelSearchRequest")
-	data.Add("JSON", jsonReq)
-
+	data.Add("JSON", string(jsonReq))
 	req, err := http.NewRequest("POST", apiUrl, bytes.NewBufferString(data.Encode()))
 
 	client := &http.Client{}
@@ -33,8 +54,7 @@ func HotelSearchRequest() []HotelSearchAnswer {
 	jsonData := []HotelSearchAnswer{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		panic(err)
+		return nil, errors.New("Ошибка запроса АПИ zabronirui.ru \n" + string(body))
 	}
-
-	return jsonData
+	return jsonData, nil
 }
