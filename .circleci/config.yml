@@ -39,6 +39,6 @@ jobs:
         #  CONTACTS_DB_MIGRATIONS: /go/src/github.com/CircleCI-Public/circleci-demo-go/db/migrations
         command: |
           trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
-          make test | tee ${TEST_RESULTS}/go-test.out
+          | tee ${TEST_RESULTS}/go-test.out
 
-      - run: go test -v ./...
+      #- run: go test -v ./...
