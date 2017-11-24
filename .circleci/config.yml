@@ -33,9 +33,9 @@ jobs:
       #- run: go get -v -t -d ./...
 
       - run:
-        name: Run unit tests
-        command: |
-          trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
-          make test | tee ${TEST_RESULTS}/go-test.out
+          name: Run unit tests
+          command: |
+            trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
+            make test | tee ${TEST_RESULTS}/go-test.out
 
       #- run: go test -v ./...
