@@ -24,6 +24,7 @@ jobs:
 
     steps:
       - checkout
+      - run: mkdir -p $TEST_RESULTS
 
       # Normally, this step would be in a custom primary image;
       # we've added it here for the sake of explanation.
