@@ -41,8 +41,8 @@ jobs:
       #- run: go test -v ./...
 
       - store_artifacts:
-        path: /tmp/test-results
-        destination: raw-test-output
+          path: /tmp/test-results
+          destination: raw-test-output
 
       - store_test_results:
           path: /tmp/test-results
