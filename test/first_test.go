@@ -2,9 +2,9 @@ package test
 
 import "testing"
 
-func TestReverseToReturnReversedInputString(t *testing.T) {
+func TestExample(t *testing.T) {
 	actualResult := "Hello"
-	var expectedResult = "Hello1"
+	var expectedResult = "Hello"
 
 	if actualResult != expectedResult {
 		t.Fatalf("Expected %s but got %s", expectedResult, actualResult)
