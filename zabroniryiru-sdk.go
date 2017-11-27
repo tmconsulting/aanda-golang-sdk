@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"regexp"
 )
 
 const apiUrl = "http://api.aanda.ru/xml_gateway/"
@@ -51,10 +52,15 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 	defer resp.Body.Close()
 
 	body, _ := ioutil.ReadAll(resp.Body)
+
+	//fmt.Println(string(body))
+
 	jsonData := []HotelSearchAnswer{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, errors.New("Ошибка запроса АПИ zabronirui.ru \n" + string(body))
+		var re = regexp.MustCompile(`Note="(.*)"`)
+		res := re.FindStringSubmatch(string(body))
+		return nil, errors.New(res[1])
 	}
 	return jsonData, nil
 }
