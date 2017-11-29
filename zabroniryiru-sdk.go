@@ -19,6 +19,28 @@ type Api struct {
 	Language string
 }
 
+func sendReq(data url.Values) []byte {
+	req, err := http.NewRequest("POST", apiUrl, bytes.NewBufferString(data.Encode()))
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		panic(err)
+	}
+	defer resp.Body.Close()
+
+	body, _ := ioutil.ReadAll(resp.Body)
+	//fmt.Println(string(body))
+	return body
+
+}
+func parseError(body []byte) error {
+
+	var re = regexp.MustCompile(`Note="(.*)"`)
+	res := re.FindStringSubmatch(string(body))
+	return errors.New(res[1])
+}
+
 func NewApi(auth Auth) *Api {
 	return &Api{
 		BuyerId:  auth.BuyerId,
@@ -42,25 +64,13 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "HotelSearchRequest")
 	data.Add("JSON", string(jsonReq))
-	req, err := http.NewRequest("POST", apiUrl, bytes.NewBufferString(data.Encode()))
 
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		panic(err)
-	}
-	defer resp.Body.Close()
-
-	body, _ := ioutil.ReadAll(resp.Body)
-
-	//fmt.Println(string(body))
-
+	body := sendReq(data)
 	jsonData := []HotelSearchAnswer{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		var re = regexp.MustCompile(`Note="(.*)"`)
-		res := re.FindStringSubmatch(string(body))
-		return nil, errors.New(res[1])
+		return nil, parseError(body)
 	}
+
 	return jsonData, nil
 }
