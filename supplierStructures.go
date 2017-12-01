@@ -109,3 +109,8 @@ type CurrencyListAnswer struct {
 	CurrencyCode string `json:"currency_code"`
 	CurrencyName string `json:"currency_name"`
 }
+
+type MealTypeAnswer struct {
+	MealTypeCode string `json:"meal_type_code"`
+	MealTypeName string `json:"meal_type_name"`
+}
