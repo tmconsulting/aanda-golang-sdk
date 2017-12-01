@@ -104,3 +104,8 @@ type HotelListAnswer struct {
 		Id   string `json:"id"`
 	} `json:"hotel_amenities"`
 }
+
+type CurrencyListAnswer struct {
+	CurrencyCode string `json:"currency_code"`
+	CurrencyName string `json:"currency_name"`
+}
