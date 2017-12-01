@@ -83,3 +83,15 @@ func main() {
 	}
 }
  ```
+
+ ### Example CurrencyListRequest
+```golang
+package main
+
+func main() {
+	data, err := aApi.CurrencyListRequest()
+	if err == nil {
+		//Work with data
+	}
+}
+ ```
