@@ -1,22 +1,21 @@
 package test
 
 import (
-	"github.com/tmconsulting/zabroniryiru-sdk"
+	"github.com/tmconsulting/aanda-sdk"
 	"io/ioutil"
 )
 
 var (
-	auth = zabroniryiru_sdk.Auth{
+	auth = aandaSdk.Auth{
 		BuyerId:  "BuyerId",
 		UserId:   "UserId",
 		Password: "Password",
 		Language: "ru",
 	}
-	zApi = zabroniryiru_sdk.NewApi(auth)
+	zApi = aandaSdk.NewApi(auth)
 )
 
 func getJson(fileName string) (data []byte) {
-	data, _ = ioutil.ReadFile("data/"+fileName)
+	data, _ = ioutil.ReadFile("data/" + fileName)
 	return data
 }
-

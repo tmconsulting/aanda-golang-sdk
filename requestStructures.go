@@ -1,4 +1,4 @@
-package zabroniryiru_sdk
+package aandaSdk
 
 type Auth struct {
 	BuyerId  string

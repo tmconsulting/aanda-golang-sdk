@@ -1,5 +1,4 @@
-package zabroniryiru_sdk
-
+package aandaSdk
 
 type HotelSearchAnswer struct {
 	HotelCode      string       `json:"hotel_code"`

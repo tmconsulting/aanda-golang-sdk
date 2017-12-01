@@ -1,13 +1,12 @@
 package test
 
 import (
-	"testing"
-	"github.com/nbio/st"
-	"gopkg.in/h2non/gock.v1"
-	"github.com/tmconsulting/zabroniryiru-sdk"
 	"errors"
+	"github.com/nbio/st"
+	"github.com/tmconsulting/aanda-sdk"
+	"gopkg.in/h2non/gock.v1"
+	"testing"
 )
-
 
 func TestHotelSearchRequest_ok(t *testing.T) {
 	defer gock.Off()
@@ -16,7 +15,7 @@ func TestHotelSearchRequest_ok(t *testing.T) {
 		Reply(200).
 		JSON(getJson("hotelSearchRequest_answOk.txt"))
 
-	searchReq := zabroniryiru_sdk.HotelSearchRequest{}
+	searchReq := aandaSdk.HotelSearchRequest{}
 	data, err := zApi.HotelSearchRequest(searchReq)
 
 	st.Expect(t, err, nil)
@@ -31,7 +30,7 @@ func TestHotelSearchRequest_err(t *testing.T) {
 		Reply(200).
 		JSON(getJson("hotelSearchRequest_answErr.txt"))
 
-	searchReq := zabroniryiru_sdk.HotelSearchRequest{}
+	searchReq := aandaSdk.HotelSearchRequest{}
 	_, err := zApi.HotelSearchRequest(searchReq)
 
 	st.Expect(t, err, errors.New("Некорректная ArrivalDate[21.11.2017]"))
