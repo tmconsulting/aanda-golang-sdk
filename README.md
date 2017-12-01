@@ -1,27 +1,27 @@
-# zabroniryi.ru SDK
-[![CircleCI](https://circleci.com/gh/tmconsulting/zabroniryiru-sdk/tree/develop.svg?style=shield)](https://circleci.com/gh/tmconsulting/zabroniryiru-sdk)
+# Aanda SDK to Reservation Hotels (https://http://zabroniryi.ru/)
+[![CircleCI](https://circleci.com/gh/tmconsulting/aanda-sdk/tree/develop.svg?style=shield)](https://circleci.com/gh/tmconsulting/aanda-sdk)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/circleci/cci-demo-react/master/LICENSE)
 
 ### Install
 ```
-go get github.com/tmconsulting/zabroniryiru-sdk
+go get github.com/tmconsulting/aanda-sdk
 ```
 
 ### Import
 ```golang
-import "github.com/tmconsulting/zabroniryiru-sdk"
+import "github.com/tmconsulting/aanda-sdk"
 ```
 
 ### Example init variables
 ```golang
 var (
-	auth = zabroniryiru_sdk.Auth{
+	auth = aandaSdk.Auth{
 		BuyerId:  "BuyerId",
 		UserId:   "BuyerId",
 		Password: "Password",
 		Language: "ru",
 	}
-	zApi = zabroniryiru_sdk.NewApi(auth)
+	aApi = aandaSdk.NewApi(auth)
 )
 ```
 
@@ -30,7 +30,7 @@ var (
 package main
 
 func main() {
-	searchReq := zabroniryiru.HotelSearchRequest{
+	searchReq := aandaSdk.HotelSearchRequest{
 		City:           "2",
 		Lat:            "",
 		Lng:            "",
@@ -41,7 +41,7 @@ func main() {
 		PriceTo:        "3000",
 		NumberOfGuests: "1",
 	}
-	data, err := zApi.HotelSearchRequest(searchReq)
+	data, err := aApi.HotelSearchRequest(searchReq)
 	if err == nil {
 		//Work with data
 	}

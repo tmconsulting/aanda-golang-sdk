@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       - image: circleci/golang:1.8
-    working_directory: /go/src/github.com/tmconsulting/zabroniryiru-sdk
+    working_directory: /go/src/github.com/tmconsulting/aanda-sdk
 
     environment:
       TEST_RESULTS: /tmp/test-results
