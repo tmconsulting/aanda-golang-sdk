@@ -114,3 +114,8 @@ type MealTypeAnswer struct {
 	MealTypeCode string `json:"meal_type_code"`
 	MealTypeName string `json:"meal_type_name"`
 }
+
+type MealCategoryAnswer struct {
+	MealCategoryCode string `json:"meal_category_code"`
+	MealCategoryName string `json:"meal_category_name"`
+}
