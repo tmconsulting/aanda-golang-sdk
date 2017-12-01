@@ -96,12 +96,24 @@ func main() {
 }
  ```
 
-### Example MealTypeRequest
+ ### Example MealTypeRequest
 ```golang
 package main
 
 func main() {
 	data, err := aApi.MealTypeRequest()
+	if err == nil {
+		//Work with data
+	}
+}
+ ```
+
+ ### Example MealCategoryeRequest
+```golang
+package main
+
+func main() {
+	data, err := aApi.MealCategoryRequest()
 	if err == nil {
 		//Work with data
 	}

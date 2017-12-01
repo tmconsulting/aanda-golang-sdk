@@ -1,0 +1,74 @@
+[
+  {
+    "meal_category_code": "1",
+    "meal_category_name": "шведский стол"
+  },
+  {
+    "meal_category_code": "2",
+    "meal_category_name": "английский"
+  },
+  {
+    "meal_category_code": "3",
+    "meal_category_name": "русский"
+  },
+  {
+    "meal_category_code": "4",
+    "meal_category_name": "мини шведский стол"
+  },
+  {
+    "meal_category_code": "5",
+    "meal_category_name": "континентальный"
+  },
+  {
+    "meal_category_code": "6",
+    "meal_category_name": "комплексный"
+  },
+  {
+    "meal_category_code": "7",
+    "meal_category_name": "по меню"
+  },
+  {
+    "meal_category_code": "8",
+    "meal_category_name": "европейский"
+  },
+  {
+    "meal_category_code": "9",
+    "meal_category_name": "легкий"
+  },
+  {
+    "meal_category_code": "10",
+    "meal_category_name": "американский"
+  },
+  {
+    "meal_category_code": "12",
+    "meal_category_name": "горячая выпечка"
+  },
+  {
+    "meal_category_code": "13",
+    "meal_category_name": "азиатский"
+  },
+  {
+    "meal_category_code": "15",
+    "meal_category_name": "ранний"
+  },
+  {
+    "meal_category_code": "18",
+    "meal_category_name": "японский"
+  },
+  {
+    "meal_category_code": "19",
+    "meal_category_name": "китайский"
+  },
+  {
+    "meal_category_code": "20",
+    "meal_category_name": "сухой паек"
+  },
+  {
+    "meal_category_code": "21",
+    "meal_category_name": "горячий континентальный"
+  },
+  {
+    "meal_category_code": "22",
+    "meal_category_name": "буфет"
+  }
+]
