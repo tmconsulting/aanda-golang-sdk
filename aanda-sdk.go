@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/url"
 	"regexp"
+	"strings"
 )
 
 const apiUrl = "http://api.aanda.ru/xml_gateway/"
@@ -36,9 +37,21 @@ func sendReq(data url.Values) []byte {
 }
 func parseError(body []byte) error {
 
-	var re = regexp.MustCompile(`Note="(.*)"`)
+	var answ string
+	err := json.Unmarshal(body, &answ)
+	if err == nil {
+		if strings.Index(answ, "Ошибка авторазации") == -1 {
+			return errors.New("Ошибка авторазиции")
+		}
+	}
+
+	re := regexp.MustCompile(`Note="(.*)"`)
 	res := re.FindStringSubmatch(string(body))
-	return errors.New(res[1])
+	if len(res) != 0 {
+		return errors.New(res[1])
+	}
+
+	return nil
 }
 
 func NewApi(auth Auth) *Api {
@@ -48,6 +61,24 @@ func NewApi(auth Auth) *Api {
 		Password: auth.Password,
 		Language: auth.Language,
 	}
+}
+func (self *Api) CountryListRequest() ([]CountryListAnswer, error) {
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "CountryListRequest")
+	data.Add("CompanyId", self.BuyerId)
+	data.Add("UserId", self.UserId)
+	data.Add("Password", self.Password)
+	data.Add("Language", self.Language)
+
+	body := sendReq(data)
+	jsonData := []CountryListAnswer{}
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return nil, parseError(body)
+	}
+
+	return jsonData, nil
 }
 func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchAnswer, error) {
 	searchReq.BuyerId = self.BuyerId

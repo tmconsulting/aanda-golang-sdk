@@ -64,3 +64,9 @@ type RoomPeriod struct {
 	PeriodSummMeal  interface{} `json:"period_summ_meal"`
 	PeriodSummTotal int         `json:"period_summ_total"`
 }
+
+type CountryListAnswer struct {
+	CountryCode string `json:"country_code"`
+	CountryName string `json:"country_name"`
+	Cities      string `json:"cities"`
+}

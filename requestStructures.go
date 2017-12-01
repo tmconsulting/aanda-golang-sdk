@@ -6,6 +6,7 @@ type Auth struct {
 	Password string
 	Language string
 }
+
 type HotelSearchRequest struct {
 	BuyerId        string `json:"BuyerId"`
 	UserId         string `json:"UserId"`

@@ -1,0 +1,27 @@
+[
+  {
+    "country_code": "13",
+    "country_name": "Армения",
+    "cities": "8"
+  },
+  {
+    "country_code": "10",
+    "country_name": "Беларусь",
+    "cities": "43"
+  },
+  {
+    "country_code": "14",
+    "country_name": "Грузия",
+    "cities": "8"
+  },
+  {
+    "country_code": "19",
+    "country_name": "Казахстан",
+    "cities": "36"
+  },
+  {
+    "country_code": "9",
+    "country_name": "Россия",
+    "cities": "964"
+  }
+]
