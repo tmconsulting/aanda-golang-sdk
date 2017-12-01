@@ -85,3 +85,22 @@ type CityListAnswer struct {
 		CityLongitude string `json:"city_longitude"`
 	} `json:"cities"`
 }
+
+type HotelListAnswer struct {
+	HotelCode      string      `json:"hotel_code"`
+	Vat            string      `json:"vat"`
+	HotelName      string      `json:"hotel_name"`
+	Address        string      `json:"address"`
+	Description    string      `json:"description"`
+	ImageUrl       string      `json:"image_url"`
+	HotelLatitude  string      `json:"hotel_latitude"`
+	HotelLongitude string      `json:"hotel_longitude"`
+	RatingCode     interface{} `json:"rating_code"`
+	RatingName     string      `json:"rating_name"`
+	StarsCode      string      `json:"stars_code"`
+	StarsName      string      `json:"stars_name"`
+	HotelAmenities []struct {
+		Name string `json:"name"`
+		Id   string `json:"id"`
+	} `json:"hotel_amenities"`
+}
