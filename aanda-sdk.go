@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/url"
 	"regexp"
+	"strconv"
 	"strings"
 )
 
@@ -62,6 +63,7 @@ func NewApi(auth Auth) *Api {
 		Language: auth.Language,
 	}
 }
+
 func (self *Api) CountryListRequest() ([]CountryListAnswer, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
@@ -80,6 +82,31 @@ func (self *Api) CountryListRequest() ([]CountryListAnswer, error) {
 
 	return jsonData, nil
 }
+
+func (self *Api) CityListRequest(countryCode int) (CityListAnswer, error) {
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "CityListRequest")
+	data.Add("CompanyId", self.BuyerId)
+	data.Add("UserId", self.UserId)
+	data.Add("Password", self.Password)
+	data.Add("Language", self.Language)
+	data.Add("CountryCode", strconv.Itoa(countryCode))
+
+	body := sendReq(data)
+
+	//FIX BUG of API
+	bodyStr := strings.Replace(string(body), "city _code", "city_code", -1)
+	jsonData := CityListAnswer{}
+
+	err := json.Unmarshal([]byte(bodyStr), &jsonData)
+	if err != nil {
+		return CityListAnswer{}, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
 func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchAnswer, error) {
 	searchReq.BuyerId = self.BuyerId
 	searchReq.UserId = self.UserId

@@ -70,3 +70,18 @@ type CountryListAnswer struct {
 	CountryName string `json:"country_name"`
 	Cities      string `json:"cities"`
 }
+
+type CityListAnswer struct {
+	Country struct {
+		Id   string `json:"id"`
+		Name string `json:"name"`
+	} `json:"country"`
+	Cities []struct {
+		CityCode      string `json:"city_code"`
+		CityName      string `json:"city_name"`
+		Region        string `json:"region"`
+		Hotels        string `json:"hotels"`
+		CityLatitude  string `json:"city_latitude"`
+		CityLongitude string `json:"city_longitude"`
+	} `json:"cities"`
+}
