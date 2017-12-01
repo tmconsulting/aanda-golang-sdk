@@ -1,0 +1,4168 @@
+{
+  "country": {
+    "id": "9",
+    "name": "Россия"
+  },
+  "cities": [
+    {
+      "city _code": "1702",
+      "city_name": "Абаза",
+      "region": "Республика Хакасия",
+      "hotels": "6",
+      "city_latitude": "52.650002",
+      "city_longitude": "90.083328"
+    },
+    {
+      "city _code": "203",
+      "city_name": "Абакан",
+      "region": "Республика Хакасия",
+      "hotels": "19",
+      "city_latitude": "53.729172",
+      "city_longitude": "91.461189"
+    },
+    {
+      "city _code": "1237",
+      "city_name": "Абрау Дюрсо",
+      "region": "Краснодарский край",
+      "hotels": "1",
+      "city_latitude": "44.717117",
+      "city_longitude": "37.592403"
+    },
+    {
+      "city _code": "1272",
+      "city_name": "Агрыз",
+      "region": "Республика Татарстан",
+      "hotels": "2",
+      "city_latitude": "56.523411",
+      "city_longitude": "52.994278"
+    },
+    {
+      "city _code": "193",
+      "city_name": "Азов",
+      "region": "Ростовская область",
+      "hotels": "5",
+      "city_latitude": "47.099049",
+      "city_longitude": "39.438629"
+    },
+    {
+      "city _code": "975",
+      "city_name": "Аксай",
+      "region": "Ростовская область",
+      "hotels": "2",
+      "city_latitude": "47.267555",
+      "city_longitude": "39.875607"
+    },
+    {
+      "city _code": "696",
+      "city_name": "Алатырь",
+      "region": "Чувашская Республика",
+      "hotels": "1",
+      "city_latitude": "54.839806",
+      "city_longitude": "46.572178"
+    },
+    {
+      "city _code": "1334",
+      "city_name": "Алдан",
+      "region": "Республика Саха (Якутия)",
+      "hotels": "3",
+      "city_latitude": "58.605579",
+      "city_longitude": "125.347366"
+    },
+    {
+      "city _code": "188",
+      "city_name": "Александров",
+      "region": "Владимирская область",
+      "hotels": "3",
+      "city_latitude": "56.396759",
+      "city_longitude": "38.724190"
+    },
+    {
+      "city _code": "1117",
+      "city_name": "Алексеевка",
+      "region": "Белгородская область",
+      "hotels": "2",
+      "city_latitude": "50.629959",
+      "city_longitude": "38.688095"
+    },
+    {
+      "city _code": "516",
+      "city_name": "Алупка",
+      "region": "Республика Крым",
+      "hotels": "5",
+      "city_latitude": "44.416328",
+      "city_longitude": "34.044552"
+    },
+    {
+      "city _code": "273",
+      "city_name": "Алушта",
+      "region": "Республика Крым",
+      "hotels": "36",
+      "city_latitude": "44.676380",
+      "city_longitude": "34.410049"
+    },
+    {
+      "city _code": "269",
+      "city_name": "Альметьевск",
+      "region": "Республика Татарстан",
+      "hotels": "11",
+      "city_latitude": "54.893219",
+      "city_longitude": "52.346230"
+    },
+    {
+      "city _code": "185",
+      "city_name": "Анадырь",
+      "region": "Чукотский АО",
+      "hotels": "2",
+      "city_latitude": "64.736656",
+      "city_longitude": "177.477371"
+    },
+    {
+      "city _code": "158",
+      "city_name": "Анапа",
+      "region": "Краснодарский край",
+      "hotels": "36",
+      "city_latitude": "44.895020",
+      "city_longitude": "37.331039"
+    },
+    {
+      "city _code": "359",
+      "city_name": "Ангарск",
+      "region": "Иркутская область",
+      "hotels": "14",
+      "city_latitude": "52.541672",
+      "city_longitude": "103.919548"
+    },
+    {
+      "city _code": "936",
+      "city_name": "Анжеро-Судженск",
+      "region": "Кемеровская область",
+      "hotels": "1",
+      "city_latitude": "56.078686",
+      "city_longitude": "86.020126"
+    },
+    {
+      "city _code": "183",
+      "city_name": "Апатиты",
+      "region": "Мурманская область",
+      "hotels": "3",
+      "city_latitude": "67.579620",
+      "city_longitude": "33.390980"
+    },
+    {
+      "city _code": "1332",
+      "city_name": "Арамиль",
+      "region": "Свердловская область",
+      "hotels": "2",
+      "city_latitude": "56.697701",
+      "city_longitude": "60.836899"
+    },
+    {
+      "city _code": "419",
+      "city_name": "Арзамас",
+      "region": "Нижегородская область",
+      "hotels": "13",
+      "city_latitude": "55.403210",
+      "city_longitude": "43.836140"
+    },
+    {
+      "city _code": "249",
+      "city_name": "Армавир",
+      "region": "Краснодарский край",
+      "hotels": "13",
+      "city_latitude": "44.996361",
+      "city_longitude": "41.120628"
+    },
+    {
+      "city _code": "381",
+      "city_name": "Арсеньев",
+      "region": "Приморский край",
+      "hotels": "3",
+      "city_latitude": "44.161789",
+      "city_longitude": "133.285507"
+    },
+    {
+      "city _code": "127",
+      "city_name": "Артем",
+      "region": "Приморский край",
+      "hotels": "3",
+      "city_latitude": "43.355728",
+      "city_longitude": "132.186676"
+    },
+    {
+      "city _code": "1709",
+      "city_name": "Артемовский",
+      "region": "Свердловская область",
+      "hotels": "2",
+      "city_latitude": "57.331001",
+      "city_longitude": "61.946800"
+    },
+    {
+      "city _code": "1492",
+      "city_name": "Артыбаш поселок",
+      "region": "Республика Алтай",
+      "hotels": "3",
+      "city_latitude": "51.791111",
+      "city_longitude": "87.255836"
+    },
+    {
+      "city _code": "34",
+      "city_name": "Архангельск",
+      "region": "Архангельская область",
+      "hotels": "7",
+      "city_latitude": "64.536926",
+      "city_longitude": "40.565571"
+    },
+    {
+      "city _code": "119",
+      "city_name": "Астрахань",
+      "region": "Астраханская область",
+      "hotels": "36",
+      "city_latitude": "46.354889",
+      "city_longitude": "48.052719"
+    },
+    {
+      "city _code": "1218",
+      "city_name": "Ахтубинск",
+      "region": "Астраханская область",
+      "hotels": "8",
+      "city_latitude": "48.292229",
+      "city_longitude": "46.176838"
+    },
+    {
+      "city _code": "406",
+      "city_name": "Ачинск",
+      "region": "Красноярский край",
+      "hotels": "6",
+      "city_latitude": "56.282360",
+      "city_longitude": "90.517052"
+    },
+    {
+      "city _code": "1207",
+      "city_name": "Байкальск",
+      "region": "Иркутская область",
+      "hotels": "4",
+      "city_latitude": "51.523079",
+      "city_longitude": "104.148659"
+    },
+    {
+      "city _code": "727",
+      "city_name": "Балабаново",
+      "region": "Калужская область",
+      "hotels": "4",
+      "city_latitude": "55.177395",
+      "city_longitude": "36.656769"
+    },
+    {
+      "city _code": "181",
+      "city_name": "Балаково",
+      "region": "Саратовская область",
+      "hotels": "16",
+      "city_latitude": "52.021069",
+      "city_longitude": "47.805759"
+    },
+    {
+      "city _code": "1233",
+      "city_name": "Балашов",
+      "region": "Саратовская область",
+      "hotels": "1",
+      "city_latitude": "51.554646",
+      "city_longitude": "43.146416"
+    },
+    {
+      "city _code": "839",
+      "city_name": "Балтийск",
+      "region": "Калининградская область",
+      "hotels": "6",
+      "city_latitude": "54.644073",
+      "city_longitude": "19.892178"
+    },
+    {
+      "city _code": "128",
+      "city_name": "Барнаул",
+      "region": "Алтайский край",
+      "hotels": "43",
+      "city_latitude": "53.356339",
+      "city_longitude": "83.761650"
+    },
+    {
+      "city _code": "1093",
+      "city_name": "Бахчисарай",
+      "region": "Республика Крым",
+      "hotels": "5",
+      "city_latitude": "44.751385",
+      "city_longitude": "33.875118"
+    },
+    {
+      "city _code": "120",
+      "city_name": "Белгород",
+      "region": "Белгородская область",
+      "hotels": "32",
+      "city_latitude": "50.596611",
+      "city_longitude": "36.609211"
+    },
+    {
+      "city _code": "730",
+      "city_name": "Белебей",
+      "region": "Республика Башкортостан",
+      "hotels": "2",
+      "city_latitude": "54.103458",
+      "city_longitude": "54.111244"
+    },
+    {
+      "city _code": "879",
+      "city_name": "Белово",
+      "region": "Кемеровская область",
+      "hotels": "3",
+      "city_latitude": "54.422115",
+      "city_longitude": "86.303696"
+    },
+    {
+      "city _code": "757",
+      "city_name": "Белогорск",
+      "region": "Амурская область",
+      "hotels": "4",
+      "city_latitude": "50.921288",
+      "city_longitude": "128.473877"
+    },
+    {
+      "city _code": "374",
+      "city_name": "Белокуриха",
+      "region": "Алтайский край",
+      "hotels": "3",
+      "city_latitude": "51.996094",
+      "city_longitude": "84.983955"
+    },
+    {
+      "city _code": "312",
+      "city_name": "Белореченск",
+      "region": "Краснодарский край",
+      "hotels": "5",
+      "city_latitude": "44.761143",
+      "city_longitude": "39.871140"
+    },
+    {
+      "city _code": "583",
+      "city_name": "Белоярский",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "2",
+      "city_latitude": "63.712112",
+      "city_longitude": "66.677261"
+    },
+    {
+      "city _code": "556",
+      "city_name": "Бердск",
+      "region": "Новосибирская область",
+      "hotels": "5",
+      "city_latitude": "54.758289",
+      "city_longitude": "83.107132"
+    },
+    {
+      "city _code": "268",
+      "city_name": "Березники",
+      "region": "Пермский край",
+      "hotels": "7",
+      "city_latitude": "59.401470",
+      "city_longitude": "56.799480"
+    },
+    {
+      "city _code": "364",
+      "city_name": "Бийск",
+      "region": "Алтайский край",
+      "hotels": "9",
+      "city_latitude": "52.541302",
+      "city_longitude": "85.217003"
+    },
+    {
+      "city _code": "1534",
+      "city_name": "Билибино",
+      "region": "Чукотский АО",
+      "hotels": "1",
+      "city_latitude": "68.050003",
+      "city_longitude": "166.449997"
+    },
+    {
+      "city _code": "349",
+      "city_name": "Биробиджан",
+      "region": "Еврейская автономная область",
+      "hotels": "9",
+      "city_latitude": "48.794666",
+      "city_longitude": "132.921799"
+    },
+    {
+      "city _code": "1252",
+      "city_name": "Благовещенск",
+      "region": "Республика Башкортостан",
+      "hotels": "6",
+      "city_latitude": "55.033329",
+      "city_longitude": "55.983330"
+    },
+    {
+      "city _code": "129",
+      "city_name": "Благовещенск",
+      "region": "Амурская область",
+      "hotels": "14",
+      "city_latitude": "50.257778",
+      "city_longitude": "127.536392"
+    },
+    {
+      "city _code": "1771",
+      "city_name": "Богданович",
+      "region": "Свердловская область",
+      "hotels": "2",
+      "city_latitude": "56.776501",
+      "city_longitude": "62.046295"
+    },
+    {
+      "city _code": "1056",
+      "city_name": "Бокситогорск",
+      "region": "Ленинградская область",
+      "hotels": "1",
+      "city_latitude": "59.473526",
+      "city_longitude": "33.845745"
+    },
+    {
+      "city _code": "505",
+      "city_name": "Бор",
+      "region": "Нижегородская область",
+      "hotels": "3",
+      "city_latitude": "56.360352",
+      "city_longitude": "44.059029"
+    },
+    {
+      "city _code": "1168",
+      "city_name": "Борзя",
+      "region": "Забайкальский край",
+      "hotels": "1",
+      "city_latitude": "50.387630",
+      "city_longitude": "116.523483"
+    },
+    {
+      "city _code": "389",
+      "city_name": "Борисоглебск",
+      "region": "Воронежская область",
+      "hotels": "6",
+      "city_latitude": "51.365940",
+      "city_longitude": "42.080540"
+    },
+    {
+      "city _code": "687",
+      "city_name": "Боровичи",
+      "region": "Новгородская область",
+      "hotels": "1",
+      "city_latitude": "58.388218",
+      "city_longitude": "33.914024"
+    },
+    {
+      "city _code": "146",
+      "city_name": "Братск",
+      "region": "Иркутская область",
+      "hotels": "8",
+      "city_latitude": "56.169659",
+      "city_longitude": "101.591637"
+    },
+    {
+      "city _code": "110",
+      "city_name": "Брянск",
+      "region": "Брянская область",
+      "hotels": "31",
+      "city_latitude": "53.243324",
+      "city_longitude": "34.363731"
+    },
+    {
+      "city _code": "521",
+      "city_name": "Бугульма",
+      "region": "Республика Татарстан",
+      "hotels": "7",
+      "city_latitude": "54.536411",
+      "city_longitude": "52.789490"
+    },
+    {
+      "city _code": "827",
+      "city_name": "Бугуруслан",
+      "region": "Оренбургская область",
+      "hotels": "2",
+      "city_latitude": "53.652302",
+      "city_longitude": "52.432606"
+    },
+    {
+      "city _code": "345",
+      "city_name": "Буденновск",
+      "region": "Ставропольский край",
+      "hotels": "8",
+      "city_latitude": "44.781528",
+      "city_longitude": "44.165024"
+    },
+    {
+      "city _code": "442",
+      "city_name": "Бузулук",
+      "region": "Оренбургская область",
+      "hotels": "8",
+      "city_latitude": "52.785240",
+      "city_longitude": "52.252640"
+    },
+    {
+      "city _code": "1154",
+      "city_name": "Буинск",
+      "region": "Республика Татарстан",
+      "hotels": "2",
+      "city_latitude": "54.964153",
+      "city_longitude": "48.290142"
+    },
+    {
+      "city _code": "290",
+      "city_name": "Валдай",
+      "region": "Новгородская область",
+      "hotels": "5",
+      "city_latitude": "57.979710",
+      "city_longitude": "33.253460"
+    },
+    {
+      "city _code": "1016",
+      "city_name": "Валуйки",
+      "region": "Белгородская область",
+      "hotels": "2",
+      "city_latitude": "50.211193",
+      "city_longitude": "38.099915"
+    },
+    {
+      "city _code": "251",
+      "city_name": "Великие Луки",
+      "region": "Псковская область",
+      "hotels": "7",
+      "city_latitude": "56.346821",
+      "city_longitude": "30.539000"
+    },
+    {
+      "city _code": "35",
+      "city_name": "Великий Новгород",
+      "region": "Новгородская область",
+      "hotels": "12",
+      "city_latitude": "58.544971",
+      "city_longitude": "31.269119"
+    },
+    {
+      "city _code": "230",
+      "city_name": "Великий Устюг",
+      "region": "Вологодская область",
+      "hotels": "6",
+      "city_latitude": "60.763229",
+      "city_longitude": "46.307789"
+    },
+    {
+      "city _code": "552",
+      "city_name": "Вельск",
+      "region": "Архангельская область",
+      "hotels": "6",
+      "city_latitude": "61.065914",
+      "city_longitude": "42.103310"
+    },
+    {
+      "city _code": "1328",
+      "city_name": "Верещагино",
+      "region": "Пермский край",
+      "hotels": "2",
+      "city_latitude": "58.077721",
+      "city_longitude": "54.622463"
+    },
+    {
+      "city _code": "947",
+      "city_name": "Верхняя Сысерть (поселок)",
+      "region": "Свердловская область",
+      "hotels": "3",
+      "city_latitude": "56.438026",
+      "city_longitude": "60.755157"
+    },
+    {
+      "city _code": "28",
+      "city_name": "Владивосток",
+      "region": "Приморский край",
+      "hotels": "48",
+      "city_latitude": "43.130692",
+      "city_longitude": "131.923828"
+    },
+    {
+      "city _code": "204",
+      "city_name": "Владикавказ",
+      "region": "Республика Северная Осетия",
+      "hotels": "9",
+      "city_latitude": "43.031231",
+      "city_longitude": "44.675770"
+    },
+    {
+      "city _code": "37",
+      "city_name": "Владимир",
+      "region": "Владимирская область",
+      "hotels": "24",
+      "city_latitude": "56.127701",
+      "city_longitude": "40.407558"
+    },
+    {
+      "city _code": "1604",
+      "city_name": "Войвож",
+      "region": "Республика Коми",
+      "hotels": "2",
+      "city_latitude": "62.894424",
+      "city_longitude": "54.968750"
+    },
+    {
+      "city _code": "106",
+      "city_name": "Волгоград",
+      "region": "Волгоградская область",
+      "hotels": "84",
+      "city_latitude": "48.718079",
+      "city_longitude": "44.504639"
+    },
+    {
+      "city _code": "226",
+      "city_name": "Волгодонск",
+      "region": "Ростовская область",
+      "hotels": "10",
+      "city_latitude": "47.519039",
+      "city_longitude": "42.141178"
+    },
+    {
+      "city _code": "944",
+      "city_name": "Волгореченск",
+      "region": "Костромская область",
+      "hotels": "2",
+      "city_latitude": "57.438061",
+      "city_longitude": "41.156288"
+    },
+    {
+      "city _code": "405",
+      "city_name": "Волжский",
+      "region": "Волгоградская область",
+      "hotels": "11",
+      "city_latitude": "53.431511",
+      "city_longitude": "50.126080"
+    },
+    {
+      "city _code": "159",
+      "city_name": "Вологда",
+      "region": "Вологодская область",
+      "hotels": "17",
+      "city_latitude": "59.215240",
+      "city_longitude": "39.876709"
+    },
+    {
+      "city _code": "198",
+      "city_name": "Воркута",
+      "region": "Республика Коми",
+      "hotels": "3",
+      "city_latitude": "67.485046",
+      "city_longitude": "64.029739"
+    },
+    {
+      "city _code": "130",
+      "city_name": "Воронеж",
+      "region": "Воронежская область",
+      "hotels": "75",
+      "city_latitude": "51.660019",
+      "city_longitude": "39.197411"
+    },
+    {
+      "city _code": "865",
+      "city_name": "Воткинск",
+      "region": "Удмуртская Республика",
+      "hotels": "3",
+      "city_latitude": "57.051807",
+      "city_longitude": "53.987392"
+    },
+    {
+      "city _code": "191",
+      "city_name": "Выборг",
+      "region": "Ленинградская область",
+      "hotels": "13",
+      "city_latitude": "60.703701",
+      "city_longitude": "28.771061"
+    },
+    {
+      "city _code": "485",
+      "city_name": "Выкса",
+      "region": "Нижегородская область",
+      "hotels": "6",
+      "city_latitude": "55.319511",
+      "city_longitude": "42.173000"
+    },
+    {
+      "city _code": "786",
+      "city_name": "Вытегра",
+      "region": "Вологодская область",
+      "hotels": "7",
+      "city_latitude": "61.006374",
+      "city_longitude": "36.449486"
+    },
+    {
+      "city _code": "294",
+      "city_name": "Вышний Волочек",
+      "region": "Тверская область",
+      "hotels": "4",
+      "city_latitude": "57.591518",
+      "city_longitude": "34.556400"
+    },
+    {
+      "city _code": "907",
+      "city_name": "Вязьма",
+      "region": "Смоленская область",
+      "hotels": "2",
+      "city_latitude": "55.205944",
+      "city_longitude": "34.298038"
+    },
+    {
+      "city _code": "1152",
+      "city_name": "Вятские Поляны",
+      "region": "Кировская область",
+      "hotels": "7",
+      "city_latitude": "56.228527",
+      "city_longitude": "51.061516"
+    },
+    {
+      "city _code": "644",
+      "city_name": "Гагарин",
+      "region": "Смоленская область",
+      "hotels": "1",
+      "city_latitude": "55.553299",
+      "city_longitude": "34.996845"
+    },
+    {
+      "city _code": "1598",
+      "city_name": "Галич",
+      "region": "Костромская область",
+      "hotels": "2",
+      "city_latitude": "58.373199",
+      "city_longitude": "42.404800"
+    },
+    {
+      "city _code": "131",
+      "city_name": "Геленджик",
+      "region": "Краснодарский край",
+      "hotels": "31",
+      "city_latitude": "44.577709",
+      "city_longitude": "38.080212"
+    },
+    {
+      "city _code": "682",
+      "city_name": "Георгиевск",
+      "region": "Ставропольский край",
+      "hotels": "2",
+      "city_latitude": "44.148598",
+      "city_longitude": "43.473896"
+    },
+    {
+      "city _code": "477",
+      "city_name": "Глазов",
+      "region": "Удмуртская Республика",
+      "hotels": "3",
+      "city_latitude": "58.135288",
+      "city_longitude": "52.662441"
+    },
+    {
+      "city _code": "376",
+      "city_name": "Горно-Алтайск",
+      "region": "Республика Алтай",
+      "hotels": "12",
+      "city_latitude": "51.958118",
+      "city_longitude": "85.971291"
+    },
+    {
+      "city _code": "424",
+      "city_name": "Городец",
+      "region": "Нижегородская область",
+      "hotels": "6",
+      "city_latitude": "56.650150",
+      "city_longitude": "43.470402"
+    },
+    {
+      "city _code": "578",
+      "city_name": "Горячий ключ",
+      "region": "Краснодарский край",
+      "hotels": "6",
+      "city_latitude": "44.634426",
+      "city_longitude": "39.135563"
+    },
+    {
+      "city _code": "766",
+      "city_name": "Грозный",
+      "region": "Чеченская Республика",
+      "hotels": "18",
+      "city_latitude": "43.317993",
+      "city_longitude": "45.698196"
+    },
+    {
+      "city _code": "1166",
+      "city_name": "Грязи",
+      "region": "Липецкая область",
+      "hotels": "2",
+      "city_latitude": "52.483700",
+      "city_longitude": "39.957897"
+    },
+    {
+      "city _code": "546",
+      "city_name": "Губаха",
+      "region": "Пермский край",
+      "hotels": "1",
+      "city_latitude": "58.837082",
+      "city_longitude": "57.554504"
+    },
+    {
+      "city _code": "596",
+      "city_name": "Губкинский",
+      "region": "Ямало-Ненецкий АО",
+      "hotels": "9",
+      "city_latitude": "64.432625",
+      "city_longitude": "76.500496"
+    },
+    {
+      "city _code": "877",
+      "city_name": "Гудермес",
+      "region": "Чеченская Республика",
+      "hotels": "2",
+      "city_latitude": "43.351879",
+      "city_longitude": "46.103535"
+    },
+    {
+      "city _code": "360",
+      "city_name": "Гурзуф",
+      "region": "Республика Крым",
+      "hotels": "8",
+      "city_latitude": "44.536201",
+      "city_longitude": "34.258099"
+    },
+    {
+      "city _code": "491",
+      "city_name": "Гусев",
+      "region": "Калининградская область",
+      "hotels": "1",
+      "city_latitude": "54.591843",
+      "city_longitude": "22.201117"
+    },
+    {
+      "city _code": "118",
+      "city_name": "Гусь-Хрустальный",
+      "region": "Владимирская область",
+      "hotels": "2",
+      "city_latitude": "55.616840",
+      "city_longitude": "40.672661"
+    },
+    {
+      "city _code": "1130",
+      "city_name": "Дальнегорск",
+      "region": "Приморский край",
+      "hotels": "1",
+      "city_latitude": "44.554035",
+      "city_longitude": "135.566223"
+    },
+    {
+      "city _code": "1129",
+      "city_name": "Дальнереченск",
+      "region": "Приморский край",
+      "hotels": "1",
+      "city_latitude": "45.930851",
+      "city_longitude": "133.731735"
+    },
+    {
+      "city _code": "1304",
+      "city_name": "Данков",
+      "region": "Липецкая область",
+      "hotels": "2",
+      "city_latitude": "53.263599",
+      "city_longitude": "39.110714"
+    },
+    {
+      "city _code": "1024",
+      "city_name": "Дербент",
+      "region": "Республика Дагестан",
+      "hotels": "4",
+      "city_latitude": "42.059021",
+      "city_longitude": "48.290833"
+    },
+    {
+      "city _code": "283",
+      "city_name": "Дзержинск",
+      "region": "Нижегородская область",
+      "hotels": "18",
+      "city_latitude": "56.235420",
+      "city_longitude": "43.445271"
+    },
+    {
+      "city _code": "1074",
+      "city_name": "Дивеево",
+      "region": "Нижегородская область",
+      "hotels": "3",
+      "city_latitude": "55.039860",
+      "city_longitude": "43.242096"
+    },
+    {
+      "city _code": "426",
+      "city_name": "Димитровград",
+      "region": "Ульяновская область",
+      "hotels": "9",
+      "city_latitude": "54.223640",
+      "city_longitude": "49.615059"
+    },
+    {
+      "city _code": "1644",
+      "city_name": "Доброград",
+      "region": "Владимирская область",
+      "hotels": "3",
+      "city_latitude": "56.228127",
+      "city_longitude": "41.298550"
+    },
+    {
+      "city _code": "568",
+      "city_name": "Добрянка",
+      "region": "Пермский край",
+      "hotels": "2",
+      "city_latitude": "58.469715",
+      "city_longitude": "56.413113"
+    },
+    {
+      "city _code": "152",
+      "city_name": "Домбай",
+      "region": "Карачаево-Черкесия",
+      "hotels": "3",
+      "city_latitude": "43.291901",
+      "city_longitude": "41.616039"
+    },
+    {
+      "city _code": "274",
+      "city_name": "Евпатория",
+      "region": "Республика Крым",
+      "hotels": "14",
+      "city_latitude": "45.196400",
+      "city_longitude": "33.351742"
+    },
+    {
+      "city _code": "224",
+      "city_name": "Ейск",
+      "region": "Краснодарский край",
+      "hotels": "7",
+      "city_latitude": "46.691879",
+      "city_longitude": "38.285641"
+    },
+    {
+      "city _code": "22",
+      "city_name": "Екатеринбург",
+      "region": "Свердловская область",
+      "hotels": "157",
+      "city_latitude": "56.837811",
+      "city_longitude": "60.596840"
+    },
+    {
+      "city _code": "229",
+      "city_name": "Елабуга",
+      "region": "Республика Татарстан",
+      "hotels": "3",
+      "city_latitude": "55.761799",
+      "city_longitude": "52.061390"
+    },
+    {
+      "city _code": "1344",
+      "city_name": "Елань",
+      "region": "Волгоградская область",
+      "hotels": "2",
+      "city_latitude": "50.949001",
+      "city_longitude": "43.737808"
+    },
+    {
+      "city _code": "438",
+      "city_name": "Елец",
+      "region": "Липецкая область",
+      "hotels": "3",
+      "city_latitude": "52.619247",
+      "city_longitude": "38.499950"
+    },
+    {
+      "city _code": "756",
+      "city_name": "Елизово",
+      "region": "Камчатская область",
+      "hotels": "1",
+      "city_latitude": "53.183025",
+      "city_longitude": "158.388351"
+    },
+    {
+      "city _code": "1300",
+      "city_name": "Енисейск",
+      "region": "Красноярский край",
+      "hotels": "1",
+      "city_latitude": "58.448620",
+      "city_longitude": "92.165161"
+    },
+    {
+      "city _code": "252",
+      "city_name": "Ессентуки",
+      "region": "Ставропольский край",
+      "hotels": "7",
+      "city_latitude": "44.049809",
+      "city_longitude": "42.857239"
+    },
+    {
+      "city _code": "840",
+      "city_name": "Ефремов",
+      "region": "Тульская область",
+      "hotels": "4",
+      "city_latitude": "53.142811",
+      "city_longitude": "38.116173"
+    },
+    {
+      "city _code": "471",
+      "city_name": "Железноводск",
+      "region": "Ставропольский край",
+      "hotels": "2",
+      "city_latitude": "44.132038",
+      "city_longitude": "43.030552"
+    },
+    {
+      "city _code": "555",
+      "city_name": "Железногорск (Курская область)",
+      "region": "Курская область",
+      "hotels": "2",
+      "city_latitude": "52.337948",
+      "city_longitude": "35.351727"
+    },
+    {
+      "city _code": "1559",
+      "city_name": "Жердевка",
+      "region": "Тамбовская область",
+      "hotels": "2",
+      "city_latitude": "51.820999",
+      "city_longitude": "41.521500"
+    },
+    {
+      "city _code": "1134",
+      "city_name": "Жирновск",
+      "region": "Волгоградская область",
+      "hotels": "1",
+      "city_latitude": "50.976830",
+      "city_longitude": "44.785751"
+    },
+    {
+      "city _code": "1393",
+      "city_name": "Жуковка",
+      "region": "Брянская область",
+      "hotels": "2",
+      "city_latitude": "53.533333",
+      "city_longitude": "33.733334"
+    },
+    {
+      "city _code": "437",
+      "city_name": "Заволжье",
+      "region": "Нижегородская область",
+      "hotels": "1",
+      "city_latitude": "56.642479",
+      "city_longitude": "43.392841"
+    },
+    {
+      "city _code": "494",
+      "city_name": "Заполярный",
+      "region": "Мурманская область",
+      "hotels": "1",
+      "city_latitude": "69.413269",
+      "city_longitude": "30.798470"
+    },
+    {
+      "city _code": "398",
+      "city_name": "Зеленоградск",
+      "region": "Калининградская область",
+      "hotels": "2",
+      "city_latitude": "54.959930",
+      "city_longitude": "20.475353"
+    },
+    {
+      "city _code": "1500",
+      "city_name": "Зея",
+      "region": "Амурская область",
+      "hotels": "4",
+      "city_latitude": "53.733330",
+      "city_longitude": "127.250000"
+    },
+    {
+      "city _code": "214",
+      "city_name": "Златоуст",
+      "region": "Челябинская область",
+      "hotels": "7",
+      "city_latitude": "55.186119",
+      "city_longitude": "59.646099"
+    },
+    {
+      "city _code": "887",
+      "city_name": "Знаменск",
+      "region": "Астраханская область",
+      "hotels": "4",
+      "city_latitude": "48.586586",
+      "city_longitude": "45.736851"
+    },
+    {
+      "city _code": "679",
+      "city_name": "Ивангород",
+      "region": "Ленинградская область",
+      "hotels": "1",
+      "city_latitude": "59.376656",
+      "city_longitude": "28.223118"
+    },
+    {
+      "city _code": "133",
+      "city_name": "Иваново",
+      "region": "Ивановская область",
+      "hotels": "21",
+      "city_latitude": "56.992409",
+      "city_longitude": "40.967789"
+    },
+    {
+      "city _code": "134",
+      "city_name": "Ижевск",
+      "region": "Удмуртская Республика",
+      "hotels": "35",
+      "city_latitude": "56.842609",
+      "city_longitude": "53.224449"
+    },
+    {
+      "city _code": "1613",
+      "city_name": "Ижма Село",
+      "region": "Республика Коми",
+      "hotels": "2",
+      "city_latitude": "65.009415",
+      "city_longitude": "53.913395"
+    },
+    {
+      "city _code": "691",
+      "city_name": "Инта",
+      "region": "Республика Коми",
+      "hotels": "4",
+      "city_latitude": "66.035934",
+      "city_longitude": "60.151489"
+    },
+    {
+      "city _code": "554",
+      "city_name": "Ирбит",
+      "region": "Свердловская область",
+      "hotels": "2",
+      "city_latitude": "57.683777",
+      "city_longitude": "63.057762"
+    },
+    {
+      "city _code": "29",
+      "city_name": "Иркутск",
+      "region": "Иркутская область",
+      "hotels": "82",
+      "city_latitude": "52.275261",
+      "city_longitude": "104.308640"
+    },
+    {
+      "city _code": "404",
+      "city_name": "Ишим",
+      "region": "Тюменская область",
+      "hotels": "5",
+      "city_latitude": "56.113281",
+      "city_longitude": "69.511147"
+    },
+    {
+      "city _code": "168",
+      "city_name": "Йошкар-Ола",
+      "region": "Республика Марий Эл",
+      "hotels": "19",
+      "city_latitude": "56.637501",
+      "city_longitude": "47.891499"
+    },
+    {
+      "city _code": "5",
+      "city_name": "Казань",
+      "region": "Республика Татарстан",
+      "hotels": "127",
+      "city_latitude": "55.796539",
+      "city_longitude": "49.108200"
+    },
+    {
+      "city _code": "1581",
+      "city_name": "Калевала поселок",
+      "region": "Республика Карелия",
+      "hotels": "2",
+      "city_latitude": "65.197746",
+      "city_longitude": "31.184414"
+    },
+    {
+      "city _code": "32",
+      "city_name": "Калининград",
+      "region": "Калининградская область",
+      "hotels": "59",
+      "city_latitude": "54.711601",
+      "city_longitude": "20.509970"
+    },
+    {
+      "city _code": "163",
+      "city_name": "Калуга",
+      "region": "Калужская область",
+      "hotels": "48",
+      "city_latitude": "54.514679",
+      "city_longitude": "36.271420"
+    },
+    {
+      "city _code": "428",
+      "city_name": "Каменка",
+      "region": "Пензенская область",
+      "hotels": "1",
+      "city_latitude": "53.193180",
+      "city_longitude": "44.066780"
+    },
+    {
+      "city _code": "450",
+      "city_name": "Каменск-Уральский",
+      "region": "Свердловская область",
+      "hotels": "6",
+      "city_latitude": "56.426479",
+      "city_longitude": "61.908489"
+    },
+    {
+      "city _code": "473",
+      "city_name": "Каменск-Шахтинский",
+      "region": "Ростовская область",
+      "hotels": "3",
+      "city_latitude": "48.319328",
+      "city_longitude": "40.263828"
+    },
+    {
+      "city _code": "1718",
+      "city_name": "Камешково",
+      "region": "Владимирская область",
+      "hotels": "2",
+      "city_latitude": "56.351700",
+      "city_longitude": "40.998100"
+    },
+    {
+      "city _code": "396",
+      "city_name": "Камышин",
+      "region": "Волгоградская область",
+      "hotels": "3",
+      "city_latitude": "50.082581",
+      "city_longitude": "45.392681"
+    },
+    {
+      "city _code": "812",
+      "city_name": "Кандалакша",
+      "region": "Мурманская область",
+      "hotels": "1",
+      "city_latitude": "67.156731",
+      "city_longitude": "32.414307"
+    },
+    {
+      "city _code": "358",
+      "city_name": "Канск ",
+      "region": "Красноярский край",
+      "hotels": "5",
+      "city_latitude": "56.205059",
+      "city_longitude": "95.705109"
+    },
+    {
+      "city _code": "1262",
+      "city_name": "Карасук",
+      "region": "Новосибирская область",
+      "hotels": "2",
+      "city_latitude": "53.734325",
+      "city_longitude": "78.042358"
+    },
+    {
+      "city _code": "1530",
+      "city_name": "Каргополь",
+      "region": "Архангельская область",
+      "hotels": "2",
+      "city_latitude": "61.490501",
+      "city_longitude": "38.988400"
+    },
+    {
+      "city _code": "530",
+      "city_name": "Касимов",
+      "region": "Рязанская область",
+      "hotels": "2",
+      "city_latitude": "54.937286",
+      "city_longitude": "41.391369"
+    },
+    {
+      "city _code": "377",
+      "city_name": "Качканар",
+      "region": "Свердловская область",
+      "hotels": "2",
+      "city_latitude": "58.698349",
+      "city_longitude": "59.489391"
+    },
+    {
+      "city _code": "165",
+      "city_name": "Кемерово",
+      "region": "Кемеровская область",
+      "hotels": "29",
+      "city_latitude": "55.371239",
+      "city_longitude": "86.052437"
+    },
+    {
+      "city _code": "831",
+      "city_name": "Кемь",
+      "region": "Республика Карелия",
+      "hotels": "2",
+      "city_latitude": "64.952766",
+      "city_longitude": "34.561882"
+    },
+    {
+      "city _code": "98",
+      "city_name": "Керчь",
+      "region": "Республика Крым",
+      "hotels": "2",
+      "city_latitude": "45.327499",
+      "city_longitude": "36.442631"
+    },
+    {
+      "city _code": "1615",
+      "city_name": "Кимовск",
+      "region": "Тульская область",
+      "hotels": "2",
+      "city_latitude": "53.955002",
+      "city_longitude": "38.588100"
+    },
+    {
+      "city _code": "836",
+      "city_name": "Кимры",
+      "region": "Тверская область",
+      "hotels": "2",
+      "city_latitude": "56.873337",
+      "city_longitude": "37.355679"
+    },
+    {
+      "city _code": "518",
+      "city_name": "Кингисепп",
+      "region": "Ленинградская область",
+      "hotels": "11",
+      "city_latitude": "59.374027",
+      "city_longitude": "28.611298"
+    },
+    {
+      "city _code": "272",
+      "city_name": "Кинешма",
+      "region": "Ивановская область",
+      "hotels": "2",
+      "city_latitude": "57.449749",
+      "city_longitude": "42.132080"
+    },
+    {
+      "city _code": "1020",
+      "city_name": "Киренск",
+      "region": "Иркутская область",
+      "hotels": "2",
+      "city_latitude": "57.775745",
+      "city_longitude": "108.110863"
+    },
+    {
+      "city _code": "1158",
+      "city_name": "Киржач",
+      "region": "Владимирская область",
+      "hotels": "2",
+      "city_latitude": "56.161678",
+      "city_longitude": "38.872078"
+    },
+    {
+      "city _code": "267",
+      "city_name": "Кириши",
+      "region": "Ленинградская область",
+      "hotels": "3",
+      "city_latitude": "59.448078",
+      "city_longitude": "32.028450"
+    },
+    {
+      "city _code": "116",
+      "city_name": "Киров",
+      "region": "Кировская область",
+      "hotels": "39",
+      "city_latitude": "58.596081",
+      "city_longitude": "49.662659"
+    },
+    {
+      "city _code": "432",
+      "city_name": "Кирово-Чепецк",
+      "region": "Кировская область",
+      "hotels": "5",
+      "city_latitude": "58.549770",
+      "city_longitude": "50.039799"
+    },
+    {
+      "city _code": "541",
+      "city_name": "Кировск",
+      "region": "Мурманская область",
+      "hotels": "6",
+      "city_latitude": "53.272472",
+      "city_longitude": "29.470148"
+    },
+    {
+      "city _code": "215",
+      "city_name": "Кисловодск",
+      "region": "Ставропольский край",
+      "hotels": "15",
+      "city_latitude": "43.923000",
+      "city_longitude": "42.724400"
+    },
+    {
+      "city _code": "829",
+      "city_name": "Клинцы",
+      "region": "Брянская область",
+      "hotels": "2",
+      "city_latitude": "52.752815",
+      "city_longitude": "32.233860"
+    },
+    {
+      "city _code": "499",
+      "city_name": "Ковдор",
+      "region": "Мурманская область",
+      "hotels": "1",
+      "city_latitude": "67.566162",
+      "city_longitude": "30.474295"
+    },
+    {
+      "city _code": "356",
+      "city_name": "Ковров",
+      "region": "Владимирская область",
+      "hotels": "14",
+      "city_latitude": "56.363628",
+      "city_longitude": "41.311218"
+    },
+    {
+      "city _code": "172",
+      "city_name": "Когалым",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "3",
+      "city_latitude": "62.240120",
+      "city_longitude": "74.526901"
+    },
+    {
+      "city _code": "563",
+      "city_name": "Коктебель",
+      "region": "Республика Крым",
+      "hotels": "8",
+      "city_latitude": "44.960339",
+      "city_longitude": "35.241135"
+    },
+    {
+      "city _code": "1031",
+      "city_name": "Колпашево",
+      "region": "Томская область",
+      "hotels": "4",
+      "city_latitude": "58.311382",
+      "city_longitude": "82.902679"
+    },
+    {
+      "city _code": "448",
+      "city_name": "Кольчугино",
+      "region": "Владимирская область",
+      "hotels": "1",
+      "city_latitude": "56.293900",
+      "city_longitude": "39.376041"
+    },
+    {
+      "city _code": "207",
+      "city_name": "Комсомольск-на-Амуре",
+      "region": "Хабаровский край",
+      "hotels": "11",
+      "city_latitude": "50.538212",
+      "city_longitude": "137.016907"
+    },
+    {
+      "city _code": "311",
+      "city_name": "Конаково",
+      "region": "Тверская область",
+      "hotels": "15",
+      "city_latitude": "56.713219",
+      "city_longitude": "36.779308"
+    },
+    {
+      "city _code": "297",
+      "city_name": "Кондопога",
+      "region": "Республика Карелия",
+      "hotels": "2",
+      "city_latitude": "62.211479",
+      "city_longitude": "34.263470"
+    },
+    {
+      "city _code": "1382",
+      "city_name": "Коноша",
+      "region": "Архангельская область",
+      "hotels": "2",
+      "city_latitude": "60.971649",
+      "city_longitude": "40.232048"
+    },
+    {
+      "city _code": "1654",
+      "city_name": "Кораблино",
+      "region": "Рязанская область",
+      "hotels": "2",
+      "city_latitude": "53.916672",
+      "city_longitude": "40.016670"
+    },
+    {
+      "city _code": "402",
+      "city_name": "Коряжма",
+      "region": "Архангельская область",
+      "hotels": "4",
+      "city_latitude": "61.316559",
+      "city_longitude": "47.146042"
+    },
+    {
+      "city _code": "305",
+      "city_name": "Костомукша",
+      "region": "Республика Карелия",
+      "hotels": "4",
+      "city_latitude": "64.589027",
+      "city_longitude": "30.601631"
+    },
+    {
+      "city _code": "38",
+      "city_name": "Кострома",
+      "region": "Костромская область",
+      "hotels": "34",
+      "city_latitude": "57.780739",
+      "city_longitude": "40.936691"
+    },
+    {
+      "city _code": "528",
+      "city_name": "Котельниково",
+      "region": "Волгоградская область",
+      "hotels": "1",
+      "city_latitude": "47.631527",
+      "city_longitude": "43.142624"
+    },
+    {
+      "city _code": "366",
+      "city_name": "Котлас",
+      "region": "Архангельская область",
+      "hotels": "6",
+      "city_latitude": "61.252972",
+      "city_longitude": "46.633217"
+    },
+    {
+      "city _code": "1494",
+      "city_name": "Котово",
+      "region": "Волгоградская область",
+      "hotels": "2",
+      "city_latitude": "50.316669",
+      "city_longitude": "44.799999"
+    },
+    {
+      "city _code": "1210",
+      "city_name": "Красновишерск",
+      "region": "Пермский край",
+      "hotels": "2",
+      "city_latitude": "60.390232",
+      "city_longitude": "57.053665"
+    },
+    {
+      "city _code": "24",
+      "city_name": "Краснодар",
+      "region": "Краснодарский край",
+      "hotels": "155",
+      "city_latitude": "45.042149",
+      "city_longitude": "38.980640"
+    },
+    {
+      "city _code": "565",
+      "city_name": "Краснотурьинск",
+      "region": "Свердловская область",
+      "hotels": "2",
+      "city_latitude": "59.763760",
+      "city_longitude": "60.193493"
+    },
+    {
+      "city _code": "612",
+      "city_name": "Красноуфимск",
+      "region": "Свердловская область",
+      "hotels": "2",
+      "city_latitude": "56.612370",
+      "city_longitude": "57.763630"
+    },
+    {
+      "city _code": "39",
+      "city_name": "Красноярск",
+      "region": "Красноярский край",
+      "hotels": "61",
+      "city_latitude": "56.001251",
+      "city_longitude": "92.885590"
+    },
+    {
+      "city _code": "1555",
+      "city_name": "Красный Сулин",
+      "region": "Ростовская область",
+      "hotels": "2",
+      "city_latitude": "47.870201",
+      "city_longitude": "40.121700"
+    },
+    {
+      "city _code": "620",
+      "city_name": "Кропоткин",
+      "region": "Краснодарский край",
+      "hotels": "4",
+      "city_latitude": "45.433296",
+      "city_longitude": "40.572861"
+    },
+    {
+      "city _code": "1107",
+      "city_name": "Крымск",
+      "region": "Краснодарский край",
+      "hotels": "1",
+      "city_latitude": "44.934410",
+      "city_longitude": "37.985497"
+    },
+    {
+      "city _code": "425",
+      "city_name": "Кстово",
+      "region": "Нижегородская область",
+      "hotels": "5",
+      "city_latitude": "56.151600",
+      "city_longitude": "44.195629"
+    },
+    {
+      "city _code": "1254",
+      "city_name": "Кузнецк",
+      "region": "Пензенская область",
+      "hotels": "3",
+      "city_latitude": "53.119335",
+      "city_longitude": "46.601166"
+    },
+    {
+      "city _code": "600",
+      "city_name": "Куйбышев",
+      "region": "Новосибирская область",
+      "hotels": "2",
+      "city_latitude": "55.445972",
+      "city_longitude": "78.311111"
+    },
+    {
+      "city _code": "818",
+      "city_name": "Кумертау",
+      "region": "Республика Башкортостан",
+      "hotels": "2",
+      "city_latitude": "52.756538",
+      "city_longitude": "55.796959"
+    },
+    {
+      "city _code": "559",
+      "city_name": "Кунгур",
+      "region": "Пермский край",
+      "hotels": "2",
+      "city_latitude": "57.428375",
+      "city_longitude": "56.943802"
+    },
+    {
+      "city _code": "220",
+      "city_name": "Курган",
+      "region": "Курганская область",
+      "hotels": "27",
+      "city_latitude": "55.453690",
+      "city_longitude": "65.342323"
+    },
+    {
+      "city _code": "1646",
+      "city_name": "Курильск",
+      "region": "Сахалинская область",
+      "hotels": "1",
+      "city_latitude": "45.250000",
+      "city_longitude": "147.883331"
+    },
+    {
+      "city _code": "108",
+      "city_name": "Курск",
+      "region": "Курская область",
+      "hotels": "34",
+      "city_latitude": "51.740261",
+      "city_longitude": "36.184879"
+    },
+    {
+      "city _code": "256",
+      "city_name": "Кызыл",
+      "region": "Республика Тыва (Тува)",
+      "hotels": "4",
+      "city_latitude": "51.721909",
+      "city_longitude": "94.417397"
+    },
+    {
+      "city _code": "1163",
+      "city_name": "Лабинск",
+      "region": "Краснодарский край",
+      "hotels": "5",
+      "city_latitude": "44.635387",
+      "city_longitude": "40.724461"
+    },
+    {
+      "city _code": "490",
+      "city_name": "Лангепас",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "2",
+      "city_latitude": "61.253719",
+      "city_longitude": "75.180710"
+    },
+    {
+      "city _code": "1213",
+      "city_name": "Лахденпохья",
+      "region": "Республика Карелия",
+      "hotels": "2",
+      "city_latitude": "61.518883",
+      "city_longitude": "30.199535"
+    },
+    {
+      "city _code": "1001",
+      "city_name": "Лебедянь",
+      "region": "Липецкая область",
+      "hotels": "4",
+      "city_latitude": "53.016388",
+      "city_longitude": "39.144844"
+    },
+    {
+      "city _code": "773",
+      "city_name": "Ленск",
+      "region": "Республика Саха (Якутия)",
+      "hotels": "4",
+      "city_latitude": "60.727699",
+      "city_longitude": "114.954865"
+    },
+    {
+      "city _code": "572",
+      "city_name": "Лесозаводск",
+      "region": "Приморский край",
+      "hotels": "2",
+      "city_latitude": "45.477955",
+      "city_longitude": "133.418594"
+    },
+    {
+      "city _code": "777",
+      "city_name": "Лесосибирск",
+      "region": "Красноярский край",
+      "hotels": "2",
+      "city_latitude": "58.221737",
+      "city_longitude": "92.503700"
+    },
+    {
+      "city _code": "598",
+      "city_name": "Ливны",
+      "region": "Орловская область",
+      "hotels": "2",
+      "city_latitude": "52.426548",
+      "city_longitude": "37.608040"
+    },
+    {
+      "city _code": "121",
+      "city_name": "Липецк",
+      "region": "Липецкая область",
+      "hotels": "41",
+      "city_latitude": "52.605949",
+      "city_longitude": "39.587681"
+    },
+    {
+      "city _code": "1051",
+      "city_name": "Лиски",
+      "region": "Воронежская область",
+      "hotels": "4",
+      "city_latitude": "50.986969",
+      "city_longitude": "39.497765"
+    },
+    {
+      "city _code": "1235",
+      "city_name": "Лодейное поле",
+      "region": "Ленинградская область",
+      "hotels": "4",
+      "city_latitude": "60.732140",
+      "city_longitude": "33.552139"
+    },
+    {
+      "city _code": "463",
+      "city_name": "Луга",
+      "region": "Ленинградская область",
+      "hotels": "4",
+      "city_latitude": "58.728020",
+      "city_longitude": "29.847170"
+    },
+    {
+      "city _code": "1512",
+      "city_name": "Лукоянов",
+      "region": "Нижегородская область",
+      "hotels": "4",
+      "city_latitude": "55.038330",
+      "city_longitude": "44.497780"
+    },
+    {
+      "city _code": "550",
+      "city_name": "Лысьва",
+      "region": "Пермский край",
+      "hotels": "6",
+      "city_latitude": "58.099667",
+      "city_longitude": "57.808647"
+    },
+    {
+      "city _code": "748",
+      "city_name": "Людиново",
+      "region": "Калужская область",
+      "hotels": "4",
+      "city_latitude": "53.870049",
+      "city_longitude": "34.438534"
+    },
+    {
+      "city _code": "186",
+      "city_name": "Магадан",
+      "region": "Магаданская область",
+      "hotels": "10",
+      "city_latitude": "59.568184",
+      "city_longitude": "150.808594"
+    },
+    {
+      "city _code": "1369",
+      "city_name": "Магас",
+      "region": "Республика Ингушетия",
+      "hotels": "3",
+      "city_latitude": "43.166672",
+      "city_longitude": "44.816669"
+    },
+    {
+      "city _code": "156",
+      "city_name": "Магнитогорск",
+      "region": "Челябинская область",
+      "hotels": "24",
+      "city_latitude": "53.459320",
+      "city_longitude": "59.082581"
+    },
+    {
+      "city _code": "351",
+      "city_name": "Майкоп",
+      "region": "Республика Адыгея",
+      "hotels": "9",
+      "city_latitude": "44.609138",
+      "city_longitude": "40.113209"
+    },
+    {
+      "city _code": "1128",
+      "city_name": "Малоярославец",
+      "region": "Калужская область",
+      "hotels": "2",
+      "city_latitude": "55.011898",
+      "city_longitude": "36.462555"
+    },
+    {
+      "city _code": "989",
+      "city_name": "Мантурово",
+      "region": "Костромская область",
+      "hotels": "1",
+      "city_latitude": "58.311729",
+      "city_longitude": "44.775925"
+    },
+    {
+      "city _code": "333",
+      "city_name": "Махачкала",
+      "region": "Республика Дагестан",
+      "hotels": "20",
+      "city_latitude": "42.984913",
+      "city_longitude": "47.504646"
+    },
+    {
+      "city _code": "382",
+      "city_name": "Мегион",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "4",
+      "city_latitude": "61.050400",
+      "city_longitude": "76.113472"
+    },
+    {
+      "city _code": "1132",
+      "city_name": "Медногорск",
+      "region": "Оренбургская область",
+      "hotels": "1",
+      "city_latitude": "51.403847",
+      "city_longitude": "57.583214"
+    },
+    {
+      "city _code": "593",
+      "city_name": "Междуреченск",
+      "region": "Кемеровская область",
+      "hotels": "1",
+      "city_latitude": "53.686596",
+      "city_longitude": "88.070374"
+    },
+    {
+      "city _code": "980",
+      "city_name": "Мелеуз",
+      "region": "Республика Башкортостан",
+      "hotels": "2",
+      "city_latitude": "52.958965",
+      "city_longitude": "55.928310"
+    },
+    {
+      "city _code": "286",
+      "city_name": "Миасс",
+      "region": "Челябинская область",
+      "hotels": "6",
+      "city_latitude": "55.032791",
+      "city_longitude": "60.121868"
+    },
+    {
+      "city _code": "607",
+      "city_name": "Миллерово",
+      "region": "Ростовская область",
+      "hotels": "12",
+      "city_latitude": "48.921547",
+      "city_longitude": "40.396664"
+    },
+    {
+      "city _code": "216",
+      "city_name": "Минеральные Воды",
+      "region": "Ставропольский край",
+      "hotels": "8",
+      "city_latitude": "44.214199",
+      "city_longitude": "43.135109"
+    },
+    {
+      "city _code": "523",
+      "city_name": "Мирный (Якутия)",
+      "region": "Республика Саха (Якутия)",
+      "hotels": "3",
+      "city_latitude": "62.536190",
+      "city_longitude": "113.966766"
+    },
+    {
+      "city _code": "547",
+      "city_name": "Михайловка",
+      "region": "Волгоградская область",
+      "hotels": "4",
+      "city_latitude": "50.070927",
+      "city_longitude": "43.240082"
+    },
+    {
+      "city _code": "1036",
+      "city_name": "Мичуринск",
+      "region": "Тамбовская область",
+      "hotels": "2",
+      "city_latitude": "52.891304",
+      "city_longitude": "40.510452"
+    },
+    {
+      "city _code": "883",
+      "city_name": "МО Балашиха",
+      "region": "Московская область",
+      "hotels": "5",
+      "city_latitude": "55.797287",
+      "city_longitude": "37.934418"
+    },
+    {
+      "city _code": "1610",
+      "city_name": "МО Бронницы",
+      "region": "Московская область",
+      "hotels": "3",
+      "city_latitude": "55.425323",
+      "city_longitude": "38.264217"
+    },
+    {
+      "city _code": "1404",
+      "city_name": "МО Верея",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "55.343369",
+      "city_longitude": "36.185696"
+    },
+    {
+      "city _code": "697",
+      "city_name": "МО Воскресенск",
+      "region": "Московская область",
+      "hotels": "1",
+      "city_latitude": "55.319798",
+      "city_longitude": "38.672409"
+    },
+    {
+      "city _code": "1430",
+      "city_name": "МО Голицыно",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "55.615944",
+      "city_longitude": "36.987118"
+    },
+    {
+      "city _code": "665",
+      "city_name": "МО Дмитров (район)",
+      "region": "Московская область",
+      "hotels": "3",
+      "city_latitude": "56.407623",
+      "city_longitude": "37.360275"
+    },
+    {
+      "city _code": "660",
+      "city_name": "МО Домодедово (район)",
+      "region": "Московская область",
+      "hotels": "23",
+      "city_latitude": "55.361050",
+      "city_longitude": "37.809097"
+    },
+    {
+      "city _code": "655",
+      "city_name": "МО Дубна",
+      "region": "Московская область",
+      "hotels": "4",
+      "city_latitude": "56.732510",
+      "city_longitude": "37.167194"
+    },
+    {
+      "city _code": "464",
+      "city_name": "МО Железнодорожный",
+      "region": "Московская область",
+      "hotels": "4",
+      "city_latitude": "55.746738",
+      "city_longitude": "38.008942"
+    },
+    {
+      "city _code": "306",
+      "city_name": "МО Жуковский",
+      "region": "Московская область",
+      "hotels": "8",
+      "city_latitude": "55.599895",
+      "city_longitude": "38.122337"
+    },
+    {
+      "city _code": "174",
+      "city_name": "МО Звенигород",
+      "region": "Московская область",
+      "hotels": "4",
+      "city_latitude": "55.731331",
+      "city_longitude": "36.866138"
+    },
+    {
+      "city _code": "666",
+      "city_name": "МО Зеленоград",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "55.987152",
+      "city_longitude": "37.202152"
+    },
+    {
+      "city _code": "659",
+      "city_name": "МО Истра (район)",
+      "region": "Московская область",
+      "hotels": "8",
+      "city_latitude": "55.914288",
+      "city_longitude": "36.860283"
+    },
+    {
+      "city _code": "699",
+      "city_name": "МО Кашира (район)",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "54.836376",
+      "city_longitude": "38.150803"
+    },
+    {
+      "city _code": "663",
+      "city_name": "МО Клин (район)",
+      "region": "Московская область",
+      "hotels": "1",
+      "city_latitude": "56.332111",
+      "city_longitude": "36.728008"
+    },
+    {
+      "city _code": "393",
+      "city_name": "МО Коломна",
+      "region": "Московская область",
+      "hotels": "10",
+      "city_latitude": "55.094559",
+      "city_longitude": "38.775768"
+    },
+    {
+      "city _code": "403",
+      "city_name": "МО Королев",
+      "region": "Московская область",
+      "hotels": "6",
+      "city_latitude": "55.916225",
+      "city_longitude": "37.854504"
+    },
+    {
+      "city _code": "1411",
+      "city_name": "МО Красноармейск",
+      "region": "Московская область",
+      "hotels": "1",
+      "city_latitude": "56.120960",
+      "city_longitude": "38.140942"
+    },
+    {
+      "city _code": "654",
+      "city_name": "МО Красногорск (район)",
+      "region": "Московская область",
+      "hotels": "8",
+      "city_latitude": "55.821548",
+      "city_longitude": "37.237038"
+    },
+    {
+      "city _code": "1397",
+      "city_name": "МО Кубинка",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "55.575459",
+      "city_longitude": "36.694912"
+    },
+    {
+      "city _code": "894",
+      "city_name": "МО Ленинский район",
+      "region": "Московская область",
+      "hotels": "12",
+      "city_latitude": "55.547657",
+      "city_longitude": "37.771572"
+    },
+    {
+      "city _code": "1039",
+      "city_name": "МО Лобня",
+      "region": "Московская область",
+      "hotels": "4",
+      "city_latitude": "56.012054",
+      "city_longitude": "37.475082"
+    },
+    {
+      "city _code": "1241",
+      "city_name": "МО Луховицы",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "54.965149",
+      "city_longitude": "39.026058"
+    },
+    {
+      "city _code": "667",
+      "city_name": "МО Люберцы (район)",
+      "region": "Московская область",
+      "hotels": "5",
+      "city_latitude": "55.678799",
+      "city_longitude": "37.893509"
+    },
+    {
+      "city _code": "1033",
+      "city_name": "МО Можайск",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "55.506714",
+      "city_longitude": "36.017357"
+    },
+    {
+      "city _code": "653",
+      "city_name": "МО Мытищи (район)",
+      "region": "Московская область",
+      "hotels": "10",
+      "city_latitude": "55.910503",
+      "city_longitude": "37.736328"
+    },
+    {
+      "city _code": "656",
+      "city_name": "МО Наро-Фоминск (район)",
+      "region": "Московская область",
+      "hotels": "6",
+      "city_latitude": "55.383873",
+      "city_longitude": "36.724224"
+    },
+    {
+      "city _code": "670",
+      "city_name": "МО Ногинск (район)",
+      "region": "Московская область",
+      "hotels": "7",
+      "city_latitude": "55.855537",
+      "city_longitude": "38.441059"
+    },
+    {
+      "city _code": "157",
+      "city_name": "МО Одинцово (район)",
+      "region": "Московская область",
+      "hotels": "19",
+      "city_latitude": "55.671741",
+      "city_longitude": "37.281090"
+    },
+    {
+      "city _code": "397",
+      "city_name": "МО Озеры",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "54.853580",
+      "city_longitude": "38.563084"
+    },
+    {
+      "city _code": "1297",
+      "city_name": "МО Павловский Посад",
+      "region": "Московская область",
+      "hotels": "1",
+      "city_latitude": "55.779392",
+      "city_longitude": "38.651318"
+    },
+    {
+      "city _code": "138",
+      "city_name": "МО Подольск (район)",
+      "region": "Московская область",
+      "hotels": "8",
+      "city_latitude": "55.432041",
+      "city_longitude": "37.551830"
+    },
+    {
+      "city _code": "671",
+      "city_name": "МО Пушкино (район)",
+      "region": "Московская область",
+      "hotels": "7",
+      "city_latitude": "56.010338",
+      "city_longitude": "37.847065"
+    },
+    {
+      "city _code": "664",
+      "city_name": "МО Раменское (район)",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "55.567444",
+      "city_longitude": "38.225685"
+    },
+    {
+      "city _code": "1012",
+      "city_name": "МО Руза (район)",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "55.702175",
+      "city_longitude": "36.204121"
+    },
+    {
+      "city _code": "140",
+      "city_name": "МО Сергиев Посад (район)",
+      "region": "Московская область",
+      "hotels": "9",
+      "city_latitude": "56.310749",
+      "city_longitude": "38.133041"
+    },
+    {
+      "city _code": "208",
+      "city_name": "МО Серпухов (район)",
+      "region": "Московская область",
+      "hotels": "6",
+      "city_latitude": "54.920609",
+      "city_longitude": "37.416901"
+    },
+    {
+      "city _code": "662",
+      "city_name": "МО Солнечногорск (район)",
+      "region": "Московская область",
+      "hotels": "7",
+      "city_latitude": "56.185146",
+      "city_longitude": "36.976677"
+    },
+    {
+      "city _code": "544",
+      "city_name": "МО Ступино (район)",
+      "region": "Московская область",
+      "hotels": "4",
+      "city_latitude": "54.886879",
+      "city_longitude": "38.078388"
+    },
+    {
+      "city _code": "657",
+      "city_name": "МО Талдом (район)",
+      "region": "Московская область",
+      "hotels": "1",
+      "city_latitude": "56.730839",
+      "city_longitude": "37.527634"
+    },
+    {
+      "city _code": "1396",
+      "city_name": "МО Троицк (Московская область)",
+      "region": "Московская область",
+      "hotels": "2",
+      "city_latitude": "55.484982",
+      "city_longitude": "37.307362"
+    },
+    {
+      "city _code": "658",
+      "city_name": "МО Химки (район)",
+      "region": "Московская область",
+      "hotels": "20",
+      "city_latitude": "55.899029",
+      "city_longitude": "37.432934"
+    },
+    {
+      "city _code": "213",
+      "city_name": "МО Чехов (район)",
+      "region": "Московская область",
+      "hotels": "4",
+      "city_latitude": "55.149853",
+      "city_longitude": "37.466995"
+    },
+    {
+      "city _code": "668",
+      "city_name": "МО Щелково (район)",
+      "region": "Московская область",
+      "hotels": "6",
+      "city_latitude": "55.923386",
+      "city_longitude": "37.978397"
+    },
+    {
+      "city _code": "753",
+      "city_name": "МО Электросталь",
+      "region": "Московская область",
+      "hotels": "5",
+      "city_latitude": "55.784729",
+      "city_longitude": "38.444653"
+    },
+    {
+      "city _code": "1459",
+      "city_name": "МО Яхрома",
+      "region": "Московская область",
+      "hotels": "3",
+      "city_latitude": "56.289890",
+      "city_longitude": "37.483856"
+    },
+    {
+      "city _code": "1159",
+      "city_name": "Моздок",
+      "region": "Республика Северная Осетия",
+      "hotels": "1",
+      "city_latitude": "43.747196",
+      "city_longitude": "44.657059"
+    },
+    {
+      "city _code": "1625",
+      "city_name": "Молчаново село",
+      "region": "Томская область",
+      "hotels": "2",
+      "city_latitude": "57.583328",
+      "city_longitude": "83.766670"
+    },
+    {
+      "city _code": "458",
+      "city_name": "Мончегорск",
+      "region": "Мурманская область",
+      "hotels": "4",
+      "city_latitude": "67.938576",
+      "city_longitude": "32.935947"
+    },
+    {
+      "city _code": "1",
+      "city_name": "Москва",
+      "region": null,
+      "hotels": "551",
+      "city_latitude": "55.755791",
+      "city_longitude": "37.617630"
+    },
+    {
+      "city _code": "1454",
+      "city_name": "Мостовской",
+      "region": "Краснодарский край",
+      "hotels": "4",
+      "city_latitude": "44.413612",
+      "city_longitude": "40.789722"
+    },
+    {
+      "city _code": "1744",
+      "city_name": "Мраково",
+      "region": "Республика Башкортостан",
+      "hotels": "2",
+      "city_latitude": "52.707901",
+      "city_longitude": "56.681900"
+    },
+    {
+      "city _code": "647",
+      "city_name": "Муравленко",
+      "region": "Ямало-Ненецкий АО",
+      "hotels": "2",
+      "city_latitude": "63.794128",
+      "city_longitude": "74.494881"
+    },
+    {
+      "city _code": "122",
+      "city_name": "Мурманск",
+      "region": "Мурманская область",
+      "hotels": "17",
+      "city_latitude": "68.953178",
+      "city_longitude": "33.107052"
+    },
+    {
+      "city _code": "253",
+      "city_name": "Муром",
+      "region": "Владимирская область",
+      "hotels": "8",
+      "city_latitude": "55.574291",
+      "city_longitude": "42.051510"
+    },
+    {
+      "city _code": "150",
+      "city_name": "Набережные Челны",
+      "region": "Республика Татарстан",
+      "hotels": "24",
+      "city_latitude": "55.730000",
+      "city_longitude": "52.433220"
+    },
+    {
+      "city _code": "348",
+      "city_name": "Надым",
+      "region": "Ямало-Ненецкий АО",
+      "hotels": "4",
+      "city_latitude": "65.537704",
+      "city_longitude": "72.518326"
+    },
+    {
+      "city _code": "217",
+      "city_name": "Назрань",
+      "region": "Республика Ингушетия",
+      "hotels": "2",
+      "city_latitude": "43.216671",
+      "city_longitude": "44.766670"
+    },
+    {
+      "city _code": "195",
+      "city_name": "Нальчик",
+      "region": "Республика Кабардино-Балкария",
+      "hotels": "16",
+      "city_latitude": "43.486950",
+      "city_longitude": "43.602989"
+    },
+    {
+      "city _code": "304",
+      "city_name": "Нарьян-Мар",
+      "region": "Ненецкий АО",
+      "hotels": "4",
+      "city_latitude": "67.638069",
+      "city_longitude": "53.006870"
+    },
+    {
+      "city _code": "187",
+      "city_name": "Находка",
+      "region": "Приморский край",
+      "hotels": "13",
+      "city_latitude": "42.781738",
+      "city_longitude": "132.859100"
+    },
+    {
+      "city _code": "373",
+      "city_name": "Невинномысск",
+      "region": "Ставропольский край",
+      "hotels": "5",
+      "city_latitude": "44.622673",
+      "city_longitude": "41.947605"
+    },
+    {
+      "city _code": "225",
+      "city_name": "Нерюнгри",
+      "region": "Республика Саха (Якутия)",
+      "hotels": "6",
+      "city_latitude": "56.671799",
+      "city_longitude": "124.650436"
+    },
+    {
+      "city _code": "284",
+      "city_name": "Нефтекамск",
+      "region": "Республика Башкортостан",
+      "hotels": "8",
+      "city_latitude": "56.088402",
+      "city_longitude": "54.248253"
+    },
+    {
+      "city _code": "873",
+      "city_name": "Нефтекумск",
+      "region": "Ставропольский край",
+      "hotels": "2",
+      "city_latitude": "44.754471",
+      "city_longitude": "44.986580"
+    },
+    {
+      "city _code": "151",
+      "city_name": "Нефтеюганск",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "9",
+      "city_latitude": "61.102322",
+      "city_longitude": "72.604050"
+    },
+    {
+      "city _code": "123",
+      "city_name": "Нижневартовск",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "26",
+      "city_latitude": "60.948009",
+      "city_longitude": "76.555847"
+    },
+    {
+      "city _code": "221",
+      "city_name": "Нижнекамск",
+      "region": "Республика Татарстан",
+      "hotels": "5",
+      "city_latitude": "55.629379",
+      "city_longitude": "51.810940"
+    },
+    {
+      "city _code": "20",
+      "city_name": "Нижний Новгород",
+      "region": "Нижегородская область",
+      "hotels": "114",
+      "city_latitude": "56.329922",
+      "city_longitude": "44.009190"
+    },
+    {
+      "city _code": "210",
+      "city_name": "Нижний Тагил",
+      "region": "Свердловская область",
+      "hotels": "8",
+      "city_latitude": "57.942619",
+      "city_longitude": "59.956329"
+    },
+    {
+      "city _code": "1201",
+      "city_name": "Нижняя Тура",
+      "region": "Свердловская область",
+      "hotels": "1",
+      "city_latitude": "58.631027",
+      "city_longitude": "59.852097"
+    },
+    {
+      "city _code": "1144",
+      "city_name": "Николаевск-на-Амуре",
+      "region": "Хабаровский край",
+      "hotels": "2",
+      "city_latitude": "53.146145",
+      "city_longitude": "140.711044"
+    },
+    {
+      "city _code": "1379",
+      "city_name": "Новая Усмань",
+      "region": "Воронежская область",
+      "hotels": "2",
+      "city_latitude": "51.627930",
+      "city_longitude": "39.408279"
+    },
+    {
+      "city _code": "31",
+      "city_name": "Новокузнецк",
+      "region": "Кемеровская область",
+      "hotels": "41",
+      "city_latitude": "53.740749",
+      "city_longitude": "87.113487"
+    },
+    {
+      "city _code": "331",
+      "city_name": "Новокуйбышевск",
+      "region": "Самарская область",
+      "hotels": "4",
+      "city_latitude": "53.099468",
+      "city_longitude": "49.947765"
+    },
+    {
+      "city _code": "335",
+      "city_name": "Новомосковск",
+      "region": "Тульская область",
+      "hotels": "5",
+      "city_latitude": "54.010914",
+      "city_longitude": "38.291481"
+    },
+    {
+      "city _code": "33",
+      "city_name": "Новороссийск",
+      "region": "Краснодарский край",
+      "hotels": "23",
+      "city_latitude": "44.752861",
+      "city_longitude": "37.768311"
+    },
+    {
+      "city _code": "17",
+      "city_name": "Новосибирск",
+      "region": "Новосибирская область",
+      "hotels": "94",
+      "city_latitude": "55.039230",
+      "city_longitude": "82.927818"
+    },
+    {
+      "city _code": "218",
+      "city_name": "Новотроицк",
+      "region": "Оренбургская область",
+      "hotels": "1",
+      "city_latitude": "51.208981",
+      "city_longitude": "58.303089"
+    },
+    {
+      "city _code": "1195",
+      "city_name": "Новочебоксарск",
+      "region": "Чувашская Республика",
+      "hotels": "2",
+      "city_latitude": "56.109531",
+      "city_longitude": "47.479115"
+    },
+    {
+      "city _code": "307",
+      "city_name": "Новочеркасск",
+      "region": "Ростовская область",
+      "hotels": "8",
+      "city_latitude": "47.411919",
+      "city_longitude": "40.104164"
+    },
+    {
+      "city _code": "321",
+      "city_name": "Новый Уренгой",
+      "region": "Ямало-Ненецкий АО",
+      "hotels": "11",
+      "city_latitude": "66.083961",
+      "city_longitude": "76.680977"
+    },
+    {
+      "city _code": "164",
+      "city_name": "Норильск",
+      "region": "Таймырский (Долгано-Ненецкий) АО",
+      "hotels": "3",
+      "city_latitude": "69.330406",
+      "city_longitude": "88.220482"
+    },
+    {
+      "city _code": "190",
+      "city_name": "Ноябрьск",
+      "region": "Ямало-Ненецкий АО",
+      "hotels": "24",
+      "city_latitude": "63.175701",
+      "city_longitude": "75.413910"
+    },
+    {
+      "city _code": "228",
+      "city_name": "Нягань",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "10",
+      "city_latitude": "62.133331",
+      "city_longitude": "65.383331"
+    },
+    {
+      "city _code": "227",
+      "city_name": "Обнинск",
+      "region": "Калужская область",
+      "hotels": "11",
+      "city_latitude": "55.100109",
+      "city_longitude": "36.624100"
+    },
+    {
+      "city _code": "575",
+      "city_name": "Октябрьский",
+      "region": "Республика Башкортостан",
+      "hotels": "7",
+      "city_latitude": "54.481449",
+      "city_longitude": "53.465569"
+    },
+    {
+      "city _code": "1089",
+      "city_name": "Оленегорск",
+      "region": "Мурманская область",
+      "hotels": "1",
+      "city_latitude": "68.142159",
+      "city_longitude": "33.266960"
+    },
+    {
+      "city _code": "23",
+      "city_name": "Омск",
+      "region": "Омская область",
+      "hotels": "65",
+      "city_latitude": "54.970901",
+      "city_longitude": "73.393753"
+    },
+    {
+      "city _code": "3",
+      "city_name": "Орел",
+      "region": "Орловская область",
+      "hotels": "18",
+      "city_latitude": "52.968449",
+      "city_longitude": "36.069489"
+    },
+    {
+      "city _code": "136",
+      "city_name": "Оренбург",
+      "region": "Оренбургская область",
+      "hotels": "38",
+      "city_latitude": "51.768242",
+      "city_longitude": "55.103710"
+    },
+    {
+      "city _code": "199",
+      "city_name": "Орск",
+      "region": "Оренбургская область",
+      "hotels": "16",
+      "city_latitude": "51.218380",
+      "city_longitude": "58.620380"
+    },
+    {
+      "city _code": "767",
+      "city_name": "Осташков",
+      "region": "Тверская область",
+      "hotels": "3",
+      "city_latitude": "57.145741",
+      "city_longitude": "33.111633"
+    },
+    {
+      "city _code": "1170",
+      "city_name": "Остров",
+      "region": "Псковская область",
+      "hotels": "2",
+      "city_latitude": "54.187870",
+      "city_longitude": "28.468563"
+    },
+    {
+      "city _code": "1200",
+      "city_name": "Отрадный",
+      "region": "Самарская область",
+      "hotels": "1",
+      "city_latitude": "53.376076",
+      "city_longitude": "51.348988"
+    },
+    {
+      "city _code": "930",
+      "city_name": "Оха",
+      "region": "Сахалинская область",
+      "hotels": "1",
+      "city_latitude": "53.584522",
+      "city_longitude": "142.947189"
+    },
+    {
+      "city _code": "421",
+      "city_name": "Павлово",
+      "region": "Нижегородская область",
+      "hotels": "10",
+      "city_latitude": "55.961948",
+      "city_longitude": "43.089901"
+    },
+    {
+      "city _code": "539",
+      "city_name": "Павловск ",
+      "region": "Воронежская область",
+      "hotels": "2",
+      "city_latitude": "50.453373",
+      "city_longitude": "40.136917"
+    },
+    {
+      "city _code": "1513",
+      "city_name": "пгт Джубга",
+      "region": "Краснодарский край",
+      "hotels": "2",
+      "city_latitude": "44.322395",
+      "city_longitude": "38.704365"
+    },
+    {
+      "city _code": "1434",
+      "city_name": "пгт Суходол",
+      "region": "Самарская область",
+      "hotels": "2",
+      "city_latitude": "53.900631",
+      "city_longitude": "51.211700"
+    },
+    {
+      "city _code": "6",
+      "city_name": "Пенза",
+      "region": "Пензенская область",
+      "hotels": "45",
+      "city_latitude": "53.200932",
+      "city_longitude": "45.010422"
+    },
+    {
+      "city _code": "296",
+      "city_name": "Первоуральск",
+      "region": "Свердловская область",
+      "hotels": "2",
+      "city_latitude": "56.908100",
+      "city_longitude": "59.942936"
+    },
+    {
+      "city _code": "137",
+      "city_name": "Переславль-Залесский",
+      "region": "Ярославская область",
+      "hotels": "12",
+      "city_latitude": "56.742111",
+      "city_longitude": "38.864559"
+    },
+    {
+      "city _code": "105",
+      "city_name": "Пермь",
+      "region": "Пермский край",
+      "hotels": "64",
+      "city_latitude": "57.997169",
+      "city_longitude": "56.235279"
+    },
+    {
+      "city _code": "184",
+      "city_name": "Петрозаводск",
+      "region": "Республика Карелия",
+      "hotels": "30",
+      "city_latitude": "61.782200",
+      "city_longitude": "34.362080"
+    },
+    {
+      "city _code": "192",
+      "city_name": "Петропавловск-Камчатский",
+      "region": "Камчатская область",
+      "hotels": "9",
+      "city_latitude": "53.061562",
+      "city_longitude": "158.622482"
+    },
+    {
+      "city _code": "1381",
+      "city_name": "Петушки",
+      "region": "Владимирская область",
+      "hotels": "2",
+      "city_latitude": "55.926392",
+      "city_longitude": "39.461040"
+    },
+    {
+      "city _code": "441",
+      "city_name": "Печора",
+      "region": "Республика Коми",
+      "hotels": "2",
+      "city_latitude": "65.144493",
+      "city_longitude": "57.228489"
+    },
+    {
+      "city _code": "435",
+      "city_name": "Плес",
+      "region": "Ивановская область",
+      "hotels": "2",
+      "city_latitude": "57.460579",
+      "city_longitude": "41.512253"
+    },
+    {
+      "city _code": "1204",
+      "city_name": "Плесецк",
+      "region": "Архангельская область",
+      "hotels": "4",
+      "city_latitude": "62.710434",
+      "city_longitude": "40.290588"
+    },
+    {
+      "city _code": "939",
+      "city_name": "Подпорожье",
+      "region": "Ленинградская область",
+      "hotels": "4",
+      "city_latitude": "60.912785",
+      "city_longitude": "34.156815"
+    },
+    {
+      "city _code": "981",
+      "city_name": "Полевской",
+      "region": "Свердловская область",
+      "hotels": "4",
+      "city_latitude": "56.495777",
+      "city_longitude": "60.236542"
+    },
+    {
+      "city _code": "823",
+      "city_name": "Полярные Зори",
+      "region": "Мурманская область",
+      "hotels": "2",
+      "city_latitude": "67.373001",
+      "city_longitude": "32.497616"
+    },
+    {
+      "city _code": "1596",
+      "city_name": "пос. Маслянино",
+      "region": "Новосибирская область",
+      "hotels": "2",
+      "city_latitude": "54.333328",
+      "city_longitude": "84.216667"
+    },
+    {
+      "city _code": "1799",
+      "city_name": "пос. Новомихайловский",
+      "region": "Краснодарский край",
+      "hotels": "2",
+      "city_latitude": "0.000000",
+      "city_longitude": "0.000000"
+    },
+    {
+      "city _code": "1627",
+      "city_name": "пос.Соловецкий",
+      "region": "Архангельская область",
+      "hotels": "1",
+      "city_latitude": "65.024437",
+      "city_longitude": "35.710560"
+    },
+    {
+      "city _code": "1522",
+      "city_name": "поселок Саган-Нур",
+      "region": "Республика Бурятия",
+      "hotels": "2",
+      "city_latitude": "51.340481",
+      "city_longitude": "108.446510"
+    },
+    {
+      "city _code": "1558",
+      "city_name": "поселок Тазовский",
+      "region": "Ямало-Ненецкий АО",
+      "hotels": "2",
+      "city_latitude": "67.442497",
+      "city_longitude": "78.754799"
+    },
+    {
+      "city _code": "503",
+      "city_name": "Приозерск",
+      "region": "Ленинградская область",
+      "hotels": "5",
+      "city_latitude": "61.042789",
+      "city_longitude": "30.121429"
+    },
+    {
+      "city _code": "1588",
+      "city_name": "Пролетарск ",
+      "region": "Ростовская область",
+      "hotels": "2",
+      "city_latitude": "46.689602",
+      "city_longitude": "41.774101"
+    },
+    {
+      "city _code": "945",
+      "city_name": "Прохладный",
+      "region": "Республика Кабардино-Балкария",
+      "hotels": "2",
+      "city_latitude": "43.758747",
+      "city_longitude": "44.010864"
+    },
+    {
+      "city _code": "145",
+      "city_name": "Псков",
+      "region": "Псковская область",
+      "hotels": "26",
+      "city_latitude": "57.824371",
+      "city_longitude": "28.330490"
+    },
+    {
+      "city _code": "1066",
+      "city_name": "Пугачев",
+      "region": "Саратовская область",
+      "hotels": "2",
+      "city_latitude": "52.015923",
+      "city_longitude": "48.797260"
+    },
+    {
+      "city _code": "1376",
+      "city_name": "Пудож",
+      "region": "Республика Карелия",
+      "hotels": "2",
+      "city_latitude": "61.805656",
+      "city_longitude": "36.487438"
+    },
+    {
+      "city _code": "725",
+      "city_name": "Пыть-Ях",
+      "region": "Тюменская область",
+      "hotels": "4",
+      "city_latitude": "60.758579",
+      "city_longitude": "72.836601"
+    },
+    {
+      "city _code": "169",
+      "city_name": "Пятигорск",
+      "region": "Ставропольский край",
+      "hotels": "26",
+      "city_latitude": "44.045910",
+      "city_longitude": "43.058739"
+    },
+    {
+      "city _code": "1375",
+      "city_name": "Радужный",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "2",
+      "city_latitude": "62.103840",
+      "city_longitude": "77.473801"
+    },
+    {
+      "city _code": "715",
+      "city_name": "Реж",
+      "region": "Свердловская область",
+      "hotels": "1",
+      "city_latitude": "57.371700",
+      "city_longitude": "61.383305"
+    },
+    {
+      "city _code": "293",
+      "city_name": "Ржев",
+      "region": "Тверская область",
+      "hotels": "1",
+      "city_latitude": "56.265579",
+      "city_longitude": "34.327572"
+    },
+    {
+      "city _code": "317",
+      "city_name": "Россошь",
+      "region": "Воронежская область",
+      "hotels": "4",
+      "city_latitude": "50.192863",
+      "city_longitude": "39.576504"
+    },
+    {
+      "city _code": "147",
+      "city_name": "Ростов Великий",
+      "region": "Ярославская область",
+      "hotels": "6",
+      "city_latitude": "57.200001",
+      "city_longitude": "39.416672"
+    },
+    {
+      "city _code": "25",
+      "city_name": "Ростов-на-Дону",
+      "region": "Ростовская область",
+      "hotels": "86",
+      "city_latitude": "47.233189",
+      "city_longitude": "39.715000"
+    },
+    {
+      "city _code": "543",
+      "city_name": "Рубцовск",
+      "region": "Алтайский край",
+      "hotels": "3",
+      "city_latitude": "51.501236",
+      "city_longitude": "81.207771"
+    },
+    {
+      "city _code": "337",
+      "city_name": "Рыбинск",
+      "region": "Ярославская область",
+      "hotels": "13",
+      "city_latitude": "58.048454",
+      "city_longitude": "38.858433"
+    },
+    {
+      "city _code": "139",
+      "city_name": "Рязань",
+      "region": "Рязанская область",
+      "hotels": "46",
+      "city_latitude": "54.624660",
+      "city_longitude": "39.738571"
+    },
+    {
+      "city _code": "1794",
+      "city_name": "с. Исаково, Республика Татарстан",
+      "region": "Республика Татарстан",
+      "hotels": "2",
+      "city_latitude": "55.085911",
+      "city_longitude": "47.931255"
+    },
+    {
+      "city _code": "1112",
+      "city_name": "Саки",
+      "region": "Республика Крым",
+      "hotels": "5",
+      "city_latitude": "45.134296",
+      "city_longitude": "33.603325"
+    },
+    {
+      "city _code": "385",
+      "city_name": "Салават",
+      "region": "Республика Башкортостан",
+      "hotels": "5",
+      "city_latitude": "53.359249",
+      "city_longitude": "55.929920"
+    },
+    {
+      "city _code": "250",
+      "city_name": "Салехард",
+      "region": "Ямало-Ненецкий АО",
+      "hotels": "9",
+      "city_latitude": "66.530937",
+      "city_longitude": "66.602432"
+    },
+    {
+      "city _code": "569",
+      "city_name": "Сальск",
+      "region": "Ростовская область",
+      "hotels": "3",
+      "city_latitude": "46.475178",
+      "city_longitude": "41.541134"
+    },
+    {
+      "city _code": "18",
+      "city_name": "Самара",
+      "region": "Самарская область",
+      "hotels": "129",
+      "city_latitude": "53.202160",
+      "city_longitude": "50.159618"
+    },
+    {
+      "city _code": "2",
+      "city_name": "Санкт-Петербург",
+      "region": null,
+      "hotels": "547",
+      "city_latitude": "59.939041",
+      "city_longitude": "30.315790"
+    },
+    {
+      "city _code": "923",
+      "city_name": "Санкт-Петербург (Гатчина)",
+      "region": "Ленинградская область",
+      "hotels": "8",
+      "city_latitude": "59.939095",
+      "city_longitude": "30.315868"
+    },
+    {
+      "city _code": "862",
+      "city_name": "Санкт-Петербург (Колпино)",
+      "region": "Ленинградская область",
+      "hotels": "5",
+      "city_latitude": "59.746632",
+      "city_longitude": "30.595469"
+    },
+    {
+      "city _code": "909",
+      "city_name": "Санкт-Петербург (Петергоф)",
+      "region": "Ленинградская область",
+      "hotels": "4",
+      "city_latitude": "59.880398",
+      "city_longitude": "29.906561"
+    },
+    {
+      "city _code": "338",
+      "city_name": "Санкт-Петербург (Пушкин)",
+      "region": "Ленинградская область",
+      "hotels": "2",
+      "city_latitude": "59.708069",
+      "city_longitude": "30.418610"
+    },
+    {
+      "city _code": "835",
+      "city_name": "Санкт-Петербург (Сестрорецк)",
+      "region": "Ленинградская область",
+      "hotels": "1",
+      "city_latitude": "60.092407",
+      "city_longitude": "29.955994"
+    },
+    {
+      "city _code": "109",
+      "city_name": "Саранск",
+      "region": "Республика Мордовия",
+      "hotels": "15",
+      "city_latitude": "54.181381",
+      "city_longitude": "45.175690"
+    },
+    {
+      "city _code": "443",
+      "city_name": "Сарапул",
+      "region": "Удмуртская Республика",
+      "hotels": "4",
+      "city_latitude": "56.476261",
+      "city_longitude": "53.797562"
+    },
+    {
+      "city _code": "117",
+      "city_name": "Саратов",
+      "region": "Саратовская область",
+      "hotels": "68",
+      "city_latitude": "51.533272",
+      "city_longitude": "46.034550"
+    },
+    {
+      "city _code": "533",
+      "city_name": "Саров",
+      "region": "Нижегородская область",
+      "hotels": "3",
+      "city_latitude": "54.922787",
+      "city_longitude": "43.344845"
+    },
+    {
+      "city _code": "291",
+      "city_name": "Сатка",
+      "region": "Челябинская область",
+      "hotels": "2",
+      "city_latitude": "55.046780",
+      "city_longitude": "58.973091"
+    },
+    {
+      "city _code": "1648",
+      "city_name": "Сафоново",
+      "region": "Смоленская область",
+      "hotels": "3",
+      "city_latitude": "55.088699",
+      "city_longitude": "33.304901"
+    },
+    {
+      "city _code": "414",
+      "city_name": "Саяногорск",
+      "region": "Республика Хакасия",
+      "hotels": "4",
+      "city_latitude": "53.089642",
+      "city_longitude": "91.415703"
+    },
+    {
+      "city _code": "223",
+      "city_name": "Светлогорск",
+      "region": "Калининградская область",
+      "hotels": "15",
+      "city_latitude": "66.936836",
+      "city_longitude": "88.375214"
+    },
+    {
+      "city _code": "1006",
+      "city_name": "Свободный",
+      "region": "Амурская область",
+      "hotels": "5",
+      "city_latitude": "51.375889",
+      "city_longitude": "128.134140"
+    },
+    {
+      "city _code": "1505",
+      "city_name": "Себеж",
+      "region": "Псковская область",
+      "hotels": "2",
+      "city_latitude": "56.283333",
+      "city_longitude": "28.483334"
+    },
+    {
+      "city _code": "102",
+      "city_name": "Севастополь",
+      "region": "Республика Крым",
+      "hotels": "29",
+      "city_latitude": "44.604858",
+      "city_longitude": "33.541088"
+    },
+    {
+      "city _code": "474",
+      "city_name": "Северодвинск",
+      "region": "Архангельская область",
+      "hotels": "9",
+      "city_latitude": "64.558189",
+      "city_longitude": "39.829620"
+    },
+    {
+      "city _code": "392",
+      "city_name": "Североуральск",
+      "region": "Свердловская область",
+      "hotels": "1",
+      "city_latitude": "60.166851",
+      "city_longitude": "59.962170"
+    },
+    {
+      "city _code": "940",
+      "city_name": "Северск",
+      "region": "Томская область",
+      "hotels": "4",
+      "city_latitude": "56.603207",
+      "city_longitude": "84.880928"
+    },
+    {
+      "city _code": "531",
+      "city_name": "Сегежа",
+      "region": "Республика Карелия",
+      "hotels": "2",
+      "city_latitude": "63.743702",
+      "city_longitude": "34.312618"
+    },
+    {
+      "city _code": "1438",
+      "city_name": "село Нежинка",
+      "region": "Оренбургская область",
+      "hotels": "2",
+      "city_latitude": "51.769337",
+      "city_longitude": "55.359547"
+    },
+    {
+      "city _code": "328",
+      "city_name": "Серов",
+      "region": "Свердловская область",
+      "hotels": "1",
+      "city_latitude": "59.604786",
+      "city_longitude": "60.575314"
+    },
+    {
+      "city _code": "1109",
+      "city_name": "Симеиз",
+      "region": "Республика Крым",
+      "hotels": "1",
+      "city_latitude": "44.405483",
+      "city_longitude": "34.007675"
+    },
+    {
+      "city _code": "103",
+      "city_name": "Симферополь",
+      "region": "Республика Крым",
+      "hotels": "19",
+      "city_latitude": "44.961639",
+      "city_longitude": "34.103821"
+    },
+    {
+      "city _code": "1247",
+      "city_name": "Сковородино",
+      "region": "Амурская область",
+      "hotels": "3",
+      "city_latitude": "53.987133",
+      "city_longitude": "123.943634"
+    },
+    {
+      "city _code": "884",
+      "city_name": "Скопин",
+      "region": "Рязанская область",
+      "hotels": "2",
+      "city_latitude": "53.823589",
+      "city_longitude": "39.549328"
+    },
+    {
+      "city _code": "1716",
+      "city_name": "Славянка",
+      "region": "Приморский край",
+      "hotels": "1",
+      "city_latitude": "42.864994",
+      "city_longitude": "131.385574"
+    },
+    {
+      "city _code": "1223",
+      "city_name": "Славянск-на-Кубани",
+      "region": "Краснодарский край",
+      "hotels": "2",
+      "city_latitude": "45.260441",
+      "city_longitude": "38.125999"
+    },
+    {
+      "city _code": "1720",
+      "city_name": "Слюдянка",
+      "region": "Иркутская область",
+      "hotels": "2",
+      "city_latitude": "57.968891",
+      "city_longitude": "112.763611"
+    },
+    {
+      "city _code": "4",
+      "city_name": "Смоленск",
+      "region": "Смоленская область",
+      "hotels": "47",
+      "city_latitude": "54.781101",
+      "city_longitude": "32.048889"
+    },
+    {
+      "city _code": "1186",
+      "city_name": "Советск",
+      "region": "Калининградская область",
+      "hotels": "2",
+      "city_latitude": "55.083328",
+      "city_longitude": "21.883329"
+    },
+    {
+      "city _code": "1115",
+      "city_name": "Советская гавань",
+      "region": "Хабаровский край",
+      "hotels": "1",
+      "city_latitude": "48.966438",
+      "city_longitude": "140.285126"
+    },
+    {
+      "city _code": "346",
+      "city_name": "Советский",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "2",
+      "city_latitude": "38.049301",
+      "city_longitude": "69.587799"
+    },
+    {
+      "city _code": "483",
+      "city_name": "Соликамск",
+      "region": "Пермский край",
+      "hotels": "2",
+      "city_latitude": "59.636250",
+      "city_longitude": "56.766788"
+    },
+    {
+      "city _code": "912",
+      "city_name": "Сорочинск",
+      "region": "Оренбургская область",
+      "hotels": "10",
+      "city_latitude": "52.429096",
+      "city_longitude": "53.151108"
+    },
+    {
+      "city _code": "295",
+      "city_name": "Сортавала",
+      "region": "Республика Карелия",
+      "hotels": "12",
+      "city_latitude": "61.711960",
+      "city_longitude": "30.702841"
+    },
+    {
+      "city _code": "562",
+      "city_name": "Сосновый Бор",
+      "region": "Ленинградская область",
+      "hotels": "7",
+      "city_latitude": "59.908703",
+      "city_longitude": "29.084225"
+    },
+    {
+      "city _code": "1080",
+      "city_name": "Сочи (район Адлер)",
+      "region": "Краснодарский край",
+      "hotels": "51",
+      "city_latitude": "43.438126",
+      "city_longitude": "39.915165"
+    },
+    {
+      "city _code": "1084",
+      "city_name": "Сочи (район Дагомыс)",
+      "region": "Краснодарский край",
+      "hotels": "5",
+      "city_latitude": "43.660316",
+      "city_longitude": "39.657394"
+    },
+    {
+      "city _code": "1081",
+      "city_name": "Сочи (район Красная Поляна)",
+      "region": "Краснодарский край",
+      "hotels": "35",
+      "city_latitude": "43.680485",
+      "city_longitude": "40.207344"
+    },
+    {
+      "city _code": "1085",
+      "city_name": "Сочи (район Лазаревское)",
+      "region": "Краснодарский край",
+      "hotels": "6",
+      "city_latitude": "43.914116",
+      "city_longitude": "39.335358"
+    },
+    {
+      "city _code": "1082",
+      "city_name": "Сочи (район Лоо)",
+      "region": "Краснодарский край",
+      "hotels": "2",
+      "city_latitude": "43.697311",
+      "city_longitude": "39.592945"
+    },
+    {
+      "city _code": "1086",
+      "city_name": "Сочи (район Хоста)",
+      "region": "Краснодарский край",
+      "hotels": "5",
+      "city_latitude": "43.513161",
+      "city_longitude": "39.875847"
+    },
+    {
+      "city _code": "26",
+      "city_name": "Сочи (район Центральный)",
+      "region": "Краснодарский край",
+      "hotels": "37",
+      "city_latitude": "43.611599",
+      "city_longitude": "39.722488"
+    },
+    {
+      "city _code": "482",
+      "city_name": "Среднеуральск",
+      "region": "Свердловская область",
+      "hotels": "4",
+      "city_latitude": "56.994438",
+      "city_longitude": "60.478291"
+    },
+    {
+      "city _code": "27",
+      "city_name": "Ставрополь",
+      "region": "Ставропольский край",
+      "hotels": "26",
+      "city_latitude": "45.039131",
+      "city_longitude": "41.982140"
+    },
+    {
+      "city _code": "1361",
+      "city_name": "Станица Вешенская",
+      "region": "Ростовская область",
+      "hotels": "8",
+      "city_latitude": "49.627220",
+      "city_longitude": "41.726112"
+    },
+    {
+      "city _code": "1400",
+      "city_name": "Станица Каневская",
+      "region": "Краснодарский край",
+      "hotels": "4",
+      "city_latitude": "46.078609",
+      "city_longitude": "38.969166"
+    },
+    {
+      "city _code": "1391",
+      "city_name": "Станица Ленинградская",
+      "region": "Краснодарский край",
+      "hotels": "2",
+      "city_latitude": "46.321400",
+      "city_longitude": "39.387699"
+    },
+    {
+      "city _code": "946",
+      "city_name": "Станица Тамань",
+      "region": "Краснодарский край",
+      "hotels": "4",
+      "city_latitude": "45.208736",
+      "city_longitude": "36.713993"
+    },
+    {
+      "city _code": "787",
+      "city_name": "Старая Русса",
+      "region": "Новгородская область",
+      "hotels": "1",
+      "city_latitude": "57.990768",
+      "city_longitude": "31.355507"
+    },
+    {
+      "city _code": "676",
+      "city_name": "Старая Слобода",
+      "region": "Ленинградская область",
+      "hotels": "1",
+      "city_latitude": "60.778015",
+      "city_longitude": "33.315304"
+    },
+    {
+      "city _code": "271",
+      "city_name": "Старый Оскол",
+      "region": "Белгородская область",
+      "hotels": "12",
+      "city_latitude": "51.304901",
+      "city_longitude": "37.856892"
+    },
+    {
+      "city _code": "301",
+      "city_name": "Стерлитамак",
+      "region": "Республика Башкортостан",
+      "hotels": "7",
+      "city_latitude": "53.622341",
+      "city_longitude": "55.957581"
+    },
+    {
+      "city _code": "917",
+      "city_name": "Стрежевой",
+      "region": "Томская область",
+      "hotels": "6",
+      "city_latitude": "60.732800",
+      "city_longitude": "77.604050"
+    },
+    {
+      "city _code": "343",
+      "city_name": "Судак",
+      "region": "Республика Крым",
+      "hotels": "23",
+      "city_latitude": "44.850330",
+      "city_longitude": "34.974190"
+    },
+    {
+      "city _code": "115",
+      "city_name": "Суздаль",
+      "region": "Владимирская область",
+      "hotels": "16",
+      "city_latitude": "56.413582",
+      "city_longitude": "40.443432"
+    },
+    {
+      "city _code": "107",
+      "city_name": "Сургут",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "48",
+      "city_latitude": "61.257160",
+      "city_longitude": "73.400993"
+    },
+    {
+      "city _code": "713",
+      "city_name": "Сухой Лог",
+      "region": "Свердловская область",
+      "hotels": "2",
+      "city_latitude": "56.907593",
+      "city_longitude": "62.035786"
+    },
+    {
+      "city _code": "314",
+      "city_name": "Сызрань",
+      "region": "Самарская область",
+      "hotels": "14",
+      "city_latitude": "53.155781",
+      "city_longitude": "48.474483"
+    },
+    {
+      "city _code": "161",
+      "city_name": "Сыктывкар",
+      "region": "Республика Коми",
+      "hotels": "15",
+      "city_latitude": "61.681862",
+      "city_longitude": "50.812771"
+    },
+    {
+      "city _code": "141",
+      "city_name": "Таганрог",
+      "region": "Ростовская область",
+      "hotels": "15",
+      "city_latitude": "47.221729",
+      "city_longitude": "38.893318"
+    },
+    {
+      "city _code": "1127",
+      "city_name": "Тайшет",
+      "region": "Иркутская область",
+      "hotels": "3",
+      "city_latitude": "55.940514",
+      "city_longitude": "98.003044"
+    },
+    {
+      "city _code": "8",
+      "city_name": "Тамбов",
+      "region": "Тамбовская область",
+      "hotels": "15",
+      "city_latitude": "52.721100",
+      "city_longitude": "41.417351"
+    },
+    {
+      "city _code": "597",
+      "city_name": "Тарко-Сале",
+      "region": "Ямало-Ненецкий АО",
+      "hotels": "1",
+      "city_latitude": "64.911819",
+      "city_longitude": "77.761055"
+    },
+    {
+      "city _code": "765",
+      "city_name": "Татарск",
+      "region": "Новосибирская область",
+      "hotels": "2",
+      "city_latitude": "55.214531",
+      "city_longitude": "75.974091"
+    },
+    {
+      "city _code": "81",
+      "city_name": "Тверь",
+      "region": "Тверская область",
+      "hotels": "47",
+      "city_latitude": "56.857929",
+      "city_longitude": "35.923828"
+    },
+    {
+      "city _code": "456",
+      "city_name": "Темрюк",
+      "region": "Краснодарский край",
+      "hotels": "3",
+      "city_latitude": "45.261074",
+      "city_longitude": "37.445454"
+    },
+    {
+      "city _code": "1670",
+      "city_name": "Терскол село",
+      "region": "Республика Кабардино-Балкария",
+      "hotels": "2",
+      "city_latitude": "0.000000",
+      "city_longitude": "0.000000"
+    },
+    {
+      "city _code": "1806",
+      "city_name": "Тест",
+      "region": null,
+      "hotels": "2",
+      "city_latitude": "0.000000",
+      "city_longitude": "0.000000"
+    },
+    {
+      "city _code": "637",
+      "city_name": "Тимашевск",
+      "region": "Краснодарский край",
+      "hotels": "8",
+      "city_latitude": "45.615894",
+      "city_longitude": "38.935085"
+    },
+    {
+      "city _code": "270",
+      "city_name": "Тихвин",
+      "region": "Ленинградская область",
+      "hotels": "8",
+      "city_latitude": "59.644119",
+      "city_longitude": "33.542885"
+    },
+    {
+      "city _code": "517",
+      "city_name": "Тихорецк",
+      "region": "Краснодарский край",
+      "hotels": "3",
+      "city_latitude": "45.854679",
+      "city_longitude": "40.125931"
+    },
+    {
+      "city _code": "285",
+      "city_name": "Тобольск",
+      "region": "Тюменская область",
+      "hotels": "14",
+      "city_latitude": "58.184200",
+      "city_longitude": "68.254669"
+    },
+    {
+      "city _code": "19",
+      "city_name": "Тольятти",
+      "region": "Самарская область",
+      "hotels": "33",
+      "city_latitude": "53.535561",
+      "city_longitude": "49.409569"
+    },
+    {
+      "city _code": "143",
+      "city_name": "Томск",
+      "region": "Томская область",
+      "hotels": "65",
+      "city_latitude": "56.463989",
+      "city_longitude": "84.962547"
+    },
+    {
+      "city _code": "375",
+      "city_name": "Торжок",
+      "region": "Тверская область",
+      "hotels": "4",
+      "city_latitude": "57.036480",
+      "city_longitude": "34.952030"
+    },
+    {
+      "city _code": "859",
+      "city_name": "Тосно",
+      "region": "Ленинградская область",
+      "hotels": "2",
+      "city_latitude": "59.540665",
+      "city_longitude": "30.877720"
+    },
+    {
+      "city _code": "352",
+      "city_name": "Троицк",
+      "region": "Челябинская область",
+      "hotels": "4",
+      "city_latitude": "54.100319",
+      "city_longitude": "61.580891"
+    },
+    {
+      "city _code": "202",
+      "city_name": "Туапсе",
+      "region": "Краснодарский край",
+      "hotels": "12",
+      "city_latitude": "44.103458",
+      "city_longitude": "39.074699"
+    },
+    {
+      "city _code": "447",
+      "city_name": "Туймазы",
+      "region": "Республика Башкортостан",
+      "hotels": "3",
+      "city_latitude": "54.601742",
+      "city_longitude": "53.725471"
+    },
+    {
+      "city _code": "7",
+      "city_name": "Тула",
+      "region": "Тульская область",
+      "hotels": "54",
+      "city_latitude": "54.196678",
+      "city_longitude": "37.617828"
+    },
+    {
+      "city _code": "1018",
+      "city_name": "Тында",
+      "region": "Амурская область",
+      "hotels": "3",
+      "city_latitude": "55.154675",
+      "city_longitude": "124.729202"
+    },
+    {
+      "city _code": "124",
+      "city_name": "Тюмень",
+      "region": "Тюменская область",
+      "hotels": "62",
+      "city_latitude": "57.154949",
+      "city_longitude": "65.515640"
+    },
+    {
+      "city _code": "580",
+      "city_name": "Уват",
+      "region": "Тюменская область",
+      "hotels": "1",
+      "city_latitude": "59.143177",
+      "city_longitude": "68.892380"
+    },
+    {
+      "city _code": "114",
+      "city_name": "Углич",
+      "region": "Ярославская область",
+      "hotels": "2",
+      "city_latitude": "57.524689",
+      "city_longitude": "38.332821"
+    },
+    {
+      "city _code": "718",
+      "city_name": "Удомля",
+      "region": "Тверская область",
+      "hotels": "2",
+      "city_latitude": "57.876778",
+      "city_longitude": "35.005112"
+    },
+    {
+      "city _code": "194",
+      "city_name": "Улан-Удэ",
+      "region": "Республика Бурятия",
+      "hotels": "37",
+      "city_latitude": "51.840839",
+      "city_longitude": "107.608093"
+    },
+    {
+      "city _code": "167",
+      "city_name": "Ульяновск",
+      "region": "Ульяновская область",
+      "hotels": "48",
+      "city_latitude": "54.321480",
+      "city_longitude": "48.385651"
+    },
+    {
+      "city _code": "493",
+      "city_name": "Урай",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "4",
+      "city_latitude": "60.133301",
+      "city_longitude": "64.809090"
+    },
+    {
+      "city _code": "166",
+      "city_name": "Урюпинск",
+      "region": "Волгоградская область",
+      "hotels": "4",
+      "city_latitude": "50.802940",
+      "city_longitude": "42.029491"
+    },
+    {
+      "city _code": "289",
+      "city_name": "Усинск",
+      "region": "Республика Коми",
+      "hotels": "10",
+      "city_latitude": "65.994156",
+      "city_longitude": "57.557011"
+    },
+    {
+      "city _code": "1482",
+      "city_name": "Усмань",
+      "region": "Липецкая область",
+      "hotels": "2",
+      "city_latitude": "52.047001",
+      "city_longitude": "39.737999"
+    },
+    {
+      "city _code": "255",
+      "city_name": "Уссурийск",
+      "region": "Приморский край",
+      "hotels": "10",
+      "city_latitude": "43.816299",
+      "city_longitude": "131.989365"
+    },
+    {
+      "city _code": "486",
+      "city_name": "Усть-Илимск",
+      "region": "Иркутская область",
+      "hotels": "4",
+      "city_latitude": "58.031471",
+      "city_longitude": "102.817848"
+    },
+    {
+      "city _code": "391",
+      "city_name": "Усть-Кут",
+      "region": "Иркутская область",
+      "hotels": "1",
+      "city_latitude": "56.798019",
+      "city_longitude": "105.765572"
+    },
+    {
+      "city _code": "313",
+      "city_name": "Усть-Лабинск",
+      "region": "Краснодарский край",
+      "hotels": "2",
+      "city_latitude": "45.210522",
+      "city_longitude": "39.688160"
+    },
+    {
+      "city _code": "113",
+      "city_name": "Уфа",
+      "region": "Республика Башкортостан",
+      "hotels": "56",
+      "city_latitude": "54.735500",
+      "city_longitude": "55.991982"
+    },
+    {
+      "city _code": "212",
+      "city_name": "Ухта",
+      "region": "Республика Коми",
+      "hotels": "10",
+      "city_latitude": "63.569611",
+      "city_longitude": "53.672981"
+    },
+    {
+      "city _code": "177",
+      "city_name": "Феодосия",
+      "region": "Республика Крым",
+      "hotels": "12",
+      "city_latitude": "45.036091",
+      "city_longitude": "35.376888"
+    },
+    {
+      "city _code": "111",
+      "city_name": "Хабаровск",
+      "region": "Хабаровский край",
+      "hotels": "66",
+      "city_latitude": "48.476719",
+      "city_longitude": "135.094070"
+    },
+    {
+      "city _code": "567",
+      "city_name": "Хабез",
+      "region": "Карачаево-Черкесия",
+      "hotels": "2",
+      "city_latitude": "44.043205",
+      "city_longitude": "41.766647"
+    },
+    {
+      "city _code": "144",
+      "city_name": "Ханты-Мансийск",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "13",
+      "city_latitude": "61.000790",
+      "city_longitude": "69.006241"
+    },
+    {
+      "city _code": "1258",
+      "city_name": "Харабали",
+      "region": "Астраханская область",
+      "hotels": "1",
+      "city_latitude": "47.409313",
+      "city_longitude": "47.252056"
+    },
+    {
+      "city _code": "440",
+      "city_name": "Чайковский",
+      "region": "Пермский край",
+      "hotels": "11",
+      "city_latitude": "56.764381",
+      "city_longitude": "54.106319"
+    },
+    {
+      "city _code": "1249",
+      "city_name": "Чаплыгин",
+      "region": "Липецкая область",
+      "hotels": "4",
+      "city_latitude": "53.240517",
+      "city_longitude": "39.967064"
+    },
+    {
+      "city _code": "112",
+      "city_name": "Чебоксары",
+      "region": "Чувашская Республика",
+      "hotels": "22",
+      "city_latitude": "56.137451",
+      "city_longitude": "47.244030"
+    },
+    {
+      "city _code": "21",
+      "city_name": "Челябинск",
+      "region": "Челябинская область",
+      "hotels": "69",
+      "city_latitude": "55.159889",
+      "city_longitude": "61.402580"
+    },
+    {
+      "city _code": "1536",
+      "city_name": "Чемал село",
+      "region": "Республика Алтай",
+      "hotels": "4",
+      "city_latitude": "51.408001",
+      "city_longitude": "86.018700"
+    },
+    {
+      "city _code": "1346",
+      "city_name": "Чердынь",
+      "region": "Пермский край",
+      "hotels": "2",
+      "city_latitude": "60.402950",
+      "city_longitude": "56.478680"
+    },
+    {
+      "city _code": "1359",
+      "city_name": "Черемхово",
+      "region": "Иркутская область",
+      "hotels": "2",
+      "city_latitude": "53.136909",
+      "city_longitude": "103.090096"
+    },
+    {
+      "city _code": "206",
+      "city_name": "Череповец",
+      "region": "Вологодская область",
+      "hotels": "34",
+      "city_latitude": "59.129822",
+      "city_longitude": "38.001308"
+    },
+    {
+      "city _code": "372",
+      "city_name": "Черкесск",
+      "region": "Карачаево-Черкесия",
+      "hotels": "9",
+      "city_latitude": "44.226864",
+      "city_longitude": "42.046768"
+    },
+    {
+      "city _code": "1113",
+      "city_name": "Черноморское",
+      "region": "Республика Крым",
+      "hotels": "2",
+      "city_latitude": "45.501980",
+      "city_longitude": "32.702682"
+    },
+    {
+      "city _code": "573",
+      "city_name": "Чернушка",
+      "region": "Пермский край",
+      "hotels": "4",
+      "city_latitude": "56.507767",
+      "city_longitude": "56.077232"
+    },
+    {
+      "city _code": "1185",
+      "city_name": "Черняховск",
+      "region": "Калининградская область",
+      "hotels": "4",
+      "city_latitude": "54.630707",
+      "city_longitude": "21.819504"
+    },
+    {
+      "city _code": "339",
+      "city_name": "Чистополь",
+      "region": "Республика Татарстан",
+      "hotels": "4",
+      "city_latitude": "55.366039",
+      "city_longitude": "50.642422"
+    },
+    {
+      "city _code": "170",
+      "city_name": "Чита",
+      "region": "Забайкальский край",
+      "hotels": "13",
+      "city_latitude": "52.045429",
+      "city_longitude": "113.498627"
+    },
+    {
+      "city _code": "933",
+      "city_name": "Чусовой",
+      "region": "Пермский край",
+      "hotels": "1",
+      "city_latitude": "58.297546",
+      "city_longitude": "57.819317"
+    },
+    {
+      "city _code": "512",
+      "city_name": "Шадринск",
+      "region": "Курганская область",
+      "hotels": "4",
+      "city_latitude": "56.087044",
+      "city_longitude": "63.629745"
+    },
+    {
+      "city _code": "801",
+      "city_name": "Шарыпово",
+      "region": "Красноярский край",
+      "hotels": "2",
+      "city_latitude": "55.539062",
+      "city_longitude": "89.180153"
+    },
+    {
+      "city _code": "1265",
+      "city_name": "Шарья",
+      "region": "Костромская область",
+      "hotels": "2",
+      "city_latitude": "58.369850",
+      "city_longitude": "45.518265"
+    },
+    {
+      "city _code": "498",
+      "city_name": "Шахты",
+      "region": "Ростовская область",
+      "hotels": "2",
+      "city_latitude": "47.708485",
+      "city_longitude": "40.215958"
+    },
+    {
+      "city _code": "420",
+      "city_name": "Шахунья",
+      "region": "Нижегородская область",
+      "hotels": "1",
+      "city_latitude": "57.668190",
+      "city_longitude": "46.600861"
+    },
+    {
+      "city _code": "592",
+      "city_name": "Шерегеш",
+      "region": "Кемеровская область",
+      "hotels": "3",
+      "city_latitude": "52.921154",
+      "city_longitude": "87.989395"
+    },
+    {
+      "city _code": "987",
+      "city_name": "Шуя",
+      "region": "Ивановская область",
+      "hotels": "2",
+      "city_latitude": "56.852020",
+      "city_longitude": "41.385593"
+    },
+    {
+      "city _code": "231",
+      "city_name": "Элиста",
+      "region": "Республика Калмыкия",
+      "hotels": "8",
+      "city_latitude": "46.312962",
+      "city_longitude": "44.253460"
+    },
+    {
+      "city _code": "436",
+      "city_name": "Энгельс",
+      "region": "Саратовская область",
+      "hotels": "10",
+      "city_latitude": "51.479679",
+      "city_longitude": "46.110069"
+    },
+    {
+      "city _code": "336",
+      "city_name": "Югорск",
+      "region": "Ханты-Мансийский АО — Югра",
+      "hotels": "1",
+      "city_latitude": "61.316669",
+      "city_longitude": "63.333328"
+    },
+    {
+      "city _code": "196",
+      "city_name": "Южно-Сахалинск",
+      "region": "Сахалинская область",
+      "hotels": "21",
+      "city_latitude": "46.961262",
+      "city_longitude": "142.731979"
+    },
+    {
+      "city _code": "927",
+      "city_name": "Южноуральск",
+      "region": "Челябинская область",
+      "hotels": "7",
+      "city_latitude": "54.449005",
+      "city_longitude": "61.258095"
+    },
+    {
+      "city _code": "534",
+      "city_name": "Юрга",
+      "region": "Кемеровская область",
+      "hotels": "1",
+      "city_latitude": "55.713558",
+      "city_longitude": "84.933868"
+    },
+    {
+      "city _code": "162",
+      "city_name": "Якутск",
+      "region": "Республика Саха (Якутия)",
+      "hotels": "27",
+      "city_latitude": "62.039261",
+      "city_longitude": "129.746399"
+    },
+    {
+      "city _code": "88",
+      "city_name": "Ялта",
+      "region": "Республика Крым",
+      "hotels": "33",
+      "city_latitude": "46.956490",
+      "city_longitude": "37.271839"
+    },
+    {
+      "city _code": "928",
+      "city_name": "Яровое",
+      "region": "Алтайский край",
+      "hotels": "3",
+      "city_latitude": "52.925259",
+      "city_longitude": "78.572914"
+    },
+    {
+      "city _code": "36",
+      "city_name": "Ярославль",
+      "region": "Ярославская область",
+      "hotels": "45",
+      "city_latitude": "57.630100",
+      "city_longitude": "39.865631"
+    },
+    {
+      "city _code": "1216",
+      "city_name": "Ясный",
+      "region": "Оренбургская область",
+      "hotels": "2",
+      "city_latitude": "51.036877",
+      "city_longitude": "59.874348"
+    }
+  ]
+}
