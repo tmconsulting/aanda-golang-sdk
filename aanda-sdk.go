@@ -149,6 +149,26 @@ func (self *Api) CurrencyListRequest() ([]CurrencyListAnswer, error) {
 	return jsonData, nil
 }
 
+func (self *Api) MealTypeRequest() ([]MealTypeAnswer, error) {
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "MealTypeRequest")
+	data.Add("CompanyId", self.BuyerId)
+	data.Add("UserId", self.UserId)
+	data.Add("Password", self.Password)
+	data.Add("Language", self.Language)
+
+	body := sendReq(data)
+
+	jsonData := []MealTypeAnswer{}
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return nil, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
 func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchAnswer, error) {
 	searchReq.BuyerId = self.BuyerId
 	searchReq.UserId = self.UserId

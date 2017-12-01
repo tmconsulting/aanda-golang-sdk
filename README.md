@@ -84,12 +84,24 @@ func main() {
 }
  ```
 
- ### Example CurrencyListRequest
+### Example CurrencyListRequest
 ```golang
 package main
 
 func main() {
 	data, err := aApi.CurrencyListRequest()
+	if err == nil {
+		//Work with data
+	}
+}
+ ```
+
+### Example MealTypeRequest
+```golang
+package main
+
+func main() {
+	data, err := aApi.MealTypeRequest()
 	if err == nil {
 		//Work with data
 	}
