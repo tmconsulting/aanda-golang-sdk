@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -102,6 +103,29 @@ func (self *Api) CityListRequest(countryCode int) (CityListAnswer, error) {
 	err := json.Unmarshal([]byte(bodyStr), &jsonData)
 	if err != nil {
 		return CityListAnswer{}, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
+func (self *Api) HotelListRequest(cityCode int) ([]HotelListAnswer, error) {
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "HotelListRequest")
+	data.Add("CompanyId", self.BuyerId)
+	data.Add("UserId", self.UserId)
+	data.Add("Password", self.Password)
+	data.Add("Language", self.Language)
+	data.Add("CityCode", strconv.Itoa(cityCode))
+
+	body := sendReq(data)
+
+	jsonData := []HotelListAnswer{}
+
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		fmt.Println(err)
+		return nil, parseError(body)
 	}
 
 	return jsonData, nil

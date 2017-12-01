@@ -48,7 +48,7 @@ func main() {
 }
  ```
 
- ### Example CountryListRequest
+### Example CountryListRequest
 ```golang
 package main
 
@@ -60,12 +60,24 @@ func main() {
 }
  ```
 
-  ### Example CityListRequest
+### Example CityListRequest
 ```golang
 package main
 
 func main() {
 	data, err := aApi.CityListRequest(9)//9 is CountryCode
+	if err == nil {
+		//Work with data
+	}
+}
+ ```
+
+### Example HotelListRequest
+```golang
+package main
+
+func main() {
+	data, err := aApi.HotelListRequest(1)//1 is CityCode == Moscow
 	if err == nil {
 		//Work with data
 	}
