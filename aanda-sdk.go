@@ -124,7 +124,6 @@ func (self *Api) HotelListRequest(cityCode int) ([]HotelListAnswer, error) {
 
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		fmt.Println(err)
 		return nil, parseError(body)
 	}
 
