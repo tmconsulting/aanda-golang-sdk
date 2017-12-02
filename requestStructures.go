@@ -71,3 +71,8 @@ type OrderInfoRequest struct {
 	Language string `json:"Language"`
 	Id       string `json:"order_id"`
 }
+
+type SendOrderMessageRequest struct {
+	OrderId int
+	Message string
+}

@@ -361,3 +361,25 @@ func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesAnswer, error
 
 	return jsonData, nil
 }
+
+func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOrderMessageAnswer, error) {
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "SendOrderMessageRequest")
+	data.Add("CompanyId", self.BuyerId)
+	data.Add("UserId", self.UserId)
+	data.Add("Password", self.Password)
+	data.Add("Language", self.Language)
+	data.Add("order_id", strconv.Itoa(somReq.OrderId))
+	data.Add("Message", somReq.Message)
+
+	body := sendReq(data)
+
+	jsonData := SendOrderMessageAnswer{}
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return SendOrderMessageAnswer{}, parseError(body)
+	}
+
+	return jsonData, nil
+}

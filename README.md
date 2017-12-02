@@ -110,6 +110,22 @@ func main() {
 }
  ```
 
+  ### Example SendOrderMessageRequest
+```golang
+package main
+
+func main() {
+    somReq := aandaSdk.SendOrderMessageRequest{
+		OrderId: 2213397,
+		Message: "test message 2 3 4 22 22",
+	}
+	data, err := aApi.SendOrderMessageRequest(somReq)
+	if err == nil {
+		//Work with data
+	}
+}
+ ```
+
  ### Example OrderMessagesRequest
 ```golang
 package main
