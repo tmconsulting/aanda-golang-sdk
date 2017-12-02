@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"gopkg.in/go-playground/validator.v2"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -37,11 +38,24 @@ func sendReq(data url.Values) []byte {
 
 }
 func parseError(body []byte) error {
-
-	var answ string
-	err := json.Unmarshal(body, &answ)
+	var answM map[string]interface{}
+	err := json.Unmarshal(body, &answM)
 	if err == nil {
-		if strings.Index(answ, "Ошибка авторазации") == -1 {
+		if err, ok := answM["error"].(string); ok {
+			return errors.New(err)
+		}
+
+		st, ok1 := answM["Status"].(string)
+		note, ok2 := answM["note"].(string)
+		if ok1 && ok2 && st == "Error" {
+			return errors.New(note)
+		}
+	}
+
+	var answS string
+	err = json.Unmarshal(body, &answS)
+	if err == nil {
+		if strings.Index(answS, "Ошибка авторазации") == -1 {
 			return errors.New("Ошибка авторазиции")
 		}
 	}
@@ -53,6 +67,11 @@ func parseError(body []byte) error {
 	}
 
 	return nil
+}
+
+func main() {
+	//validate = validator.New()
+	//validate.RegisterStructValidation(UserStructLevelValidation, User{})
 }
 
 func NewApi(auth Auth) *Api {
@@ -259,6 +278,34 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
+func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestAnswer, error) {
+	orderReq.BuyerId = self.BuyerId
+	orderReq.UserId = self.UserId
+	orderReq.Password = self.Password
+	orderReq.Language = self.Language
+
+	jsonReq, err := json.Marshal(orderReq)
+	if err != nil {
+		panic(err)
+	}
+
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "OrderRequest")
+	data.Add("JSON", string(jsonReq))
+
+	body := sendReq(data)
+
+	jsonData := OrderRequestAnswer{}
+	err = json.Unmarshal(body, &jsonData)
+	vErr := validator.ValidateStruct(jsonData)
+	if err != nil || vErr != nil {
+		return OrderRequestAnswer{}, parseError(body)
 	}
 
 	return jsonData, nil
