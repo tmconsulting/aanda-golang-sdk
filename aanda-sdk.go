@@ -129,6 +129,28 @@ func (self *Api) HotelListRequest(cityCode int) ([]HotelListAnswer, error) {
 	return jsonData, nil
 }
 
+func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionAnswer, error) {
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "HotelDescriptionRequest")
+	data.Add("CompanyId", self.BuyerId)
+	data.Add("UserId", self.UserId)
+	data.Add("Password", self.Password)
+	data.Add("Language", self.Language)
+	data.Add("HotelCode", strconv.Itoa(hotelCode))
+
+	body := sendReq(data)
+
+	jsonData := HotelDescriptionAnswer{}
+
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return HotelDescriptionAnswer{}, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
 func (self *Api) CurrencyListRequest() ([]CurrencyListAnswer, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")

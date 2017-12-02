@@ -105,6 +105,70 @@ type HotelListAnswer struct {
 	} `json:"hotel_amenities"`
 }
 
+type HotelDescriptionAnswer struct {
+	HotelCode       string `json:"hotel_code"`
+	HotelName       string `json:"hotel_name"`
+	Vat             string `json:"vat"`
+	Address         string `json:"address"`
+	Phone           string `json:"phone"`
+	Description     string `json:"description"`
+	FullDescription string `json:"full_description"`
+	FullAddress     struct {
+		Zip            string `json:"zip"`
+		Region         string `json:"region"`
+		City           string `json:"city"`
+		Addinfo        string `json:"addinfo"`
+		Strtype        string `json:"strtype"`
+		Strname        string `json:"strname"`
+		Proptype       string `json:"proptype"`
+		Propnumber     string `json:"propnumber"`
+		Buildingattr   string `json:"buildingattr"`
+		Buildingnumber string `json:"buildingnumber"`
+		Addinfo2       string `json:"addinfo2"`
+		CityCode       string `json:"city_code"`
+		CityName       string `json:"city_name"`
+		CityLatitude   string `json:"city_latitude"`
+		CityLongitude  string `json:"city_longitude"`
+		HotelLatitude  string `json:"hotel_latitude"`
+		HotelLongitude string `json:"hotel_longitude"`
+		CountryCode    string `json:"country_code"`
+		CountryName    string `json:"country_name"`
+	} `json:"full_address"`
+	RatingCode string `json:"rating_code"`
+	RatingName string `json:"rating_name"`
+	StarsCode  string `json:"stars_code"`
+	StarsName  string `json:"stars_name"`
+	Images     []struct {
+		URL  string `json:"Url"`
+		Desc string `json:"desc"`
+	} `json:"images"`
+	CurrencyCode   string `json:"currency_code"`
+	CurrencyName   string `json:"currency_name"`
+	HotelAmenities []struct {
+		Name string `json:"name"`
+		ID   string `json:"id"`
+	} `json:"hotel_amenities"`
+	Rooms []struct {
+		RoomCode        string `json:"room_code"`
+		RoomName        string `json:"room_name"`
+		NumberOfGuests  string `json:"number_of_guests"`
+		RoomDescription string `json:"room_description"`
+		Images          string `json:"images"`
+		RoomAmenities   []struct {
+			Name string `json:"name"`
+			ID   string `json:"id"`
+		} `json:"room_amenities"`
+	} `json:"rooms"`
+	Conference []interface{} `json:"conference"`
+	Group      struct {
+		Qty      string `json:"qty"`
+		Type     string `json:"type"`
+		Typename string `json:"typename"`
+		Note     string `json:"note"`
+		Rule     string `json:"rule"`
+	} `json:"group"`
+}
+
 type CurrencyListAnswer struct {
 	CurrencyCode string `json:"currency_code"`
 	CurrencyName string `json:"currency_name"`

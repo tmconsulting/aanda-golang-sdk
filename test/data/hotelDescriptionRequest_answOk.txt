@@ -1,0 +1,365 @@
+{
+  "hotel_code": "2150",
+  "hotel_name": "Ярославская",
+  "vat": "1",
+  "address": "Россия, 129164, Москва, ул. Ярославская, д. 8, корп. 1",
+  "phone": "+7(499)-750-23-54",
+  "description": "",
+  "full_description": "\r\nГостиница \"Ярославская\" расположена на одноименной улице. Максимум десять минут вам понадобится, чтобы дойти до станции метро \"ВДНХ\", возле которой масса кафе и ресторанов. Перейдя проспект Мира, вы дойдете до Музея космонавтики, а также огромная территория международного выставочного комплекса. Полчаса езды - и вы уже в самом центре Москвы.\r\n\r\nГостям предлагаются удобные номера, обставленные элегантной мебелью (общее число - 94). Оснащение: большой стол, ТВ, телефон, мини-холодильник. Утром для всех гостей сервируется бесплатный завтрак.\r\n\r\nК вашим услугам в гостинице \"Ярославская\":\r\n\r\nWi-Fi бесплатно;\r\nтакси;\r\nбагажная комната;\r\nбронирование билетов;\r\nпарикмахерская;\r\nкафе-бар;\r\nорганизация экскурсий.\r\n\r\n",
+  "full_address": {
+    "zip": "129164",
+    "region": "Московская область",
+    "city": "Москва",
+    "addinfo": "",
+    "strtype": "улица",
+    "strname": "Ярославская",
+    "proptype": "дом",
+    "propnumber": "8",
+    "buildingattr": "корпус",
+    "buildingnumber": "1",
+    "addinfo2": "",
+    "city_code": "1",
+    "city_name": "Москва",
+    "city_latitude": "55.755791",
+    "city_longitude": "37.617630",
+    "hotel_latitude": "55.817570",
+    "hotel_longitude": "37.647423",
+    "country_code": "9",
+    "country_name": "Россия"
+  },
+  "rating_code": "5",
+  "rating_name": "Отель",
+  "stars_code": "3",
+  "stars_name": "3 звезды",
+  "images": [
+    {
+      "Url": "https://images.aanda.ru/photos/2150/101642.jpg",
+      "desc": "Главная"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/101629.jpg",
+      "desc": "Холл / ресепшен"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/101630.jpg",
+      "desc": "Ресторан / кафе / бар"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/101640.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/101641.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/101638.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/101639.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166009.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166010.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166011.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166012.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166013.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166014.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166015.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166016.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166020.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166021.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166022.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166023.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166017.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166018.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166019.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166006.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166007.jpg",
+      "desc": "Номера"
+    },
+    {
+      "Url": "https://images.aanda.ru/photos/2150/166008.jpg",
+      "desc": "Номера"
+    }
+  ],
+  "currency_code": "2",
+  "currency_name": "RUR",
+  "hotel_amenities": [
+    {
+      "name": "Wi-Fi",
+      "id": "2"
+    },
+    {
+      "name": "Бар/ресторан",
+      "id": "3"
+    },
+    {
+      "name": "Развлечения",
+      "id": "13"
+    },
+    {
+      "name": "Салон красоты",
+      "id": "17"
+    }
+  ],
+  "rooms": [
+    {
+      "room_code": "32077",
+      "room_name": "1-местный",
+      "number_of_guests": "1",
+      "room_description": "В комнате: стандартная кровать, письменный стол и стул, кресло, телевизор, телефон, холодильник, ванная комната.",
+      "images": "<Image Url=\"https://images.aanda.ru/photos/2150/101640.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/101641.jpg\"/>",
+      "room_amenities": [
+        {
+          "name": "Холодильник",
+          "id": "5"
+        },
+        {
+          "name": "Телевизор",
+          "id": "6"
+        },
+        {
+          "name": "Телефон",
+          "id": "8"
+        },
+        {
+          "name": "Рабочая зона",
+          "id": "21"
+        },
+        {
+          "name": "Мягкая мебель",
+          "id": "22"
+        },
+        {
+          "name": "Ванна",
+          "id": "23"
+        }
+      ]
+    },
+    {
+      "room_code": "32078",
+      "room_name": "2-местный",
+      "number_of_guests": "2",
+      "room_description": "В комнате: две стандартные кровати, письменный стол и стул, кресло, телевизор, телефон, холодильник, ванная комната.",
+      "images": "<Image Url=\"https://images.aanda.ru/photos/2150/101638.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/101639.jpg\"/>",
+      "room_amenities": [
+        {
+          "name": "Холодильник",
+          "id": "5"
+        },
+        {
+          "name": "Телевизор",
+          "id": "6"
+        },
+        {
+          "name": "Телефон",
+          "id": "8"
+        },
+        {
+          "name": "Рабочая зона",
+          "id": "21"
+        },
+        {
+          "name": "Мягкая мебель",
+          "id": "22"
+        },
+        {
+          "name": "Ванна",
+          "id": "23"
+        }
+      ]
+    },
+    {
+      "room_code": "54737",
+      "room_name": "1-местный комфорт",
+      "number_of_guests": "1",
+      "room_description": "",
+      "images": "<Image Url=\"https://images.aanda.ru/photos/2150/166009.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166010.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166011.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166012.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166013.jpg\"/>",
+      "room_amenities": []
+    },
+    {
+      "room_code": "54738",
+      "room_name": "2-местный комфорт",
+      "number_of_guests": "2",
+      "room_description": "",
+      "images": "<Image Url=\"https://images.aanda.ru/photos/2150/166014.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166015.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166016.jpg\"/>",
+      "room_amenities": []
+    },
+    {
+      "room_code": "54739",
+      "room_name": "семейный",
+      "number_of_guests": "2",
+      "room_description": "",
+      "images": "<Image Url=\"https://images.aanda.ru/photos/2150/166020.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166021.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166022.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166023.jpg\"/>",
+      "room_amenities": []
+    },
+    {
+      "room_code": "54741",
+      "room_name": "делюкс",
+      "number_of_guests": "2",
+      "room_description": "",
+      "images": "<Image Url=\"https://images.aanda.ru/photos/2150/166017.jpg\"/>",
+      "room_amenities": []
+    },
+    {
+      "room_code": "54743",
+      "room_name": "люкс",
+      "number_of_guests": "2",
+      "room_description": "",
+      "images": "<Image Url=\"https://images.aanda.ru/photos/2150/166018.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166019.jpg\"/>",
+      "room_amenities": []
+    },
+    {
+      "room_code": "55181",
+      "room_name": "джуниор сюит",
+      "number_of_guests": "2",
+      "room_description": "Однокомнатный номер с двуспальной кроватью или двумя односпальными. ",
+      "images": "<Image Url=\"https://images.aanda.ru/photos/2150/166006.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166007.jpg\"/><Image Url=\"https://images.aanda.ru/photos/2150/166008.jpg\"/>",
+      "room_amenities": [
+        {
+          "name": "Кондиционер",
+          "id": "3"
+        },
+        {
+          "name": "Сейф",
+          "id": "4"
+        },
+        {
+          "name": "Телевизор",
+          "id": "6"
+        },
+        {
+          "name": "Телефон",
+          "id": "8"
+        },
+        {
+          "name": "Кабельное телевидение",
+          "id": "9"
+        },
+        {
+          "name": "Тапочки",
+          "id": "10"
+        },
+        {
+          "name": "Халат",
+          "id": "13"
+        },
+        {
+          "name": "Мини-бар",
+          "id": "15"
+        },
+        {
+          "name": "Услуга будильник",
+          "id": "16"
+        },
+        {
+          "name": "Фен",
+          "id": "17"
+        },
+        {
+          "name": "Набор косметики (туалетные принадлежности)",
+          "id": "18"
+        },
+        {
+          "name": "Набор для приготовления чая/кофе",
+          "id": "19"
+        },
+        {
+          "name": "Рабочая зона",
+          "id": "21"
+        },
+        {
+          "name": "Мягкая мебель",
+          "id": "22"
+        },
+        {
+          "name": "Душ/душевая кабинка",
+          "id": "24"
+        },
+        {
+          "name": "1 двуспальная кровать",
+          "id": "27"
+        },
+        {
+          "name": "Раздельные кровати",
+          "id": "28"
+        },
+        {
+          "name": "Кровать размера King size",
+          "id": "29"
+        },
+        {
+          "name": "Шкаф",
+          "id": "34"
+        },
+        {
+          "name": "Чайник",
+          "id": "36"
+        },
+        {
+          "name": "Набор посуды",
+          "id": "38"
+        }
+      ]
+    }
+  ],
+  "conference": [],
+  "group": {
+    "qty": "10",
+    "type": "2",
+    "typename": "номеров",
+    "note": "Продажа по запросу",
+    "rule": "Сроки аннуляции и размер штрафных санкций в случае отмены/изменений группы будут сообщены дополнительно"
+  }
+}
