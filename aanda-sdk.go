@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"gopkg.in/go-playground/validator.v2"
 	"io/ioutil"
 	"net/http"
@@ -331,6 +332,33 @@ func (self *Api) OrderInfoRequest(id int) (OrderInfoAnswer, error) {
 
 	body := sendReq(data)
 
+	jsonData := OrderInfoAnswer{}
+	err = json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return OrderInfoAnswer{}, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
+func (self *Api) OrderListRequest(orderReq OrderListRequest) (OrderInfoAnswer, error) {
+	orderReq.BuyerId = self.BuyerId
+	orderReq.UserId = self.UserId
+	orderReq.Password = self.Password
+	orderReq.Language = self.Language
+
+	jsonReq, err := json.Marshal(orderReq)
+	if err != nil {
+		panic(err)
+	}
+
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "OrderListRequest")
+	data.Add("JSON", string(jsonReq))
+
+	body := sendReq(data)
+	fmt.Println(string(body))
 	jsonData := OrderInfoAnswer{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {

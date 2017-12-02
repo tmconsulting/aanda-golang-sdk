@@ -71,3 +71,19 @@ type OrderInfoRequest struct {
 	Language string `json:"Language"`
 	Id       string `json:"order_id"`
 }
+
+type OrderListRequest struct {
+	BuyerId              string `json:"BuyerId"`
+	UserId               string `json:"UserId"`
+	Password             string `json:"Password"`
+	Language             string `json:"Language"`
+	LastName             string `json:"LastName"` //Доп параметры
+	ArrivalDateFrom      string `json:"ArrivalDateFrom"`
+	ArrivalDateTo        string `json:"ArrivalDateTo"`
+	DepartureDateFrom    string `json:"LastName"`
+	DepartureDateTo      string `json:"LastName"`
+	RegistrationDateFrom string `json:"LastName"`
+	RegistrationDateTo   string `json:"LastName"`
+	ChangeDateFrom       string `json:"LastName"`
+	ChangeDateTo         string `json:"LastName"`
+}
