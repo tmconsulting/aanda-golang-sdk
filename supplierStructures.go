@@ -353,3 +353,7 @@ type OrderMessagesAnswer struct {
 	From        string `json:"from"`
 	Message     string `json:"message"`
 }
+
+type SendOrderMessageAnswer struct {
+	MessageCode string `json:"message_code"`
+}
