@@ -1,0 +1,220 @@
+{
+  "hotel_code": "2150",
+  "hotel_name": "Ярославская",
+  "number_of_guests": 1,
+  "check-in_time": "14:00",
+  "check-out_time": "12:00",
+  "arrival_date": "05.12.2017",
+  "departure_date": "06.12.2017",
+  "vat": 0,
+  "time_zone": "UTC+3",
+  "country_code": "9",
+  "country_name": "Россия",
+  "city_code": "1",
+  "city_name": "Москва",
+  "city_latitude": "55.755791",
+  "city_longitude": "37.617630",
+  "hotel_latitude": "55.817570",
+  "hotel_longitude": "37.647423",
+  "allow_early_check-in": "1",
+  "allow_early_check-out": "1",
+  "currency_code": "2",
+  "currency_name": "RUR",
+  "rooms": [
+    {
+      "room_code": 32077,
+      "room_name": "1-местный",
+      "rate_name": "",
+      "allow_earlier_checkin": false,
+      "allow_late_checkout": false,
+      "checkins": [],
+      "checkouts": [],
+      "price": 4100,
+      "rackrate": 4100,
+      "comission": {
+        "room": 328,
+        "meal": 0,
+        "total": 328,
+        "checkin": 0,
+        "checkout": 0,
+        "total_mealfree": 328
+      },
+      "penalty_size": {
+        "room": 4100,
+        "total": 4100
+      },
+      "deadline_date": "04.12.2017",
+      "deadline_time": "12:00",
+      "penalty_info": "",
+      "max_guests": "1",
+      "meal_type_code": "4",
+      "meal_type_name": "завтрак",
+      "meal_category_code": "0",
+      "meal_category_name": "",
+      "meal_name": "завтрак",
+      "meal_price": 0,
+      "meal_is_included_code": 1,
+      "payment_terms_code": "3",
+      "payment_terms_name": "Оплата согласно договору",
+      "availability_code": 2,
+      "availability_name": "Free-sale",
+      "rooms_available": 3,
+      "room_amenities": [
+        {
+          "name": "Холодильник",
+          "id": "5"
+        },
+        {
+          "name": "Телевизор",
+          "id": "6"
+        },
+        {
+          "name": "Телефон",
+          "id": "8"
+        },
+        {
+          "name": "Рабочая зона",
+          "id": "21"
+        },
+        {
+          "name": "Мягкая мебель",
+          "id": "22"
+        },
+        {
+          "name": "Ванна",
+          "id": "23"
+        }
+      ]
+    },
+    {
+      "room_code": 32078,
+      "room_name": "2-местный",
+      "rate_name": "",
+      "allow_earlier_checkin": false,
+      "allow_late_checkout": false,
+      "checkins": [],
+      "checkouts": [],
+      "price": 4600,
+      "rackrate": 4600,
+      "comission": {
+        "room": 368,
+        "meal": 0,
+        "total": 368,
+        "checkin": 0,
+        "checkout": 0,
+        "total_mealfree": 368
+      },
+      "penalty_size": {
+        "room": 4600,
+        "total": 4600
+      },
+      "deadline_date": "04.12.2017",
+      "deadline_time": "12:00",
+      "penalty_info": "",
+      "max_guests": "2",
+      "meal_type_code": "4",
+      "meal_type_name": "завтрак",
+      "meal_category_code": "0",
+      "meal_category_name": "",
+      "meal_name": "завтрак",
+      "meal_price": 0,
+      "meal_is_included_code": 1,
+      "payment_terms_code": "3",
+      "payment_terms_name": "Оплата согласно договору",
+      "availability_code": 2,
+      "availability_name": "Free-sale",
+      "rooms_available": 4,
+      "room_amenities": [
+        {
+          "name": "Холодильник",
+          "id": "5"
+        },
+        {
+          "name": "Телевизор",
+          "id": "6"
+        },
+        {
+          "name": "Телефон",
+          "id": "8"
+        },
+        {
+          "name": "Рабочая зона",
+          "id": "21"
+        },
+        {
+          "name": "Мягкая мебель",
+          "id": "22"
+        },
+        {
+          "name": "Ванна",
+          "id": "23"
+        }
+      ]
+    },
+    {
+      "room_code": 54737,
+      "room_name": "1-местный комфорт",
+      "rate_name": "",
+      "allow_earlier_checkin": false,
+      "allow_late_checkout": false,
+      "checkins": [],
+      "checkouts": [],
+      "price": 4700,
+      "rackrate": 4700,
+      "comission": {
+        "room": 376,
+        "meal": 0,
+        "total": 376,
+        "checkin": 0,
+        "checkout": 0,
+        "total_mealfree": 376
+      },
+      "penalty_size": {
+        "room": 4700,
+        "total": 4700
+      },
+      "deadline_date": "04.12.2017",
+      "deadline_time": "12:00",
+      "penalty_info": "",
+      "max_guests": "1",
+      "meal_type_code": "4",
+      "meal_type_name": "завтрак",
+      "meal_category_code": "0",
+      "meal_category_name": "",
+      "meal_name": "завтрак",
+      "meal_price": 0,
+      "meal_is_included_code": 1,
+      "payment_terms_code": "3",
+      "payment_terms_name": "Оплата согласно договору",
+      "availability_code": 2,
+      "availability_name": "Free-sale",
+      "rooms_available": 1,
+      "room_amenities": []
+    }
+  ],
+  "group": {
+    "qty": "10",
+    "type": "2",
+    "typename": "номеров",
+    "note": "Продажа по запросу",
+    "rule": "Сроки аннуляции и размер штрафных санкций в случае отмены/изменений группы будут сообщены дополнительно"
+  },
+  "hotel_amenities": [
+    {
+      "name": "Wi-Fi",
+      "id": "2"
+    },
+    {
+      "name": "Бар/ресторан",
+      "id": "3"
+    },
+    {
+      "name": "Развлечения",
+      "id": "13"
+    },
+    {
+      "name": "Салон красоты",
+      "id": "17"
+    }
+  ]
+}

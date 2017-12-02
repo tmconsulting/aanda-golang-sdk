@@ -183,3 +183,81 @@ type MealCategoryAnswer struct {
 	MealCategoryCode string `json:"meal_category_code"`
 	MealCategoryName string `json:"meal_category_name"`
 }
+
+type HotelPricingAnswer struct {
+	HotelCode          string `json:"hotel_code"`
+	HotelName          string `json:"hotel_name"`
+	NumberOfGuests     int    `json:"number_of_guests"`
+	CheckInTime        string `json:"check-in_time"`
+	CheckOutTime       string `json:"check-out_time"`
+	ArrivalDate        string `json:"arrival_date"`
+	DepartureDate      string `json:"departure_date"`
+	Vat                int    `json:"vat"`
+	TimeZone           string `json:"time_zone"`
+	CountryCode        string `json:"country_code"`
+	CountryName        string `json:"country_name"`
+	CityCode           string `json:"city_code"`
+	CityName           string `json:"city_name"`
+	CityLatitude       string `json:"city_latitude"`
+	CityLongitude      string `json:"city_longitude"`
+	HotelLatitude      string `json:"hotel_latitude"`
+	HotelLongitude     string `json:"hotel_longitude"`
+	AllowEarlyCheckIn  string `json:"allow_early_check-in"`
+	AllowEarlyCheckOut string `json:"allow_early_check-out"`
+	CurrencyCode       string `json:"currency_code"`
+	CurrencyName       string `json:"currency_name"`
+	Rooms              []struct {
+		RoomCode            int           `json:"room_code"`
+		RoomName            string        `json:"room_name"`
+		RateName            string        `json:"rate_name"`
+		AllowEarlierCheckin bool          `json:"allow_earlier_checkin"`
+		AllowLateCheckout   bool          `json:"allow_late_checkout"`
+		Checkins            []interface{} `json:"checkins"`
+		Checkouts           []interface{} `json:"checkouts"`
+		Price               int           `json:"price"`
+		Rackrate            int           `json:"rackrate"`
+		Comission           struct {
+			Room          int `json:"room"`
+			Meal          int `json:"meal"`
+			Total         int `json:"total"`
+			Checkin       int `json:"checkin"`
+			Checkout      int `json:"checkout"`
+			TotalMealfree int `json:"total_mealfree"`
+		} `json:"comission"`
+		PenaltySize struct {
+			Room  int `json:"room"`
+			Total int `json:"total"`
+		} `json:"penalty_size"`
+		DeadlineDate       string `json:"deadline_date"`
+		DeadlineTime       string `json:"deadline_time"`
+		PenaltyInfo        string `json:"penalty_info"`
+		MaxGuests          string `json:"max_guests"`
+		MealTypeCode       string `json:"meal_type_code"`
+		MealTypeName       string `json:"meal_type_name"`
+		MealCategoryCode   string `json:"meal_category_code"`
+		MealCategoryName   string `json:"meal_category_name"`
+		MealName           string `json:"meal_name"`
+		MealPrice          int    `json:"meal_price"`
+		MealIsIncludedCode int    `json:"meal_is_included_code"`
+		PaymentTermsCode   string `json:"payment_terms_code"`
+		PaymentTermsName   string `json:"payment_terms_name"`
+		AvailabilityCode   int    `json:"availability_code"`
+		AvailabilityName   string `json:"availability_name"`
+		RoomsAvailable     int    `json:"rooms_available"`
+		RoomAmenities      []struct {
+			Name string `json:"name"`
+			ID   string `json:"id"`
+		} `json:"room_amenities"`
+	} `json:"rooms"`
+	Group struct {
+		Qty      string `json:"qty"`
+		Type     string `json:"type"`
+		Typename string `json:"typename"`
+		Note     string `json:"note"`
+		Rule     string `json:"rule"`
+	} `json:"group"`
+	HotelAmenities []struct {
+		Name string `json:"name"`
+		ID   string `json:"id"`
+	} `json:"hotel_amenities"`
+}

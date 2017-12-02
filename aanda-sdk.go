@@ -211,6 +211,33 @@ func (self *Api) MealCategoryRequest() ([]MealCategoryAnswer, error) {
 	return jsonData, nil
 }
 
+func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricingAnswer, error) {
+	priceReq.BuyerId = self.BuyerId
+	priceReq.UserId = self.UserId
+	priceReq.Password = self.Password
+	priceReq.Language = self.Language
+
+	jsonReq, err := json.Marshal(priceReq)
+	if err != nil {
+		panic(err)
+	}
+
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "HotelPricingRequest")
+	data.Add("JSON", string(jsonReq))
+
+	body := sendReq(data)
+
+	jsonData := HotelPricingAnswer{}
+	err = json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return HotelPricingAnswer{}, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
 func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchAnswer, error) {
 	searchReq.BuyerId = self.BuyerId
 	searchReq.UserId = self.UserId
