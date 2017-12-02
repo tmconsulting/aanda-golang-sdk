@@ -24,6 +24,7 @@ type Api struct {
 
 func sendReq(data url.Values) []byte {
 	req, err := http.NewRequest("POST", apiUrl, bytes.NewBufferString(data.Encode()))
+	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
@@ -335,6 +336,27 @@ func (self *Api) OrderInfoRequest(id int) (OrderInfoAnswer, error) {
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return OrderInfoAnswer{}, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
+func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesAnswer, error) {
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "OrderMessagesRequest")
+	data.Add("CompanyId", self.BuyerId)
+	data.Add("UserId", self.UserId)
+	data.Add("Password", self.Password)
+	data.Add("Language", self.Language)
+	data.Add("order_id", strconv.Itoa(2213397))
+
+	body := sendReq(data)
+
+	jsonData := []OrderMessagesAnswer{}
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return nil, parseError(body)
 	}
 
 	return jsonData, nil

@@ -345,3 +345,11 @@ type OrderInfoAnswer struct {
 	} `json:"service_list"`
 	GroupInfo []interface{} `json:"group_info"`
 }
+
+type OrderMessagesAnswer struct {
+	OrderCode   string `json:"order_code"`
+	MessageCode string `json:"message_code"`
+	Created     string `json:"created"`
+	From        string `json:"from"`
+	Message     string `json:"message"`
+}
