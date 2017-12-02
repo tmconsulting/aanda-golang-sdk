@@ -1,0 +1,83 @@
+{
+  "order_id": "2213397",
+  "reference_number": "",
+  "created": "02.12.2017",
+  "deadline_date": "01.01.2018",
+  "deadline_time": "12:00",
+  "total_price": 4600,
+  "comission": "0.00",
+  "arrival_date": "02.01.2018",
+  "departure_date": "03.01.2018",
+  "currency_code": "2",
+  "currency_name": "RUR",
+  "payment_terms_code": "3",
+  "payment_terms_name": "Оплата согласно договору",
+  "status_code": "11",
+  "status_name": "Запрос получен",
+  "contactperson_name": "TMCon  ",
+  "person_phone": "",
+  "person_fax": "",
+  "person_email": "",
+  "rooms": [
+    {
+      "room_code": "32078",
+      "arrival_date": "02.01.2018",
+      "arrival_time": "14:00",
+      "departure_date": "03.01.2018",
+      "departure_time": "12:00",
+      "number_of_nights": "1",
+      "number_of_rooms": "1",
+      "number_of_guests": "1",
+      "additional_info": "???????? ????? Доп. услуги, Скидка 8%: -368.00",
+      "supplier_info": "",
+      "confirmation_number": "",
+      "price": 4600,
+      "room_price": "4600.00",
+      "comission": 368,
+      "penalty": "0.00",
+      "penalty_note": "",
+      "deadline_date": "01.01.2018",
+      "possible_penalty": "4600.00",
+      "cancelled_code": "2",
+      "cancelled_name": "Нет",
+      "change_code": "2",
+      "change_name": "Нет",
+      "hotel_code": "2150",
+      "vat": "0",
+      "time_zone": "UTC+3",
+      "country_code": "9",
+      "country_name": "Россия",
+      "city_code": "1",
+      "city_name": "Москва",
+      "status_code": "11",
+      "status_name": "Запрос получен",
+      "allow_cancel_code": 2,
+      "allow_cancel_name": "Нет",
+      "allow_change_code": 2,
+      "allow_change_name": "Нет",
+      "room_name": "2-местный ",
+      "meal_code": 1,
+      "meal_name": "завтрак",
+      "persons": [
+        {
+          "lastname": "lol",
+          "firstname": "lol"
+        }
+      ]
+    }
+  ],
+  "service_list": [
+    {
+      "id": "5728494",
+      "name": "Скидка 8%",
+      "price": "-368.00",
+      "service_type": "12",
+      "service_name": "Скидка",
+      "start_date": "2018-01-02",
+      "end_date": "2018-01-03",
+      "invoice_id": null,
+      "person_id": "5465152"
+    }
+  ],
+  "group_info": []
+}

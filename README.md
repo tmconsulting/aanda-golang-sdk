@@ -71,7 +71,7 @@ func main() {
 }
  ```
 
- ### Example OrderRequest
+### Example OrderRequest
 ```golang
 package main
 
@@ -92,6 +92,18 @@ func main() {
 		}},
 	}
 	data, err := aApi.OrderRequest(orderReq)
+	if err == nil {
+		//Work with data
+	}
+}
+ ```
+
+### Example OrderInfoRequest
+```golang
+package main
+
+func main() {
+	data, err := aApi.OrderInfoRequest(2213397) // 2213397 is OrderId
 	if err == nil {
 		//Work with data
 	}

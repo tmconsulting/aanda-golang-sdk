@@ -63,3 +63,11 @@ type Person struct {
 	FirstName string `json:"FirstName"`
 	LastName  string `json:"LastName"`
 }
+
+type OrderInfoRequest struct {
+	BuyerId  string `json:"BuyerId"`
+	UserId   string `json:"UserId"`
+	Password string `json:"Password"`
+	Language string `json:"Language"`
+	Id       string `json:"order_id"`
+}

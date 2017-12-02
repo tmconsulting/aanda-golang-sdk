@@ -146,7 +146,7 @@ type HotelDescriptionAnswer struct {
 	CurrencyName   string `json:"currency_name"`
 	HotelAmenities []struct {
 		Name string `json:"name"`
-		ID   string `json:"id"`
+		Id   string `json:"id"`
 	} `json:"hotel_amenities"`
 	Rooms []struct {
 		RoomCode        string `json:"room_code"`
@@ -156,7 +156,7 @@ type HotelDescriptionAnswer struct {
 		Images          string `json:"images"`
 		RoomAmenities   []struct {
 			Name string `json:"name"`
-			ID   string `json:"id"`
+			Id   string `json:"id"`
 		} `json:"room_amenities"`
 	} `json:"rooms"`
 	Conference []interface{} `json:"conference"`
@@ -258,12 +258,90 @@ type HotelPricingAnswer struct {
 	} `json:"group"`
 	HotelAmenities []struct {
 		Name string `json:"name"`
-		ID   string `json:"id"`
+		Id   string `json:"id"`
 	} `json:"hotel_amenities"`
 }
 
 type OrderRequestAnswer struct {
 	Status  string  `json:"Status" validate:"required"`
-	OrderID string  `json:"order_id" validate:"required"`
+	OrderId string  `json:"order_id" validate:"required"`
 	Time    float64 `json:"Time" validate:"required"`
+}
+
+type OrderInfoAnswer struct {
+	OrderId           string `json:"order_id"`
+	ReferenceNumber   string `json:"reference_number"`
+	Created           string `json:"created"`
+	DeadlineDate      string `json:"deadline_date"`
+	DeadlineTime      string `json:"deadline_time"`
+	TotalPrice        int    `json:"total_price"`
+	Comission         string `json:"comission"`
+	ArrivalDate       string `json:"arrival_date"`
+	DepartureDate     string `json:"departure_date"`
+	CurrencyCode      string `json:"currency_code"`
+	CurrencyName      string `json:"currency_name"`
+	PaymentTermsCode  string `json:"payment_terms_code"`
+	PaymentTermsName  string `json:"payment_terms_name"`
+	StatusCode        string `json:"status_code"`
+	StatusName        string `json:"status_name"`
+	ContactpersonName string `json:"contactperson_name"`
+	PersonPhone       string `json:"person_phone"`
+	PersonFax         string `json:"person_fax"`
+	PersonEmail       string `json:"person_email"`
+	Rooms             []struct {
+		RoomCode           string `json:"room_code"`
+		ArrivalDate        string `json:"arrival_date"`
+		ArrivalTime        string `json:"arrival_time"`
+		DepartureDate      string `json:"departure_date"`
+		DepartureTime      string `json:"departure_time"`
+		NumberOfNights     string `json:"number_of_nights"`
+		NumberOfRooms      string `json:"number_of_rooms"`
+		NumberOfGuests     string `json:"number_of_guests"`
+		AdditionalInfo     string `json:"additional_info"`
+		SupplierInfo       string `json:"supplier_info"`
+		ConfirmationNumber string `json:"confirmation_number"`
+		Price              int    `json:"price"`
+		RoomPrice          string `json:"room_price"`
+		Comission          int    `json:"comission"`
+		Penalty            string `json:"penalty"`
+		PenaltyNote        string `json:"penalty_note"`
+		DeadlineDate       string `json:"deadline_date"`
+		PossiblePenalty    string `json:"possible_penalty"`
+		CancelledCode      string `json:"cancelled_code"`
+		CancelledName      string `json:"cancelled_name"`
+		ChangeCode         string `json:"change_code"`
+		ChangeName         string `json:"change_name"`
+		HotelCode          string `json:"hotel_code"`
+		Vat                string `json:"vat"`
+		TimeZone           string `json:"time_zone"`
+		CountryCode        string `json:"country_code"`
+		CountryName        string `json:"country_name"`
+		CityCode           string `json:"city_code"`
+		CityName           string `json:"city_name"`
+		StatusCode         string `json:"status_code"`
+		StatusName         string `json:"status_name"`
+		AllowCancelCode    int    `json:"allow_cancel_code"`
+		AllowCancelName    string `json:"allow_cancel_name"`
+		AllowChangeCode    int    `json:"allow_change_code"`
+		AllowChangeName    string `json:"allow_change_name"`
+		RoomName           string `json:"room_name"`
+		MealCode           int    `json:"meal_code"`
+		MealName           string `json:"meal_name"`
+		Persons            []struct {
+			Lastname  string `json:"lastname"`
+			Firstname string `json:"firstname"`
+		} `json:"persons"`
+	} `json:"rooms"`
+	ServiceList []struct {
+		Id          string      `json:"id"`
+		Name        string      `json:"name"`
+		Price       string      `json:"price"`
+		ServiceType string      `json:"service_type"`
+		ServiceName string      `json:"service_name"`
+		StartDate   string      `json:"start_date"`
+		EndDate     string      `json:"end_date"`
+		InvoiceId   interface{} `json:"invoice_id"`
+		PersonId    string      `json:"person_id"`
+	} `json:"service_list"`
+	GroupInfo []interface{} `json:"group_info"`
 }

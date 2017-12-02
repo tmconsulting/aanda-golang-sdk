@@ -310,3 +310,32 @@ func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestAnswer, error)
 
 	return jsonData, nil
 }
+
+func (self *Api) OrderInfoRequest(id int) (OrderInfoAnswer, error) {
+	orderInfReq := OrderInfoRequest{}
+	orderInfReq.BuyerId = self.BuyerId
+	orderInfReq.UserId = self.UserId
+	orderInfReq.Password = self.Password
+	orderInfReq.Language = self.Language
+	orderInfReq.Id = strconv.Itoa(id)
+
+	jsonReq, err := json.Marshal(orderInfReq)
+	if err != nil {
+		panic(err)
+	}
+
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "OrderInfoRequest")
+	data.Add("JSON", string(jsonReq))
+
+	body := sendReq(data)
+
+	jsonData := OrderInfoAnswer{}
+	err = json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return OrderInfoAnswer{}, parseError(body)
+	}
+
+	return jsonData, nil
+}
