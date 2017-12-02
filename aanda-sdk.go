@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"gopkg.in/go-playground/validator.v2"
 	"io/ioutil"
 	"net/http"
@@ -25,6 +24,7 @@ type Api struct {
 
 func sendReq(data url.Values) []byte {
 	req, err := http.NewRequest("POST", apiUrl, bytes.NewBufferString(data.Encode()))
+	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
@@ -341,7 +341,7 @@ func (self *Api) OrderInfoRequest(id int) (OrderInfoAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) OrderMessagesRequest(orderId int) ([]MealCategoryAnswer, error) {
+func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesAnswer, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "OrderMessagesRequest")
@@ -349,12 +349,11 @@ func (self *Api) OrderMessagesRequest(orderId int) ([]MealCategoryAnswer, error)
 	data.Add("UserId", self.UserId)
 	data.Add("Password", self.Password)
 	data.Add("Language", self.Language)
-	data.Add("order_id", "2213397")
+	data.Add("order_id", strconv.Itoa(2213397))
 
 	body := sendReq(data)
-	fmt.Println("HERE")
-	fmt.Println(string(body))
-	jsonData := []MealCategoryAnswer{}
+
+	jsonData := []OrderMessagesAnswer{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
