@@ -261,3 +261,9 @@ type HotelPricingAnswer struct {
 		ID   string `json:"id"`
 	} `json:"hotel_amenities"`
 }
+
+type OrderRequestAnswer struct {
+	Status  string  `json:"Status" validate:"required"`
+	OrderID string  `json:"order_id" validate:"required"`
+	Time    float64 `json:"Time" validate:"required"`
+}

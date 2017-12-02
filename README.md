@@ -71,6 +71,33 @@ func main() {
 }
  ```
 
+ ### Example OrderRequest
+```golang
+package main
+
+func main() {
+	orderReq := aandaSdk.OrderRequest{
+		ArrivalDate:   "02.01.2018",
+		DepartureDate: "03.01.2018",
+		AddInfo:       "ТЕСТОВЫЙ ЗАКАЗ",
+		HotelCode:     "2150",
+		RoomCode:      "32078",
+		Meal:           "",
+		ArrivalTime:    "14:00",
+		DepartureTime:  "12:00",
+		NumberOfGuests: "1",
+		Person: []aandaSdk.Person{aandaSdk.Person{
+			FirstName: "Name",
+			LastName:  "Name",
+		}},
+	}
+	data, err := aApi.OrderRequest(orderReq)
+	if err == nil {
+		//Work with data
+	}
+}
+ ```
+
 ### Example CountryListRequest
 ```golang
 package main
