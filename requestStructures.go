@@ -22,3 +22,19 @@ type HotelSearchRequest struct {
 	PriceTo        string `json:"PriceTo"`
 	NumberOfGuests string `json:"NumberOfGuests"`
 }
+
+type HotelPricingRequest struct {
+	BuyerId        string `json:"BuyerId"`
+	UserId         string `json:"UserId"`
+	Password       string `json:"Password"`
+	Language       string `json:"Language"`
+	Hotel          string `json:"Hotel"`
+	ProductCode    string `json:"ProductCode"`
+	Currency       string `json:"Currency"`
+	WhereToPay     string `json:"WhereToPay"`
+	ArrivalDate    string `json:"ArrivalDate"`
+	DepartureDate  string `json:"DepartureDate"`
+	ArrivalTime    string `json:"ArrivalTime"`
+	DepartureTime  string `json:"DepartureTime"`
+	NumberOfGuests string `json:"NumberOfGuests"`
+}

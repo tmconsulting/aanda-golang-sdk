@@ -1,4 +1,4 @@
-# zabroniryi.ru SDK
+# Aanda SDK for Reservation Hotels zabroniryi.ru
 [![CircleCI](https://circleci.com/gh/tmconsulting/aanda-sdk/tree/develop.svg?style=shield)](https://circleci.com/gh/tmconsulting/aanda-sdk)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/circleci/cci-demo-react/master/LICENSE)
 
@@ -42,6 +42,29 @@ func main() {
 		NumberOfGuests: "1",
 	}
 	data, err := aApi.HotelSearchRequest(searchReq)
+	if err == nil {
+		//Work with data
+	}
+}
+ ```
+
+ ### Example HotelPricingRequest
+```golang
+package main
+
+func main() {
+	priceReq := aandaSdk.HotelPricingRequest{
+		Hotel:          "2150",
+		ProductCode:    "",
+		Currency:       "1",
+		WhereToPay:     "1",
+		ArrivalDate:    "05.12.2017",
+		DepartureDate:  "06.12.2017",
+		ArrivalTime:    "2000",
+		DepartureTime:  "3000",
+		NumberOfGuests: "1",
+	}
+	data, err := aApi.HotelPricingRequest(priceReq)
 	if err == nil {
 		//Work with data
 	}
