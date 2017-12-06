@@ -345,3 +345,23 @@ type OrderInfoAnswer struct {
 	} `json:"service_list"`
 	GroupInfo []interface{} `json:"group_info"`
 }
+
+type OrderListResponse struct {
+	OrderId           string `json:"order_id"`
+	ReferenceNumber   string `json:"reference_number"`
+	Created           string `json:"created"`
+	DeadlineDate      string `json:"deadline_date"`
+	TotalPrice        string `json:"total_price"`
+	Comission         int    `json:"comission"`
+	Penalty           string `json:"penalty"`
+	ArrivalDate       string `json:"arrival_date"`
+	DepartureDate     string `json:"departure_date"`
+	CurrencyCode      string `json:"currency_code"`
+	CurrencyName      string `json:"currency_name"`
+	StatusCode        string `json:"status_code"`
+	StatusName        string `json:"status_name"`
+	ContactpersonName string `json:"contactperson_name"`
+	PersonPhone       string `json:"person_phone"`
+	PersonFax         string `json:"person_fax"`
+	PersonEmail       string `json:"person_email"`
+}
