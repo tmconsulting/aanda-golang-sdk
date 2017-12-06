@@ -4,17 +4,11 @@ import (
 	"errors"
 	"github.com/nbio/st"
 	"github.com/tmconsulting/aanda-sdk"
-	"gopkg.in/h2non/gock.v1"
 	"testing"
 )
 
 func TestOrderRequest_ok(t *testing.T) {
-	defer gock.Off()
-	gock.New("http://api.aanda.ru").
-		Post("/xml_gateway/").
-		Reply(200).
-		JSON(getJson("orderRequest_answOk.txt"))
-
+	testRequest("orderRequest_answOk.txt")
 	orderReq := aandaSdk.OrderRequest{}
 	data, err := zApi.OrderRequest(orderReq)
 
@@ -23,12 +17,7 @@ func TestOrderRequest_ok(t *testing.T) {
 }
 
 func TestOrderRequest_err1(t *testing.T) {
-	defer gock.Off()
-	gock.New("http://api.aanda.ru").
-		Post("/xml_gateway/").
-		Reply(200).
-		JSON(getJson("orderRequest_answErr1.txt"))
-
+	testRequest("orderRequest_answErr1.txt")
 	orderReq := aandaSdk.OrderRequest{}
 	_, err := zApi.OrderRequest(orderReq)
 
@@ -36,12 +25,7 @@ func TestOrderRequest_err1(t *testing.T) {
 }
 
 func TestOrderRequest_err2(t *testing.T) {
-	defer gock.Off()
-	gock.New("http://api.aanda.ru").
-		Post("/xml_gateway/").
-		Reply(200).
-		JSON(getJson("orderRequest_answErr2.txt"))
-
+	testRequest("orderRequest_answErr2.txt")
 	orderReq := aandaSdk.OrderRequest{}
 	_, err := zApi.OrderRequest(orderReq)
 
@@ -49,12 +33,7 @@ func TestOrderRequest_err2(t *testing.T) {
 }
 
 func TestOrderRequest_err3(t *testing.T) {
-	defer gock.Off()
-	gock.New("http://api.aanda.ru").
-		Post("/xml_gateway/").
-		Reply(200).
-		JSON(getJson("orderRequest_answErr3.txt"))
-
+	testRequest("orderRequest_answErr3.txt")
 	orderReq := aandaSdk.OrderRequest{}
 	_, err := zApi.OrderRequest(orderReq)
 

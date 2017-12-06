@@ -4,17 +4,11 @@ import (
 	"errors"
 	"github.com/nbio/st"
 	"github.com/tmconsulting/aanda-sdk"
-	"gopkg.in/h2non/gock.v1"
 	"testing"
 )
 
 func TestHotelSearchRequest_ok(t *testing.T) {
-	defer gock.Off()
-	gock.New("http://api.aanda.ru").
-		Post("/xml_gateway/").
-		Reply(200).
-		JSON(getJson("hotelSearchRequest_answOk.txt"))
-
+	testRequest("hotelSearchRequest_answOk.txt")
 	searchReq := aandaSdk.HotelSearchRequest{}
 	data, err := zApi.HotelSearchRequest(searchReq)
 
@@ -24,12 +18,7 @@ func TestHotelSearchRequest_ok(t *testing.T) {
 }
 
 func TestHotelSearchRequest_err(t *testing.T) {
-	defer gock.Off()
-	gock.New("http://api.aanda.ru").
-		Post("/xml_gateway/").
-		Reply(200).
-		JSON(getJson("hotelSearchRequest_answErr.txt"))
-
+	testRequest("hotelSearchRequest_answErr.txt")
 	searchReq := aandaSdk.HotelSearchRequest{}
 	_, err := zApi.HotelSearchRequest(searchReq)
 
