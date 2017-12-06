@@ -39,28 +39,32 @@ func sendReq(data url.Values) []byte {
 
 }
 func parseError(body []byte) error {
+	//Try parse as JSON
 	var answM map[string]interface{}
 	err := json.Unmarshal(body, &answM)
 	if err == nil {
+		//if have only error key
 		if err, ok := answM["error"].(string); ok {
 			return errors.New(err)
 		}
-
+		//if have Status=Error
 		st, ok1 := answM["Status"].(string)
 		note, ok2 := answM["note"].(string)
 		if ok1 && ok2 && st == "Error" {
 			return errors.New(note)
 		}
 	}
-
+	//may be simple string, try parse it
 	var answS string
 	err = json.Unmarshal(body, &answS)
 	if err == nil {
 		if strings.Index(answS, "Ошибка авторазации") == -1 {
-			return errors.New("Ошибка авторазиции")
+			return errors.New("Authorization error")
+		} else {
+			errors.New(answS)
 		}
 	}
-
+	//may be part of XML, try parse in by regexp
 	re := regexp.MustCompile(`Note="(.*)"`)
 	res := re.FindStringSubmatch(string(body))
 	if len(res) != 0 {
@@ -68,11 +72,6 @@ func parseError(body []byte) error {
 	}
 
 	return nil
-}
-
-func main() {
-	//validate = validator.New()
-	//validate.RegisterStructValidation(UserStructLevelValidation, User{})
 }
 
 func NewApi(auth Auth) *Api {
@@ -84,17 +83,27 @@ func NewApi(auth Auth) *Api {
 	}
 }
 
-func (self *Api) CountryListRequest() ([]CountryListAnswer, error) {
+func (self *Api) createDataReq(req map[string]string) url.Values {
 	data := url.Values{}
 	data.Set("RequestType", "json")
-	data.Add("RequestName", "CountryListRequest")
 	data.Add("CompanyId", self.BuyerId)
 	data.Add("UserId", self.UserId)
 	data.Add("Password", self.Password)
 	data.Add("Language", self.Language)
+	for key, value := range req {
+		data.Add(key, value)
+	}
 
+	return data
+}
+
+func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
+	req := map[string]string{
+		"RequestName": "CounttryListRequest",
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
-	jsonData := []CountryListAnswer{}
+	jsonData := []CountryListResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -103,43 +112,35 @@ func (self *Api) CountryListRequest() ([]CountryListAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) CityListRequest(countryCode int) (CityListAnswer, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "CityListRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("CountryCode", strconv.Itoa(countryCode))
-
+func (self *Api) CityListRequest(countryCode int) (CityListResponse, error) {
+	req := map[string]string{
+		"RequestName": "CityListRequest",
+		"CountryCode": strconv.Itoa(countryCode),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	//FIX BUG of API
+	//FIX BUG of API (space in key)
 	bodyStr := strings.Replace(string(body), "city _code", "city_code", -1)
-	jsonData := CityListAnswer{}
+	jsonData := CityListResponse{}
 
 	err := json.Unmarshal([]byte(bodyStr), &jsonData)
 	if err != nil {
-		return CityListAnswer{}, parseError(body)
+		return CityListResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) HotelListRequest(cityCode int) ([]HotelListAnswer, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "HotelListRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("CityCode", strconv.Itoa(cityCode))
-
+func (self *Api) HotelListRequest(cityCode int) ([]HotelListResponse, error) {
+	req := map[string]string{
+		"RequestName": "HotelListRequest",
+		"CityCode":    strconv.Itoa(cityCode),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	jsonData := []HotelListAnswer{}
+	jsonData := []HotelListResponse{}
 
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
@@ -149,40 +150,32 @@ func (self *Api) HotelListRequest(cityCode int) ([]HotelListAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionAnswer, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "HotelDescriptionRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("HotelCode", strconv.Itoa(hotelCode))
-
+func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionResponse, error) {
+	req := map[string]string{
+		"RequestName": "HotelDescriptionRequest",
+		"HotelCode":   strconv.Itoa(hotelCode),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	jsonData := HotelDescriptionAnswer{}
+	jsonData := HotelDescriptionResponse{}
 
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return HotelDescriptionAnswer{}, parseError(body)
+		return HotelDescriptionResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) CurrencyListRequest() ([]CurrencyListAnswer, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "CurrencyListRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-
+func (self *Api) CurrencyListRequest() ([]CurrencyListResponse, error) {
+	req := map[string]string{
+		"RequestName": "CurrencyListRequest",
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	jsonData := []CurrencyListAnswer{}
+	jsonData := []CurrencyListResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -191,18 +184,14 @@ func (self *Api) CurrencyListRequest() ([]CurrencyListAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) MealTypeRequest() ([]MealTypeAnswer, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "MealTypeRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-
+func (self *Api) MealTypeRequest() ([]MealTypeResponse, error) {
+	req := map[string]string{
+		"RequestName": "MealTypeRequest",
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	jsonData := []MealTypeAnswer{}
+	jsonData := []MealTypeResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -211,18 +200,14 @@ func (self *Api) MealTypeRequest() ([]MealTypeAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) MealCategoryRequest() ([]MealCategoryAnswer, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "MealCategoryRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-
+func (self *Api) MealCategoryRequest() ([]MealCategoryResponse, error) {
+	req := map[string]string{
+		"RequestName": "MealCategoryRequest",
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	jsonData := []MealCategoryAnswer{}
+	jsonData := []MealCategoryResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -231,7 +216,7 @@ func (self *Api) MealCategoryRequest() ([]MealCategoryAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricingAnswer, error) {
+func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricingResponse, error) {
 	priceReq.BuyerId = self.BuyerId
 	priceReq.UserId = self.UserId
 	priceReq.Password = self.Password
@@ -242,23 +227,23 @@ func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricing
 		panic(err)
 	}
 
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "HotelPricingRequest")
-	data.Add("JSON", string(jsonReq))
-
+	req := map[string]string{
+		"RequestName": "HotelSearchRequest",
+		"JSON":        string(jsonReq),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	jsonData := HotelPricingAnswer{}
+	jsonData := HotelPricingResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return HotelPricingAnswer{}, parseError(body)
+		return HotelPricingResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchAnswer, error) {
+func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchResponse, error) {
 	searchReq.BuyerId = self.BuyerId
 	searchReq.UserId = self.UserId
 	searchReq.Password = self.Password
@@ -275,7 +260,7 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 	data.Add("JSON", string(jsonReq))
 
 	body := sendReq(data)
-	jsonData := []HotelSearchAnswer{}
+	jsonData := []HotelSearchResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -284,7 +269,7 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 	return jsonData, nil
 }
 
-func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestAnswer, error) {
+func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestResponse, error) {
 	orderReq.BuyerId = self.BuyerId
 	orderReq.UserId = self.UserId
 	orderReq.Password = self.Password
@@ -295,24 +280,24 @@ func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestAnswer, error)
 		panic(err)
 	}
 
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "OrderRequest")
-	data.Add("JSON", string(jsonReq))
-
+	req := map[string]string{
+		"RequestName": "OrderRequest",
+		"JSON":        string(jsonReq),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	jsonData := OrderRequestAnswer{}
+	jsonData := OrderRequestResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	vErr := validator.ValidateStruct(jsonData)
 	if err != nil || vErr != nil {
-		return OrderRequestAnswer{}, parseError(body)
+		return OrderRequestResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) OrderInfoRequest(id int) (OrderInfoAnswer, error) {
+func (self *Api) OrderInfoRequest(id int) (OrderInfoResponse, error) {
 	orderInfReq := OrderInfoRequest{}
 	orderInfReq.BuyerId = self.BuyerId
 	orderInfReq.UserId = self.UserId
@@ -332,28 +317,24 @@ func (self *Api) OrderInfoRequest(id int) (OrderInfoAnswer, error) {
 
 	body := sendReq(data)
 
-	jsonData := OrderInfoAnswer{}
+	jsonData := OrderInfoResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return OrderInfoAnswer{}, parseError(body)
+		return OrderInfoResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesAnswer, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "OrderMessagesRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("order_id", strconv.Itoa(2213397))
-
+func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesResponse, error) {
+	req := map[string]string{
+		"RequestName": "OrderMessagesRequest",
+		"order_id":    strconv.Itoa(2213397),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	jsonData := []OrderMessagesAnswer{}
+	jsonData := []OrderMessagesResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -362,23 +343,19 @@ func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesAnswer, error
 	return jsonData, nil
 }
 
-func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOrderMessageAnswer, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "SendOrderMessageRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("order_id", strconv.Itoa(somReq.OrderId))
-	data.Add("Message", somReq.Message)
-
+func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOrderMessageResponse, error) {
+	req := map[string]string{
+		"RequestName": "OrderMessagesRequest",
+		"order_id":    strconv.Itoa(somReq.OrderId),
+		"Message":     somReq.Message,
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
-	jsonData := SendOrderMessageAnswer{}
+	jsonData := SendOrderMessageResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return SendOrderMessageAnswer{}, parseError(body)
+		return SendOrderMessageResponse{}, parseError(body)
 	}
 
 	return jsonData, nil

@@ -8,10 +8,7 @@ type Auth struct {
 }
 
 type HotelSearchRequest struct {
-	BuyerId        string `json:"BuyerId"`
-	UserId         string `json:"UserId"`
-	Password       string `json:"Password"`
-	Language       string `json:"Language"`
+	Auth
 	City           string `json:"City"`
 	Lat            string `json:"Lat"`
 	Lng            string `json:"Lng"`
@@ -24,10 +21,7 @@ type HotelSearchRequest struct {
 }
 
 type HotelPricingRequest struct {
-	BuyerId        string `json:"BuyerId"`
-	UserId         string `json:"UserId"`
-	Password       string `json:"Password"`
-	Language       string `json:"Language"`
+	Auth
 	Hotel          string `json:"Hotel"`
 	ProductCode    string `json:"ProductCode"`
 	Currency       string `json:"Currency"`
@@ -40,10 +34,7 @@ type HotelPricingRequest struct {
 }
 
 type OrderRequest struct {
-	BuyerId        string   `json:"BuyerId"`
-	UserId         string   `json:"UserId"`
-	Password       string   `json:"Password"`
-	Language       string   `json:"Language"`
+	Auth
 	OrderId        string   `json:"order_id"`
 	ArrivalDate    string   `json:"arrival_date"`
 	DepartureDate  string   `json:"departure_date"`
@@ -65,11 +56,8 @@ type Person struct {
 }
 
 type OrderInfoRequest struct {
-	BuyerId  string `json:"BuyerId"`
-	UserId   string `json:"UserId"`
-	Password string `json:"Password"`
-	Language string `json:"Language"`
-	Id       string `json:"order_id"`
+	Auth
+	Id string `json:"order_id"`
 }
 
 type SendOrderMessageRequest struct {
