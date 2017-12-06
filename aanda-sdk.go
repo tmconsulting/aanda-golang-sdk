@@ -32,9 +32,7 @@ func sendReq(data url.Values) []byte {
 		panic(err)
 	}
 	defer resp.Body.Close()
-
 	body, _ := ioutil.ReadAll(resp.Body)
-	//fmt.Println(string(body))
 	return body
 
 }
@@ -356,6 +354,33 @@ func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOr
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return SendOrderMessageResponse{}, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
+func (self *Api) OrderListRequest(orderReq OrderListRequest) ([]OrderListResponse, error) {
+	orderReq.BuyerId = self.BuyerId
+	orderReq.UserId = self.UserId
+	orderReq.Password = self.Password
+	orderReq.Language = self.Language
+
+	jsonReq, err := json.Marshal(orderReq)
+	if err != nil {
+		panic(err)
+	}
+
+	data := url.Values{}
+	data.Set("RequestType", "json")
+	data.Add("RequestName", "OrderListRequest")
+	data.Add("JSON", string(jsonReq))
+
+	body := sendReq(data)
+
+	jsonData := []OrderListResponse{}
+	err = json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return nil, parseError(body)
 	}
 
 	return jsonData, nil
