@@ -1,6 +1,6 @@
 package aandaSdk
 
-type HotelSearchAnswer struct {
+type HotelSearchResponse struct {
 	HotelCode      string       `json:"hotel_code"`
 	HotelName      string       `json:"hotel_name"`
 	Address        string       `json:"address"`
@@ -65,13 +65,13 @@ type RoomPeriod struct {
 	PeriodSummTotal int         `json:"period_summ_total"`
 }
 
-type CountryListAnswer struct {
+type CountryListResponse struct {
 	CountryCode string `json:"country_code"`
 	CountryName string `json:"country_name"`
 	Cities      string `json:"cities"`
 }
 
-type CityListAnswer struct {
+type CityListResponse struct {
 	Country struct {
 		Id   string `json:"id"`
 		Name string `json:"name"`
@@ -86,7 +86,7 @@ type CityListAnswer struct {
 	} `json:"cities"`
 }
 
-type HotelListAnswer struct {
+type HotelListResponse struct {
 	HotelCode      string      `json:"hotel_code"`
 	Vat            string      `json:"vat"`
 	HotelName      string      `json:"hotel_name"`
@@ -105,7 +105,7 @@ type HotelListAnswer struct {
 	} `json:"hotel_amenities"`
 }
 
-type HotelDescriptionAnswer struct {
+type HotelDescriptionResponse struct {
 	HotelCode       string `json:"hotel_code"`
 	HotelName       string `json:"hotel_name"`
 	Vat             string `json:"vat"`
@@ -169,22 +169,22 @@ type HotelDescriptionAnswer struct {
 	} `json:"group"`
 }
 
-type CurrencyListAnswer struct {
+type CurrencyListResponse struct {
 	CurrencyCode string `json:"currency_code"`
 	CurrencyName string `json:"currency_name"`
 }
 
-type MealTypeAnswer struct {
+type MealTypeResponse struct {
 	MealTypeCode string `json:"meal_type_code"`
 	MealTypeName string `json:"meal_type_name"`
 }
 
-type MealCategoryAnswer struct {
+type MealCategoryResponse struct {
 	MealCategoryCode string `json:"meal_category_code"`
 	MealCategoryName string `json:"meal_category_name"`
 }
 
-type HotelPricingAnswer struct {
+type HotelPricingResponse struct {
 	HotelCode          string `json:"hotel_code"`
 	HotelName          string `json:"hotel_name"`
 	NumberOfGuests     int    `json:"number_of_guests"`
@@ -262,13 +262,13 @@ type HotelPricingAnswer struct {
 	} `json:"hotel_amenities"`
 }
 
-type OrderRequestAnswer struct {
+type OrderRequestResponse struct {
 	Status  string  `json:"Status" validate:"required"`
 	OrderId string  `json:"order_id" validate:"required"`
 	Time    float64 `json:"Time" validate:"required"`
 }
 
-type OrderInfoAnswer struct {
+type OrderInfoResponse struct {
 	OrderId           string `json:"order_id"`
 	ReferenceNumber   string `json:"reference_number"`
 	Created           string `json:"created"`
@@ -346,7 +346,7 @@ type OrderInfoAnswer struct {
 	GroupInfo []interface{} `json:"group_info"`
 }
 
-type OrderMessagesAnswer struct {
+type OrderMessagesResponse struct {
 	OrderCode   string `json:"order_code"`
 	MessageCode string `json:"message_code"`
 	Created     string `json:"created"`
@@ -354,6 +354,6 @@ type OrderMessagesAnswer struct {
 	Message     string `json:"message"`
 }
 
-type SendOrderMessageAnswer struct {
+type SendOrderMessageResponse struct {
 	MessageCode string `json:"message_code"`
 }

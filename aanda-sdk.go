@@ -84,7 +84,7 @@ func NewApi(auth Auth) *Api {
 	}
 }
 
-func (self *Api) CountryListRequest() ([]CountryListAnswer, error) {
+func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "CountryListRequest")
@@ -94,7 +94,7 @@ func (self *Api) CountryListRequest() ([]CountryListAnswer, error) {
 	data.Add("Language", self.Language)
 
 	body := sendReq(data)
-	jsonData := []CountryListAnswer{}
+	jsonData := []CountryListResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -103,7 +103,7 @@ func (self *Api) CountryListRequest() ([]CountryListAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) CityListRequest(countryCode int) (CityListAnswer, error) {
+func (self *Api) CityListRequest(countryCode int) (CityListResponse, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "CityListRequest")
@@ -117,17 +117,17 @@ func (self *Api) CityListRequest(countryCode int) (CityListAnswer, error) {
 
 	//FIX BUG of API
 	bodyStr := strings.Replace(string(body), "city _code", "city_code", -1)
-	jsonData := CityListAnswer{}
+	jsonData := CityListResponse{}
 
 	err := json.Unmarshal([]byte(bodyStr), &jsonData)
 	if err != nil {
-		return CityListAnswer{}, parseError(body)
+		return CityListResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) HotelListRequest(cityCode int) ([]HotelListAnswer, error) {
+func (self *Api) HotelListRequest(cityCode int) ([]HotelListResponse, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "HotelListRequest")
@@ -139,7 +139,7 @@ func (self *Api) HotelListRequest(cityCode int) ([]HotelListAnswer, error) {
 
 	body := sendReq(data)
 
-	jsonData := []HotelListAnswer{}
+	jsonData := []HotelListResponse{}
 
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
@@ -149,7 +149,7 @@ func (self *Api) HotelListRequest(cityCode int) ([]HotelListAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionAnswer, error) {
+func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionResponse, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "HotelDescriptionRequest")
@@ -161,17 +161,17 @@ func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionAnswer,
 
 	body := sendReq(data)
 
-	jsonData := HotelDescriptionAnswer{}
+	jsonData := HotelDescriptionResponse{}
 
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return HotelDescriptionAnswer{}, parseError(body)
+		return HotelDescriptionResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) CurrencyListRequest() ([]CurrencyListAnswer, error) {
+func (self *Api) CurrencyListRequest() ([]CurrencyListResponse, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "CurrencyListRequest")
@@ -182,7 +182,7 @@ func (self *Api) CurrencyListRequest() ([]CurrencyListAnswer, error) {
 
 	body := sendReq(data)
 
-	jsonData := []CurrencyListAnswer{}
+	jsonData := []CurrencyListResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -191,7 +191,7 @@ func (self *Api) CurrencyListRequest() ([]CurrencyListAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) MealTypeRequest() ([]MealTypeAnswer, error) {
+func (self *Api) MealTypeRequest() ([]MealTypeResponse, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "MealTypeRequest")
@@ -202,7 +202,7 @@ func (self *Api) MealTypeRequest() ([]MealTypeAnswer, error) {
 
 	body := sendReq(data)
 
-	jsonData := []MealTypeAnswer{}
+	jsonData := []MealTypeResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -211,7 +211,7 @@ func (self *Api) MealTypeRequest() ([]MealTypeAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) MealCategoryRequest() ([]MealCategoryAnswer, error) {
+func (self *Api) MealCategoryRequest() ([]MealCategoryResponse, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "MealCategoryRequest")
@@ -222,7 +222,7 @@ func (self *Api) MealCategoryRequest() ([]MealCategoryAnswer, error) {
 
 	body := sendReq(data)
 
-	jsonData := []MealCategoryAnswer{}
+	jsonData := []MealCategoryResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -231,7 +231,7 @@ func (self *Api) MealCategoryRequest() ([]MealCategoryAnswer, error) {
 	return jsonData, nil
 }
 
-func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricingAnswer, error) {
+func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricingResponse, error) {
 	priceReq.BuyerId = self.BuyerId
 	priceReq.UserId = self.UserId
 	priceReq.Password = self.Password
@@ -249,16 +249,16 @@ func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricing
 
 	body := sendReq(data)
 
-	jsonData := HotelPricingAnswer{}
+	jsonData := HotelPricingResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return HotelPricingAnswer{}, parseError(body)
+		return HotelPricingResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchAnswer, error) {
+func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchResponse, error) {
 	searchReq.BuyerId = self.BuyerId
 	searchReq.UserId = self.UserId
 	searchReq.Password = self.Password
@@ -275,7 +275,7 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 	data.Add("JSON", string(jsonReq))
 
 	body := sendReq(data)
-	jsonData := []HotelSearchAnswer{}
+	jsonData := []HotelSearchResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -284,7 +284,7 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 	return jsonData, nil
 }
 
-func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestAnswer, error) {
+func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestResponse, error) {
 	orderReq.BuyerId = self.BuyerId
 	orderReq.UserId = self.UserId
 	orderReq.Password = self.Password
@@ -302,17 +302,17 @@ func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestAnswer, error)
 
 	body := sendReq(data)
 
-	jsonData := OrderRequestAnswer{}
+	jsonData := OrderRequestResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	vErr := validator.ValidateStruct(jsonData)
 	if err != nil || vErr != nil {
-		return OrderRequestAnswer{}, parseError(body)
+		return OrderRequestResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) OrderInfoRequest(id int) (OrderInfoAnswer, error) {
+func (self *Api) OrderInfoRequest(id int) (OrderInfoResponse, error) {
 	orderInfReq := OrderInfoRequest{}
 	orderInfReq.BuyerId = self.BuyerId
 	orderInfReq.UserId = self.UserId
@@ -332,16 +332,16 @@ func (self *Api) OrderInfoRequest(id int) (OrderInfoAnswer, error) {
 
 	body := sendReq(data)
 
-	jsonData := OrderInfoAnswer{}
+	jsonData := OrderInfoResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return OrderInfoAnswer{}, parseError(body)
+		return OrderInfoResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
 }
 
-func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesAnswer, error) {
+func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesResponse, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "OrderMessagesRequest")
@@ -353,7 +353,7 @@ func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesAnswer, error
 
 	body := sendReq(data)
 
-	jsonData := []OrderMessagesAnswer{}
+	jsonData := []OrderMessagesResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)
@@ -362,7 +362,7 @@ func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesAnswer, error
 	return jsonData, nil
 }
 
-func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOrderMessageAnswer, error) {
+func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOrderMessageResponse, error) {
 	data := url.Values{}
 	data.Set("RequestType", "json")
 	data.Add("RequestName", "SendOrderMessageRequest")
@@ -375,10 +375,10 @@ func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOr
 
 	body := sendReq(data)
 
-	jsonData := SendOrderMessageAnswer{}
+	jsonData := SendOrderMessageResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return SendOrderMessageAnswer{}, parseError(body)
+		return SendOrderMessageResponse{}, parseError(body)
 	}
 
 	return jsonData, nil
