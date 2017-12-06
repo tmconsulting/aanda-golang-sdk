@@ -39,28 +39,32 @@ func sendReq(data url.Values) []byte {
 
 }
 func parseError(body []byte) error {
+	//Try parse as JSON
 	var answM map[string]interface{}
 	err := json.Unmarshal(body, &answM)
 	if err == nil {
+		//if have only error key
 		if err, ok := answM["error"].(string); ok {
 			return errors.New(err)
 		}
-
+		//if have Status=Error
 		st, ok1 := answM["Status"].(string)
 		note, ok2 := answM["note"].(string)
 		if ok1 && ok2 && st == "Error" {
 			return errors.New(note)
 		}
 	}
-
+	//may be simple string, try parse it
 	var answS string
 	err = json.Unmarshal(body, &answS)
 	if err == nil {
 		if strings.Index(answS, "Ошибка авторазации") == -1 {
-			return errors.New("Ошибка авторазиции")
+			return errors.New("Authorization error")
+		} else {
+			errors.New(answS)
 		}
 	}
-
+	//may be part of XML, try parse in by regexp
 	re := regexp.MustCompile(`Note="(.*)"`)
 	res := re.FindStringSubmatch(string(body))
 	if len(res) != 0 {
@@ -68,11 +72,6 @@ func parseError(body []byte) error {
 	}
 
 	return nil
-}
-
-func main() {
-	//validate = validator.New()
-	//validate.RegisterStructValidation(UserStructLevelValidation, User{})
 }
 
 func NewApi(auth Auth) *Api {
@@ -115,7 +114,7 @@ func (self *Api) CityListRequest(countryCode int) (CityListResponse, error) {
 
 	body := sendReq(data)
 
-	//FIX BUG of API
+	//FIX BUG of API (space in key)
 	bodyStr := strings.Replace(string(body), "city _code", "city_code", -1)
 	jsonData := CityListResponse{}
 
