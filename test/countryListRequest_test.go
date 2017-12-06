@@ -12,7 +12,6 @@ func TestCountryListRequest_ok(t *testing.T) {
 	data, err := zApi.CountryListRequest()
 
 	st.Expect(t, err, nil)
-	st.Expect(t, len(data), 5)
 	st.Expect(t, data[0].CountryName, "Армения")
 }
 

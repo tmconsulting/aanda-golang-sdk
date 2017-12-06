@@ -13,7 +13,6 @@ func TestHotelSearchRequest_ok(t *testing.T) {
 	data, err := zApi.HotelSearchRequest(searchReq)
 
 	st.Expect(t, err, nil)
-	st.Expect(t, len(data), 108)
 	st.Expect(t, data[0].CityName, "Санкт-Петербург")
 }
 

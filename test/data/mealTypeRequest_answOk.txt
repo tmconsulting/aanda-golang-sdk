@@ -2,25 +2,5 @@
   {
     "meal_type_code": "1",
     "meal_type_name": "полный пансион"
-  },
-  {
-    "meal_type_code": "2",
-    "meal_type_name": "полупансион"
-  },
-  {
-    "meal_type_code": "3",
-    "meal_type_name": "полный пансион plus"
-  },
-  {
-    "meal_type_code": "4",
-    "meal_type_name": "завтрак"
-  },
-  {
-    "meal_type_code": "5",
-    "meal_type_name": "ужин"
-  },
-  {
-    "meal_type_code": "6",
-    "meal_type_name": "обед"
   }
 ]

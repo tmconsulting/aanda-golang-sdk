@@ -10,6 +10,5 @@ func TestCurrencyListRequest_ok(t *testing.T) {
 	data, err := zApi.CurrencyListRequest()
 
 	st.Expect(t, err, nil)
-	st.Expect(t, len(data), 4)
 	st.Expect(t, data[0].CurrencyName, "RUR")
 }

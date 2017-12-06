@@ -103,15 +103,6 @@ if err == nil {
 }
  ```
 
- ### Example OrderListRequest
- ```golang
-    orderReq := aandaSdk.OrderListRequest{}
-    data, err := aApi.OrderListRequest(orderReq)
-    if err == nil {
-        //Work with data
-    }
-  ```
-
 ### Example CountryListRequest
 ```golang
 somReq := aandaSdk.SendOrderMessageRequest{

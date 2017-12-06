@@ -11,46 +11,6 @@
       "hotels": "6",
       "city_latitude": "52.650002",
       "city_longitude": "90.083328"
-    },
-    {
-      "city _code": "203",
-      "city_name": "Абакан",
-      "region": "Республика Хакасия",
-      "hotels": "19",
-      "city_latitude": "53.729172",
-      "city_longitude": "91.461189"
-    },
-    {
-      "city _code": "1237",
-      "city_name": "Абрау Дюрсо",
-      "region": "Краснодарский край",
-      "hotels": "1",
-      "city_latitude": "44.717117",
-      "city_longitude": "37.592403"
-    },
-    {
-      "city _code": "1272",
-      "city_name": "Агрыз",
-      "region": "Республика Татарстан",
-      "hotels": "2",
-      "city_latitude": "56.523411",
-      "city_longitude": "52.994278"
-    },
-    {
-      "city _code": "193",
-      "city_name": "Азов",
-      "region": "Ростовская область",
-      "hotels": "5",
-      "city_latitude": "47.099049",
-      "city_longitude": "39.438629"
-    },
-    {
-      "city _code": "975",
-      "city_name": "Аксай",
-      "region": "Ростовская область",
-      "hotels": "2",
-      "city_latitude": "47.267555",
-      "city_longitude": "39.875607"
     }
   ]
 }

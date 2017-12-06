@@ -2,17 +2,5 @@
   {
     "currency_code": "2",
     "currency_name": "RUR"
-  },
-  {
-    "currency_code": "7",
-    "currency_name": "UAH"
-  },
-  {
-    "currency_code": "5",
-    "currency_name": "EUR"
-  },
-  {
-    "currency_code": "3",
-    "currency_name": "USD"
   }
 ]

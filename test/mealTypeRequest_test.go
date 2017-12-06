@@ -10,6 +10,5 @@ func TestMealTypeRequest_ok(t *testing.T) {
 	data, err := zApi.MealTypeRequest()
 
 	st.Expect(t, err, nil)
-	st.Expect(t, len(data), 6)
 	st.Expect(t, data[0].MealTypeCode, "1")
 }
