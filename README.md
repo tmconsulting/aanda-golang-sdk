@@ -1,6 +1,6 @@
 # Aanda SDK for Reservation Hotels zabroniryi.ru
 [![CircleCI](https://circleci.com/gh/tmconsulting/aanda-sdk/tree/develop.svg?style=shield)](https://circleci.com/gh/tmconsulting/aanda-sdk)
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/circleci/cci-demo-react/master/LICENSE)
+[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tmconsulting/aanda-sdk/blob/master/LICENSE)
 
 ### Install
 ```

@@ -96,6 +96,7 @@ func (self *Api) createDataReq(req map[string]string) url.Values {
 
 	return data
 }
+
 func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
 	req := map[string]string{
 		"RequestName": "CounttryListRequest",
@@ -226,11 +227,11 @@ func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricing
 		panic(err)
 	}
 
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "HotelPricingRequest")
-	data.Add("JSON", string(jsonReq))
-
+	req := map[string]string{
+		"RequestName": "HotelSearchRequest",
+		"JSON":        string(jsonReq),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	jsonData := HotelPricingResponse{}
@@ -279,11 +280,11 @@ func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestResponse, erro
 		panic(err)
 	}
 
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "OrderRequest")
-	data.Add("JSON", string(jsonReq))
-
+	req := map[string]string{
+		"RequestName": "OrderRequest",
+		"JSON":        string(jsonReq),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	jsonData := OrderRequestResponse{}
