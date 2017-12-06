@@ -1,0 +1,3 @@
+<Error Code="9998" Description="Доступ запрещен !">
+<Type Code="1" Name="Фатальная" Note="Некорректная ArrivalDate[21.11.2017]"/>
+</Error>

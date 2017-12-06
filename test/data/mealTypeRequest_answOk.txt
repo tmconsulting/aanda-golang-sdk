@@ -1,0 +1,6 @@
+[
+  {
+    "meal_type_code": "1",
+    "meal_type_name": "полный пансион"
+  }
+]

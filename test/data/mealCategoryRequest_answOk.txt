@@ -1,0 +1,6 @@
+[
+  {
+    "meal_category_code": "1",
+    "meal_category_name": "шведский стол"
+  }
+]

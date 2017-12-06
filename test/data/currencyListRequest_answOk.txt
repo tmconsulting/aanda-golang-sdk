@@ -1,0 +1,6 @@
+[
+  {
+    "currency_code": "2",
+    "currency_name": "RUR"
+  }
+]

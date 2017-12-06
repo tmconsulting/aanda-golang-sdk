@@ -1,0 +1,119 @@
+[
+  {
+    "hotel_code": "8406",
+    "hotel_name": "А отель Фонтанка",
+    "address": "Россия, Санкт-Петербург, наб. реки Фонтанки, д. 142",
+    "description": "\r\n«А Отель Фонтанка» находится в Санкт-Петербурге. Отель идеально подходит для семейного отдыха. Расстояние до станции метро Балтийская составляет 1.4 км, до Балтийского вокзала – 1.2 км, до аэропорта – 17 км.\r\n\r\n  \r\n\r\nВ гостинице 456 номеров. В номерах: кровать, мебель, ванная комната, интернет, телевизор.\r\n\r\n\r\nДля питания гостей в отеле есть отличный ресторан «Авеню», в котором накрывают вкусный завтрак.\r\n\r\n  \r\n  \r\nК вашим услугам в «А Отеле Фонтанка»:\r\n\r\n\tресторан;\r\n\tхранение багажа;\r\n\tсувениры;\r\n\tвизовая поддержка;\r\n\tупаковка багажа;\r\n\tинтернет.\r\n\r\n\r\n\r\n",
+    "image_url": "http://images.aanda.ru/photos/8406/139442.jpg",
+    "vat": 1,
+    "check-in_time": "14:00",
+    "check-out_time": "12:00",
+    "timezone": "UTC+3",
+    "city_code": "2",
+    "city_name": "Санкт-Петербург",
+    "hotel_latitude": "59.915707",
+    "hotel_longitude": "30.294432",
+    "country_code": "9",
+    "country_name": "Россия",
+    "rating_code": "5",
+    "rating_name": "Отель",
+    "stars_code": 3,
+    "stars_name": "3 звезды",
+    "amenities": null,
+    "currency_code": "2",
+    "currency_name": "RUR",
+    "rooms": [
+      {
+        "room_code": 41520,
+        "room_name": "стандарт",
+        "rate_name": "",
+        "number_of_guests": "2",
+        "price": 2350,
+        "rackrate": null,
+        "comission": {
+          "room": 188,
+          "meal": 0,
+          "total": 188,
+          "total_mealfree": 188
+        },
+        "penalty_size": 2350,
+        "deadline_date": "26.11.2017",
+        "deadline_time": "12:00:00",
+        "penalty_info": "",
+        "meal_type_code": "4",
+        "meal_type_name": "завтрак",
+        "meal_category_code": "1",
+        "meal_category_name": "шведский стол",
+        "meal_name": "завтрак, шведский стол",
+        "meal_price": 0,
+        "meal_is_included_code": 1,
+        "meal_is_included_name": "Да",
+        "availability_code": 4,
+        "availability_name": "Продажа по запросу",
+        "payment_terms_code": "3",
+        "payment_terms_name": "Оплата согласно договору",
+        "checkins": null,
+        "checkouts": null,
+        "periods": [
+          {
+            "period_start": "27.11.2017",
+            "period_end": "27.11.2017",
+            "period_days": 1,
+            "period_summ_room": 2350,
+            "period_summ_meal": 0,
+            "period_summ_total": 2350
+          }
+        ]
+      },
+      {
+        "room_code": 42619,
+        "room_name": "супериор с 01.01.2016г",
+        "rate_name": "",
+        "number_of_guests": "2",
+        "price": 2600,
+        "rackrate": null,
+        "comission": {
+          "room": 208,
+          "meal": 0,
+          "total": 208,
+          "total_mealfree": 208
+        },
+        "penalty_size": 2600,
+        "deadline_date": "26.11.2017",
+        "deadline_time": "12:00:00",
+        "penalty_info": "",
+        "meal_type_code": "4",
+        "meal_type_name": "завтрак",
+        "meal_category_code": "1",
+        "meal_category_name": "шведский стол",
+        "meal_name": "завтрак, шведский стол",
+        "meal_price": 0,
+        "meal_is_included_code": 1,
+        "meal_is_included_name": "Да",
+        "availability_code": 4,
+        "availability_name": "Продажа по запросу",
+        "payment_terms_code": "3",
+        "payment_terms_name": "Оплата согласно договору",
+        "checkins": null,
+        "checkouts": null,
+        "periods": [
+          {
+            "period_start": "27.11.2017",
+            "period_end": "27.11.2017",
+            "period_days": 1,
+            "period_summ_room": 2600,
+            "period_summ_meal": 0,
+            "period_summ_total": 2600
+          }
+        ]
+      }
+    ],
+    "group": {
+      "qty": "10",
+      "type": "2",
+      "typename": "номеров",
+      "note": "Продажа по запросу",
+      "rule": "Сроки аннуляции и размер штрафных санкций в случае отмены/изменений группы будут сообщены дополнительно"
+    }
+  }
+]

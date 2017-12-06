@@ -1,0 +1,16 @@
+{
+  "country": {
+    "id": "9",
+    "name": "Россия"
+  },
+  "cities": [
+    {
+      "city _code": "1702",
+      "city_name": "Абаза",
+      "region": "Республика Хакасия",
+      "hotels": "6",
+      "city_latitude": "52.650002",
+      "city_longitude": "90.083328"
+    }
+  ]
+}
