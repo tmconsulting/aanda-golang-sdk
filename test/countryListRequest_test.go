@@ -21,5 +21,5 @@ func TestCountryListRequest_err(t *testing.T) {
 	searchReq := aandaSdk.HotelSearchRequest{}
 	_, err := zApi.HotelSearchRequest(searchReq)
 
-	st.Expect(t, err, errors.New("Ошибка авторазиции"))
+	st.Expect(t, err, errors.New("Authorization error"))
 }

@@ -83,15 +83,24 @@ func NewApi(auth Auth) *Api {
 	}
 }
 
-func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
+func (self *Api) createDataReq(req map[string]string) url.Values {
 	data := url.Values{}
 	data.Set("RequestType", "json")
-	data.Add("RequestName", "CountryListRequest")
 	data.Add("CompanyId", self.BuyerId)
 	data.Add("UserId", self.UserId)
 	data.Add("Password", self.Password)
 	data.Add("Language", self.Language)
+	for key, value := range req {
+		data.Add(key, value)
+	}
 
+	return data
+}
+func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
+	req := map[string]string{
+		"RequestName": "CounttryListRequest",
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 	jsonData := []CountryListResponse{}
 	err := json.Unmarshal(body, &jsonData)
@@ -103,15 +112,11 @@ func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
 }
 
 func (self *Api) CityListRequest(countryCode int) (CityListResponse, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "CityListRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("CountryCode", strconv.Itoa(countryCode))
-
+	req := map[string]string{
+		"RequestName": "CityListRequest",
+		"CountryCode": strconv.Itoa(countryCode),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	//FIX BUG of API (space in key)
@@ -127,15 +132,11 @@ func (self *Api) CityListRequest(countryCode int) (CityListResponse, error) {
 }
 
 func (self *Api) HotelListRequest(cityCode int) ([]HotelListResponse, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "HotelListRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("CityCode", strconv.Itoa(cityCode))
-
+	req := map[string]string{
+		"RequestName": "HotelListRequest",
+		"CityCode":    strconv.Itoa(cityCode),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	jsonData := []HotelListResponse{}
@@ -149,15 +150,11 @@ func (self *Api) HotelListRequest(cityCode int) ([]HotelListResponse, error) {
 }
 
 func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionResponse, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "HotelDescriptionRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("HotelCode", strconv.Itoa(hotelCode))
-
+	req := map[string]string{
+		"RequestName": "HotelDescriptionRequest",
+		"HotelCode":   strconv.Itoa(hotelCode),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	jsonData := HotelDescriptionResponse{}
@@ -171,14 +168,10 @@ func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionRespons
 }
 
 func (self *Api) CurrencyListRequest() ([]CurrencyListResponse, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "CurrencyListRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-
+	req := map[string]string{
+		"RequestName": "CurrencyListRequest",
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	jsonData := []CurrencyListResponse{}
@@ -191,14 +184,10 @@ func (self *Api) CurrencyListRequest() ([]CurrencyListResponse, error) {
 }
 
 func (self *Api) MealTypeRequest() ([]MealTypeResponse, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "MealTypeRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-
+	req := map[string]string{
+		"RequestName": "MealTypeRequest",
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	jsonData := []MealTypeResponse{}
@@ -211,14 +200,10 @@ func (self *Api) MealTypeRequest() ([]MealTypeResponse, error) {
 }
 
 func (self *Api) MealCategoryRequest() ([]MealCategoryResponse, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "MealCategoryRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-
+	req := map[string]string{
+		"RequestName": "MealCategoryRequest",
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	jsonData := []MealCategoryResponse{}
@@ -341,15 +326,11 @@ func (self *Api) OrderInfoRequest(id int) (OrderInfoResponse, error) {
 }
 
 func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesResponse, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "OrderMessagesRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("order_id", strconv.Itoa(2213397))
-
+	req := map[string]string{
+		"RequestName": "OrderMessagesRequest",
+		"order_id":    strconv.Itoa(2213397),
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	jsonData := []OrderMessagesResponse{}
@@ -362,16 +343,12 @@ func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesResponse, err
 }
 
 func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOrderMessageResponse, error) {
-	data := url.Values{}
-	data.Set("RequestType", "json")
-	data.Add("RequestName", "SendOrderMessageRequest")
-	data.Add("CompanyId", self.BuyerId)
-	data.Add("UserId", self.UserId)
-	data.Add("Password", self.Password)
-	data.Add("Language", self.Language)
-	data.Add("order_id", strconv.Itoa(somReq.OrderId))
-	data.Add("Message", somReq.Message)
-
+	req := map[string]string{
+		"RequestName": "OrderMessagesRequest",
+		"order_id":    strconv.Itoa(somReq.OrderId),
+		"Message":     somReq.Message,
+	}
+	data := self.createDataReq(req)
 	body := sendReq(data)
 
 	jsonData := SendOrderMessageResponse{}
