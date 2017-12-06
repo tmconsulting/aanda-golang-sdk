@@ -279,6 +279,7 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestAnswer, error) {
 	m := structs.Map(orderReq)
 	data := self.createDataForJsonReq("OrderRequest", m)
+	fmt.Println(data)
 
 	body := sendReq(data)
 	fmt.Println(string(body))
