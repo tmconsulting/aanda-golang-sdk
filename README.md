@@ -1,15 +1,15 @@
 # Aanda SDK for Reservation Hotels zabroniryi.ru
-[![CircleCI](https://circleci.com/gh/tmconsulting/aanda-sdk/tree/master.svg?style=shield)](https://circleci.com/gh/tmconsulting/aanda-sdk)
+[![CircleCI](https://circleci.com/gh/tmconsulting/aanda-golang-sdk/tree/master.svg?style=shield)](https://circleci.com/gh/tmconsulting/aanda-golang-sdk)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tmconsulting/aanda-sdk/blob/master/LICENSE)
 
 ### Install
 ```
-go get github.com/tmconsulting/aanda-sdk
+go get github.com/tmconsulting/aanda-golang-sdk
 ```
 
 ### Import
 ```golang
-import "github.com/tmconsulting/aanda-sdk"
+import "github.com/tmconsulting/aanda-golang-sdk"
 ```
 
 ### Example init variables
