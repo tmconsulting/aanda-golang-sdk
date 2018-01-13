@@ -385,3 +385,19 @@ func (self *Api) OrderListRequest(orderReq OrderListRequest) ([]OrderListRespons
 
 	return jsonData, nil
 }
+
+func (self *Api) ClientStatusRequest() ([]ClientStatusResponse, error) {
+	req := map[string]string{
+		"RequestName": "ClientStatusRequest",
+	}
+	data := self.createDataReq(req)
+	body := sendReq(data)
+
+	jsonData := []ClientStatusResponse{}
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return nil, parseError(body)
+	}
+
+	return jsonData, nil
+}

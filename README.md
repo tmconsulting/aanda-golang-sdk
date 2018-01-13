@@ -103,7 +103,7 @@ if err == nil {
 }
  ```
 
-### Example CountryListRequest
+### Example SendOrderMessageRequest
 ```golang
 somReq := aandaSdk.SendOrderMessageRequest{
 	OrderId: 2213397,
@@ -178,3 +178,11 @@ if err == nil {
 	//Work with data
 }
  ```
+
+  ### Example ClientStatusRequest
+ ```golang
+ data, err := aApi.ClientStatusRequest()
+ if err == nil {
+ 	//Work with data
+ }
+  ```
