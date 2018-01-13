@@ -377,3 +377,9 @@ type OrderMessagesResponse struct {
 type SendOrderMessageResponse struct {
 	MessageCode string `json:"message_code"`
 }
+
+type ClientStatusResponse struct {
+	ClientStatusCode        string `json:"client_status_code"`
+	ClientStatusName        string `json:"client_status_name"`
+	ClientStatusExplanation string `json:"client_status_explanation"`
+}

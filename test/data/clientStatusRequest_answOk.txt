@@ -1,0 +1,52 @@
+[
+  {
+    "client_status_code": "11",
+    "client_status_name": "Запрос получен",
+    "client_status_explanation": "Заказ только что создан и получен менеджером A&A"
+  },
+  {
+    "client_status_code": "18",
+    "client_status_name": "В работе",
+    "client_status_explanation": "Сотрудник A&A принял заказ в работу"
+  },
+  {
+    "client_status_code": "65",
+    "client_status_name": "Забронировано",
+    "client_status_explanation": "Частный статус, используется редко для некоторых клиентов"
+  },
+  {
+    "client_status_code": "71",
+    "client_status_name": "Аннулировано",
+    "client_status_explanation": "Стоимость и условия бронирования предложены Агенту, менеджер A&A ожидает согласие / отказ Агента (Клиента)"
+  },
+  {
+    "client_status_code": "25",
+    "client_status_name": "Отказано",
+    "client_status_explanation": "Заказ выполнить невозможно (нет мест / Агент отказался от услуги до ее подтверждения)"
+  },
+  {
+    "client_status_code": "47",
+    "client_status_name": "Изменения получены",
+    "client_status_explanation": "Гостиница подтвердила бронирование, но документы по заказу еще не выставлены"
+  },
+  {
+    "client_status_code": "35",
+    "client_status_name": "Подтверждено",
+    "client_status_explanation": "Изменения заказа получены менеджером A&A"
+  },
+  {
+    "client_status_code": "22",
+    "client_status_name": "Бронь восстановлена в связи с отказом на изменения",
+    "client_status_explanation": "Заказ аннулирован"
+  },
+  {
+    "client_status_code": "20",
+    "client_status_name": "Заявка в гостинице",
+    "client_status_explanation": "В гостиницу направлен запрос на бронирование / уведомление о продаже"
+  },
+  {
+    "client_status_code": "21",
+    "client_status_name": "Ожидает подтверждения агента",
+    "client_status_explanation": "Все услуги заказа забронированы, подтверждение и счет в заказе сформированы"
+  }
+]

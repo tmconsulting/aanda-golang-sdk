@@ -3,7 +3,7 @@ package test
 import (
 	"errors"
 	"github.com/nbio/st"
-	"github.com/tmconsulting/aanda-sdk"
+	"github.com/tmconsulting/aanda-golang-sdk"
 	"testing"
 )
 
