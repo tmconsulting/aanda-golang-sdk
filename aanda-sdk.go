@@ -45,10 +45,16 @@ func parseError(body []byte) error {
 		if err, ok := answM["error"].(string); ok {
 			return errors.New(err)
 		}
+		//if have error and message key
+		_, ok1 := answM["error"].(float64)
+		message, ok2 := answM["message"].(string)
+		if ok1 && ok2 {
+			return errors.New(message)
+		}
 		//if have Status=Error
-		st, ok1 := answM["Status"].(string)
-		note, ok2 := answM["note"].(string)
-		if ok1 && ok2 && st == "Error" {
+		st, ok3 := answM["Status"].(string)
+		note, ok4 := answM["note"].(string)
+		if ok3 && ok4 && st == "Error" {
 			return errors.New(note)
 		}
 	}
