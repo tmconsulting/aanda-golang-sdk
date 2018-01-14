@@ -103,7 +103,7 @@ func (self *Api) createDataReq(req map[string]string) url.Values {
 
 func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
 	req := map[string]string{
-		"RequestName": "CounttryListRequest",
+		"RequestName": "CountryListRequest",
 	}
 	data := self.createDataReq(req)
 	body := sendReq(data)

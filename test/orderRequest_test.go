@@ -39,3 +39,11 @@ func TestOrderRequest_err3(t *testing.T) {
 
 	st.Expect(t, err, errors.New("Ошибка! - Номер 1642 неактивен! Выберите другой номер."))
 }
+
+func TestOrderRequest_err4(t *testing.T) {
+	testRequest("orderRequest_answErr4.txt")
+	orderReq := aandaSdk.OrderRequest{}
+	_, err := zApi.OrderRequest(orderReq)
+
+	st.Expect(t, err, errors.New("Не верный статус"))
+}
