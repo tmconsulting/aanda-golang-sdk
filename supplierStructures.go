@@ -383,3 +383,8 @@ type ClientStatusResponse struct {
 	ClientStatusName        string `json:"client_status_name"`
 	ClientStatusExplanation string `json:"client_status_explanation"`
 }
+
+type ServiceTypeResponse struct {
+	ServiceCode string `json:"service_code"`
+	ServiceName string `json:"service_name"`
+}

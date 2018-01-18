@@ -220,6 +220,22 @@ func (self *Api) MealCategoryRequest() ([]MealCategoryResponse, error) {
 	return jsonData, nil
 }
 
+func (self *Api) ServiceTypeRequest() ([]ServiceTypeResponse, error) {
+	req := map[string]string{
+		"RequestName": "ServiceTypeRequest",
+	}
+	data := self.createDataReq(req)
+	body := sendReq(data)
+
+	jsonData := []ServiceTypeResponse{}
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return nil, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
 func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricingResponse, error) {
 	priceReq.BuyerId = self.BuyerId
 	priceReq.UserId = self.UserId
