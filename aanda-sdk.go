@@ -103,7 +103,7 @@ func (self *Api) createDataReq(req map[string]string) url.Values {
 
 func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
 	req := map[string]string{
-		"RequestName": "CountryListRequest",
+		"RequestName": "CounttryListRequest",
 	}
 	data := self.createDataReq(req)
 	body := sendReq(data)
@@ -212,6 +212,22 @@ func (self *Api) MealCategoryRequest() ([]MealCategoryResponse, error) {
 	body := sendReq(data)
 
 	jsonData := []MealCategoryResponse{}
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return nil, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
+func (self *Api) ServiceTypeRequest() ([]ServiceTypeResponse, error) {
+	req := map[string]string{
+		"RequestName": "ServiceTypeRequest",
+	}
+	data := self.createDataReq(req)
+	body := sendReq(data)
+
+	jsonData := []ServiceTypeResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
 		return nil, parseError(body)

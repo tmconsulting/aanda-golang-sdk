@@ -1,0 +1,114 @@
+[
+  {
+    "service_code": "1",
+    "service_name": "Авиабилет"
+  },
+  {
+    "service_code": "2",
+    "service_name": "Сервисный сбор авиабилетов"
+  },
+  {
+    "service_code": "3",
+    "service_name": "Жд билет"
+  },
+  {
+    "service_code": "4",
+    "service_name": "Сервисный сбор жд билетов"
+  },
+  {
+    "service_code": "5",
+    "service_name": "Комиссионный сбор авиабилетов"
+  },
+  {
+    "service_code": "6",
+    "service_name": "Сервисный сбор  за возврат авиабилетов"
+  },
+  {
+    "service_code": "8",
+    "service_name": "Комиссионный сбор за возврат жд билетов"
+  },
+  {
+    "service_code": "9",
+    "service_name": "Сервисный сбор за возврат жд билетов"
+  },
+  {
+    "service_code": "10",
+    "service_name": "Страховой сбор"
+  },
+  {
+    "service_code": "11",
+    "service_name": "Комиссия"
+  },
+  {
+    "service_code": "12",
+    "service_name": "Скидка"
+  },
+  {
+    "service_code": "13",
+    "service_name": "Трансфер"
+  },
+  {
+    "service_code": "14",
+    "service_name": "Завтрак"
+  },
+  {
+    "service_code": "17",
+    "service_name": "Конференц-зал"
+  },
+  {
+    "service_code": "18",
+    "service_name": "Сбор ПРТ"
+  },
+  {
+    "service_code": "19",
+    "service_name": "Агентское вознаграждение"
+  },
+  {
+    "service_code": "20",
+    "service_name": "Страховой полис"
+  },
+  {
+    "service_code": "21",
+    "service_name": "Визовая поддержка. Выезд за рубеж."
+  },
+  {
+    "service_code": "22",
+    "service_name": "Визовая поддержка. Въезд в РФ."
+  },
+  {
+    "service_code": "23",
+    "service_name": "Тур"
+  },
+  {
+    "service_code": "24",
+    "service_name": "VIP-зал в аэропорту"
+  },
+  {
+    "service_code": "25",
+    "service_name": "Проживание"
+  },
+  {
+    "service_code": "26",
+    "service_name": "Штраф за несвоевременную аннуляцию отеля"
+  },
+  {
+    "service_code": "27",
+    "service_name": "Ранний заезд"
+  },
+  {
+    "service_code": "28",
+    "service_name": "Поздний выезд"
+  },
+  {
+    "service_code": "29",
+    "service_name": "Питание за дополнительную плату"
+  },
+  {
+    "service_code": "30",
+    "service_name": "Доп. услуги в отеле"
+  },
+  {
+    "service_code": "31",
+    "service_name": "Бронирование первых суток"
+  }
+]
