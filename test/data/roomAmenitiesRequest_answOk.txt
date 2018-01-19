@@ -1,0 +1,178 @@
+[
+  {
+    "room_amenities_code": "3",
+    "room_amenities_name": "Кондиционер"
+  },
+  {
+    "room_amenities_code": "4",
+    "room_amenities_name": "Сейф"
+  },
+  {
+    "room_amenities_code": "5",
+    "room_amenities_name": "Холодильник"
+  },
+  {
+    "room_amenities_code": "6",
+    "room_amenities_name": "Телевизор"
+  },
+  {
+    "room_amenities_code": "7",
+    "room_amenities_name": "Стиральная машина"
+  },
+  {
+    "room_amenities_code": "8",
+    "room_amenities_name": "Телефон"
+  },
+  {
+    "room_amenities_code": "9",
+    "room_amenities_name": "Кабельное телевидение"
+  },
+  {
+    "room_amenities_code": "10",
+    "room_amenities_name": "Тапочки"
+  },
+  {
+    "room_amenities_code": "11",
+    "room_amenities_name": "Кухня"
+  },
+  {
+    "room_amenities_code": "12",
+    "room_amenities_name": "Балкон"
+  },
+  {
+    "room_amenities_code": "13",
+    "room_amenities_name": "Халат"
+  },
+  {
+    "room_amenities_code": "14",
+    "room_amenities_name": "Посудомоечная машина"
+  },
+  {
+    "room_amenities_code": "15",
+    "room_amenities_name": "Мини-бар"
+  },
+  {
+    "room_amenities_code": "16",
+    "room_amenities_name": "Услуга будильник"
+  },
+  {
+    "room_amenities_code": "17",
+    "room_amenities_name": "Фен"
+  },
+  {
+    "room_amenities_code": "18",
+    "room_amenities_name": "Набор косметики (туалетные принадлежности)"
+  },
+  {
+    "room_amenities_code": "19",
+    "room_amenities_name": "Набор для приготовления чая/кофе"
+  },
+  {
+    "room_amenities_code": "20",
+    "room_amenities_name": "Ежедневная уборка"
+  },
+  {
+    "room_amenities_code": "21",
+    "room_amenities_name": "Рабочая зона"
+  },
+  {
+    "room_amenities_code": "22",
+    "room_amenities_name": "Мягкая мебель"
+  },
+  {
+    "room_amenities_code": "23",
+    "room_amenities_name": "Ванна"
+  },
+  {
+    "room_amenities_code": "24",
+    "room_amenities_name": "Душ/душевая кабинка"
+  },
+  {
+    "room_amenities_code": "25",
+    "room_amenities_name": "Блочный номер"
+  },
+  {
+    "room_amenities_code": "26",
+    "room_amenities_name": "Общие удобства"
+  },
+  {
+    "room_amenities_code": "27",
+    "room_amenities_name": "1 двуспальная кровать"
+  },
+  {
+    "room_amenities_code": "28",
+    "room_amenities_name": "Раздельные кровати"
+  },
+  {
+    "room_amenities_code": "29",
+    "room_amenities_name": "Кровать размера King size"
+  },
+  {
+    "room_amenities_code": "30",
+    "room_amenities_name": "Санузел в номере"
+  },
+  {
+    "room_amenities_code": "31",
+    "room_amenities_name": "Односпальная кровать "
+  },
+  {
+    "room_amenities_code": "32",
+    "room_amenities_name": "Полутороспальная кровать"
+  },
+  {
+    "room_amenities_code": "33",
+    "room_amenities_name": "Тумбочка"
+  },
+  {
+    "room_amenities_code": "34",
+    "room_amenities_name": "Шкаф"
+  },
+  {
+    "room_amenities_code": "35",
+    "room_amenities_name": "Джакузи"
+  },
+  {
+    "room_amenities_code": "36",
+    "room_amenities_name": "Чайник"
+  },
+  {
+    "room_amenities_code": "37",
+    "room_amenities_name": "Кофейная станция"
+  },
+  {
+    "room_amenities_code": "38",
+    "room_amenities_name": "Набор посуды"
+  },
+  {
+    "room_amenities_code": "39",
+    "room_amenities_name": "Письменные принадлежности"
+  },
+  {
+    "room_amenities_code": "40",
+    "room_amenities_name": "Номер без окна"
+  },
+  {
+    "room_amenities_code": "41",
+    "room_amenities_name": "Мансардный номер"
+  },
+  {
+    "room_amenities_code": "42",
+    "room_amenities_name": "Двухъярусная кровать"
+  },
+  {
+    "room_amenities_code": "43",
+    "room_amenities_name": "Биде"
+  },
+  {
+    "room_amenities_code": "44",
+    "room_amenities_name": "Утюг"
+  },
+  {
+    "room_amenities_code": "45",
+    "room_amenities_name": "Гладильная доска"
+  },
+  {
+    "room_amenities_code": "46",
+    "room_amenities_name": "Сплит-система "
+  }
+]

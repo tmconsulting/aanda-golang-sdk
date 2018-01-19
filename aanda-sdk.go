@@ -423,3 +423,36 @@ func (self *Api) ClientStatusRequest() ([]ClientStatusResponse, error) {
 
 	return jsonData, nil
 }
+
+func (self *Api) HotelAmenitiesRequest() ([]HotelAmenitiesResponse, error) {
+	req := map[string]string{
+		"RequestName": "HotelAmenitiesRequest",
+	}
+	data := self.createDataReq(req)
+	body := sendReq(data)
+
+	jsonData := []HotelAmenitiesResponse{}
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return nil, parseError(body)
+	}
+
+	return jsonData, nil
+}
+
+func (self *Api) RoomAmenitiesRequest() ([]RoomAmenitiesResponse, error) {
+	req := map[string]string{
+		"RequestName": "RoomAmenitiesRequest",
+	}
+	data := self.createDataReq(req)
+	body := sendReq(data)
+
+	jsonData := []RoomAmenitiesResponse{}
+	err := json.Unmarshal(body, &jsonData)
+	if err != nil {
+		return nil, parseError(body)
+	}
+
+	return jsonData, nil
+}
+

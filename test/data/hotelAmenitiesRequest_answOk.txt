@@ -1,0 +1,90 @@
+[
+  {
+    "hotel_amenities_code": "2",
+    "hotel_amenities_name": "Wi-Fi"
+  },
+  {
+    "hotel_amenities_code": "3",
+    "hotel_amenities_name": "Бар/ресторан"
+  },
+  {
+    "hotel_amenities_code": "4",
+    "hotel_amenities_name": "Парковка"
+  },
+  {
+    "hotel_amenities_code": "5",
+    "hotel_amenities_name": "Пункт обмена валют/банкомат"
+  },
+  {
+    "hotel_amenities_code": "6",
+    "hotel_amenities_name": "Бизнес-центр"
+  },
+  {
+    "hotel_amenities_code": "7",
+    "hotel_amenities_name": "Бесплатный трансфер"
+  },
+  {
+    "hotel_amenities_code": "8",
+    "hotel_amenities_name": "Прачечная/Химчистка"
+  },
+  {
+    "hotel_amenities_code": "9",
+    "hotel_amenities_name": "Удобства  и номера для гостей с ограниченными физическими возможностями"
+  },
+  {
+    "hotel_amenities_code": "10",
+    "hotel_amenities_name": "SPA"
+  },
+  {
+    "hotel_amenities_code": "11",
+    "hotel_amenities_name": "Бассейн"
+  },
+  {
+    "hotel_amenities_code": "12",
+    "hotel_amenities_name": "Фитнес-центр"
+  },
+  {
+    "hotel_amenities_code": "13",
+    "hotel_amenities_name": "Развлечения"
+  },
+  {
+    "hotel_amenities_code": "14",
+    "hotel_amenities_name": "Частный пляж"
+  },
+  {
+    "hotel_amenities_code": "15",
+    "hotel_amenities_name": "Конференц-залы"
+  },
+  {
+    "hotel_amenities_code": "16",
+    "hotel_amenities_name": "Услуги консьержа"
+  },
+  {
+    "hotel_amenities_code": "17",
+    "hotel_amenities_name": "Салон красоты"
+  },
+  {
+    "hotel_amenities_code": "18",
+    "hotel_amenities_name": "Услуги няни"
+  },
+  {
+    "hotel_amenities_code": "19",
+    "hotel_amenities_name": "Размещение с домашними животными"
+  },
+  {
+    "hotel_amenities_code": "20",
+    "hotel_amenities_name": "Сувенирный магазин"
+  },
+  {
+    "hotel_amenities_code": "21",
+    "hotel_amenities_name": "Экскурсионное обслуживание/услуги гидов-переводчиков"
+  },
+  {
+    "hotel_amenities_code": "22",
+    "hotel_amenities_name": "Доставка корреспонденции"
+  },
+  {
+    "hotel_amenities_code": "23",
+    "hotel_amenities_name": "Камера хранения"
+  }
+]

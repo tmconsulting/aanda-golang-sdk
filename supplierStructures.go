@@ -388,3 +388,13 @@ type ServiceTypeResponse struct {
 	ServiceCode string `json:"service_code"`
 	ServiceName string `json:"service_name"`
 }
+
+type HotelAmenitiesResponse struct {
+	HotelAmenitiesCode string `json:"hotel_amenities_code"`
+	HotelAmenitiesName string `json:"hotel_amenities_name"`
+}
+
+type RoomAmenitiesResponse struct {
+	RoomAmenitiesCode string `json:"room_amenities_code"`
+	RoomAmenitiesName string `json:"room_amenities_name"`
+}
