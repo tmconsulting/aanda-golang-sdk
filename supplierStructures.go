@@ -19,7 +19,7 @@ type HotelSearchResponse struct {
 	CountryName    string       `json:"country_name"`
 	RatingCode     string       `json:"rating_code"`
 	RatingName     string       `json:"rating_name"`
-	StarsCode      interface{}  `json:"stars_code"` //Иногда тут пустая строка
+	StarsCode      int          `json:"stars_code"` //Иногда тут пустая строка
 	StarsName      string       `json:"stars_name"`
 	CurrencyCode   string       `json:"currency_code"`
 	CurrencyName   string       `json:"currency_name"`
