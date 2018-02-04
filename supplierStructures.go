@@ -29,10 +29,10 @@ type HotelRooms struct {
 	RoomCode           int           `json:"room_code"`
 	RoomName           string        `json:"room_name"`
 	NumberOfGuests     string        `json:"number_of_guests"`
-	Price              int           `json:"price"`
-	Rackrate           interface{}   `json:"rackrate"` //Иногда тут null
+	Price              float64       `json:"price"`
+	Rackrate           float64       `json:"rackrate"`
 	Comission          RoomComission `json:"comission"`
-	PenaltySize        int           `json:"penalty_size"`
+	PenaltySize        float64       `json:"penalty_size"`
 	DeadlineDate       string        `json:"deadline_date"`
 	DeadlineTime       string        `json:"deadline_time"`
 	PenaltyInfo        string        `json:"penalty_info"`
