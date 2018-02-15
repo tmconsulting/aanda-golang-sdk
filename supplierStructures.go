@@ -51,10 +51,10 @@ type HotelRooms struct {
 	Periods            []RoomPeriod  `json:"periods"`
 }
 type RoomComission struct {
-	Room          interface{} `json:"room"` //
-	Meal          int         `json:"meal"`
-	Total         interface{} `json:"total"` //
-	TotalMealfree interface{} `json:"total_mealfree"`
+	Room          float64 `json:"room"`
+	Meal          float64 `json:"meal"`
+	Total         float64 `json:"total"`
+	TotalMealfree float64 `json:"total_mealfree"`
 }
 type RoomPeriod struct {
 	PeriodStart     string      `json:"period_start"`
