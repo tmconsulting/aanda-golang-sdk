@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"gopkg.in/go-playground/validator.v2"
 	"io/ioutil"
 	"net/http"
