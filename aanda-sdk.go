@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"gopkg.in/go-playground/validator.v2"
 	"io/ioutil"
 	"net/http"
@@ -365,7 +366,7 @@ func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesResponse, err
 
 func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOrderMessageResponse, error) {
 	req := map[string]string{
-		"RequestName": "OrderMessagesRequest",
+		"RequestName": "SendOrderMessageRequest",
 		"order_id":    strconv.Itoa(somReq.OrderId),
 		"Message":     somReq.Message,
 	}
@@ -455,4 +456,3 @@ func (self *Api) RoomAmenitiesRequest() ([]RoomAmenitiesResponse, error) {
 
 	return jsonData, nil
 }
-
