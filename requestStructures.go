@@ -73,10 +73,10 @@ type OrderListRequest struct {
 	LastName             string `json:"LastName"` //Доп параметры
 	ArrivalDateFrom      string `json:"ArrivalDateFrom"`
 	ArrivalDateTo        string `json:"ArrivalDateTo"`
-	DepartureDateFrom    string `json:"LastName"`
-	DepartureDateTo      string `json:"LastName"`
-	RegistrationDateFrom string `json:"LastName"`
-	RegistrationDateTo   string `json:"LastName"`
-	ChangeDateFrom       string `json:"LastName"`
-	ChangeDateTo         string `json:"LastName"`
+	DepartureDateFrom    string `json:"DepartureDateFrom"`
+	DepartureDateTo      string `json:"DepartureDateTo"`
+	RegistrationDateFrom string `json:"RegistrationDateFrom"`
+	RegistrationDateTo   string `json:"RegistrationDateTo"`
+	ChangeDateFrom       string `json:"ChangeDateFrom"`
+	ChangeDateTo         string `json:"ChangeDateTo"`
 }

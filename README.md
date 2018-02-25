@@ -96,7 +96,14 @@ if err == nil {
 
  ### Example OrderListRequest
 ```golang
-orderReq := aandaSdk.OrderRequest{}
+orderReq := aandaSdk.OrderListRequest{
+	//ArrivalDateFrom: "24.02.2018",
+	//ArrivalDateTo:   "25.02.2018",
+	//DepartureDateFrom: "25.02.2018",
+	//DepartureDateTo:   "26.02.2018",
+	//RegistrationDateFrom: "23.02.2018",
+	//RegistrationDateTo: "22.02.2018",
+	}
 data, err := aApi.OrderListRequest(orderReq)
 if err == nil {
 	//Work with data
