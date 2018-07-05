@@ -106,6 +106,7 @@ type HotelListResponse struct {
 }
 
 type HotelDescriptionResponse struct {
+	Status          *string    `json:"status,omitempty"`
 	HotelCode       MustString `json:"hotel_code"`
 	HotelName       string     `json:"hotel_name"`
 	Vat             MustString `json:"vat"`

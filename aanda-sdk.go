@@ -198,7 +198,7 @@ func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionRespons
 	jsonData := HotelDescriptionResponse{}
 
 	err := json.Unmarshal(body, &jsonData)
-	if err != nil {
+	if err != nil || jsonData.Status != nil {
 		respErr := parseError(body)
 
 		if respErr == nil {
