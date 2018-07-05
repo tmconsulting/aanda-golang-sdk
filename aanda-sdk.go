@@ -4,13 +4,14 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"gopkg.in/go-playground/validator.v2"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"regexp"
 	"strconv"
 	"strings"
+
+	"gopkg.in/go-playground/validator.v2"
 )
 
 const apiUrl = "http://api.aanda.ru/xml_gateway/"
@@ -36,10 +37,18 @@ func sendReq(data url.Values) []byte {
 	return body
 
 }
+
 func parseError(body []byte) error {
+	// Try to parse known struct
+	var aandaErr AandaError
+	err := json.Unmarshal(body, &aandaErr)
+	if err == nil {
+		return &aandaErr
+	}
+
 	//Try parse as JSON
 	var answM map[string]interface{}
-	err := json.Unmarshal(body, &answM)
+	err = json.Unmarshal(body, &answM)
 	if err == nil {
 		//if have only error key
 		if err, ok := answM["error"].(string); ok {
@@ -65,7 +74,7 @@ func parseError(body []byte) error {
 		if strings.Index(answS, "Ошибка авторазации") == -1 {
 			return errors.New("Authorization error")
 		} else {
-			errors.New(answS)
+			return errors.New(answS)
 		}
 	}
 	//may be part of XML, try parse in by regexp
@@ -283,7 +292,13 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 	jsonData := []HotelSearchResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil

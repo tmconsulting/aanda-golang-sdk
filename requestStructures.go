@@ -46,8 +46,8 @@ type OrderRequest struct {
 	Meal           string   `json:"Meal"`
 	ArrivalTime    string   `json:"arrival_time"`
 	DepartureTime  string   `json:"departure_time"`
-	NumberOfGuests string   `json"NumberOfGuests"`
-	Person         []Person `json"Person"`
+	NumberOfGuests string   `json:"NumberOfGuests"`
+	Person         []Person `json:"Person"`
 }
 
 type Person struct {

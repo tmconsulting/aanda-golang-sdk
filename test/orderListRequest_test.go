@@ -1,9 +1,10 @@
 package test
 
 import (
+	"testing"
+
 	"github.com/nbio/st"
 	"github.com/tmconsulting/aanda-golang-sdk"
-	"testing"
 )
 
 func TestOrderListRequest_ok(t *testing.T) {
