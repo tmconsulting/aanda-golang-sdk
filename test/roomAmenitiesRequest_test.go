@@ -2,6 +2,7 @@ package test
 
 import (
 	"testing"
+
 	"github.com/nbio/st"
 )
 
@@ -12,4 +13,3 @@ func TestRoomAmenitiesRequest_ok(t *testing.T) {
 	st.Expect(t, err, nil)
 	st.Expect(t, len(data), 44)
 }
-

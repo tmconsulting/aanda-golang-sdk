@@ -1,8 +1,9 @@
 package test
 
 import (
-	"github.com/nbio/st"
 	"testing"
+
+	"github.com/nbio/st"
 )
 
 func TestCityListRequest_ok(t *testing.T) {

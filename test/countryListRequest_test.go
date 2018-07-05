@@ -2,9 +2,10 @@ package test
 
 import (
 	"errors"
+	"testing"
+
 	"github.com/nbio/st"
 	"github.com/tmconsulting/aanda-golang-sdk"
-	"testing"
 )
 
 func TestCountryListRequest_ok(t *testing.T) {

@@ -1,8 +1,9 @@
 package test
 
 import (
-	"github.com/nbio/st"
 	"testing"
+
+	"github.com/nbio/st"
 )
 
 func TestHotelListRequest_ok(t *testing.T) {
