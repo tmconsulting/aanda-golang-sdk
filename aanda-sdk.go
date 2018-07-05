@@ -42,8 +42,14 @@ func parseError(body []byte) error {
 	// Try to parse known struct
 	var aandaErr AandaError
 	err := json.Unmarshal(body, &aandaErr)
-	if err == nil {
-		return &aandaErr
+	if err == nil && !aandaErr.IsEmpty() {
+		return aandaErr.ToError()
+	}
+
+	var aandaErrMsg AandaErrorMsg
+	err = json.Unmarshal(body, &aandaErrMsg)
+	if err == nil && !aandaErrMsg.IsEmpty() {
+		return aandaErrMsg.ToError()
 	}
 
 	//Try parse as JSON
