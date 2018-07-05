@@ -125,7 +125,13 @@ func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
 	jsonData := []CountryListResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -145,7 +151,13 @@ func (self *Api) CityListRequest(countryCode int) (CityListResponse, error) {
 
 	err := json.Unmarshal([]byte(bodyStr), &jsonData)
 	if err != nil {
-		return CityListResponse{}, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return CityListResponse{}, err
+		} else {
+			return CityListResponse{}, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -163,7 +175,13 @@ func (self *Api) HotelListRequest(cityCode int) ([]HotelListResponse, error) {
 
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -181,7 +199,13 @@ func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionRespons
 
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return HotelDescriptionResponse{}, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return HotelDescriptionResponse{}, err
+		} else {
+			return HotelDescriptionResponse{}, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -197,7 +221,13 @@ func (self *Api) CurrencyListRequest() ([]CurrencyListResponse, error) {
 	jsonData := []CurrencyListResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -213,7 +243,13 @@ func (self *Api) MealTypeRequest() ([]MealTypeResponse, error) {
 	jsonData := []MealTypeResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -229,7 +265,13 @@ func (self *Api) MealCategoryRequest() ([]MealCategoryResponse, error) {
 	jsonData := []MealCategoryResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -245,7 +287,13 @@ func (self *Api) ServiceTypeRequest() ([]ServiceTypeResponse, error) {
 	jsonData := []ServiceTypeResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -272,7 +320,13 @@ func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricing
 	jsonData := HotelPricingResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return HotelPricingResponse{}, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return HotelPricingResponse{}, err
+		} else {
+			return HotelPricingResponse{}, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -332,7 +386,17 @@ func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestResponse, erro
 	err = json.Unmarshal(body, &jsonData)
 	vErr := validator.ValidateStruct(jsonData)
 	if err != nil || vErr != nil {
-		return OrderRequestResponse{}, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			if err != nil {
+				return OrderRequestResponse{}, err
+			} else {
+				return OrderRequestResponse{}, vErr
+			}
+		} else {
+			return OrderRequestResponse{}, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -361,7 +425,13 @@ func (self *Api) OrderInfoRequest(id int) (OrderInfoResponse, error) {
 	jsonData := OrderInfoResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return OrderInfoResponse{}, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return OrderInfoResponse{}, err
+		} else {
+			return OrderInfoResponse{}, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -378,7 +448,13 @@ func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesResponse, err
 	jsonData := []OrderMessagesResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -396,7 +472,13 @@ func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOr
 	jsonData := SendOrderMessageResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return SendOrderMessageResponse{}, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return SendOrderMessageResponse{}, err
+		} else {
+			return SendOrderMessageResponse{}, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -423,7 +505,13 @@ func (self *Api) OrderListRequest(orderReq OrderListRequest) ([]OrderListRespons
 	jsonData := []OrderListResponse{}
 	err = json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -439,7 +527,13 @@ func (self *Api) ClientStatusRequest() ([]ClientStatusResponse, error) {
 	jsonData := []ClientStatusResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -455,7 +549,13 @@ func (self *Api) HotelAmenitiesRequest() ([]HotelAmenitiesResponse, error) {
 	jsonData := []HotelAmenitiesResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
@@ -471,7 +571,13 @@ func (self *Api) RoomAmenitiesRequest() ([]RoomAmenitiesResponse, error) {
 	jsonData := []RoomAmenitiesResponse{}
 	err := json.Unmarshal(body, &jsonData)
 	if err != nil {
-		return nil, parseError(body)
+		respErr := parseError(body)
+
+		if respErr == nil {
+			return nil, err
+		} else {
+			return nil, respErr
+		}
 	}
 
 	return jsonData, nil
