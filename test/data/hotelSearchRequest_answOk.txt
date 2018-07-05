@@ -30,12 +30,7 @@
         "number_of_guests": "2",
         "price": 2350,
         "rackrate": null,
-        "comission": {
-          "room": 188,
-          "meal": 0,
-          "total": 188,
-          "total_mealfree": 188
-        },
+        "comission": 10.14,
         "penalty_size": 2350,
         "deadline_date": "26.11.2017",
         "deadline_time": "12:00:00",
@@ -72,12 +67,7 @@
         "number_of_guests": "2",
         "price": 2600,
         "rackrate": null,
-        "comission": {
-          "room": 208,
-          "meal": 0,
-          "total": 208,
-          "total_mealfree": 208
-        },
+        "comission": 5,
         "penalty_size": 2600,
         "deadline_date": "26.11.2017",
         "deadline_time": "12:00:00",
