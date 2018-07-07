@@ -139,12 +139,12 @@ type HotelDescriptionResponse struct {
 	RatingName string     `json:"rating_name"`
 	StarsCode  MustString `json:"stars_code"`
 	StarsName  MustString `json:"stars_name"`
-	Images     []struct {
+	Images []struct {
 		URL  string `json:"Url"`
 		Desc string `json:"desc"`
 	} `json:"images"`
-	CurrencyCode   MustString `json:"currency_code"`
-	CurrencyName   string     `json:"currency_name"`
+	CurrencyCode MustString `json:"currency_code"`
+	CurrencyName string     `json:"currency_name"`
 	HotelAmenities []struct {
 		Name string     `json:"name"`
 		Id   MustString `json:"id"`
@@ -155,7 +155,7 @@ type HotelDescriptionResponse struct {
 		NumberOfGuests  MustString `json:"number_of_guests"`
 		RoomDescription string     `json:"room_description"`
 		Images          string     `json:"images"`
-		RoomAmenities   []struct {
+		RoomAmenities []struct {
 			Name string     `json:"name"`
 			Id   MustString `json:"id"`
 		} `json:"room_amenities"`
@@ -207,7 +207,7 @@ type HotelPricingResponse struct {
 	AllowEarlyCheckOut string `json:"allow_early_check-out"`
 	CurrencyCode       string `json:"currency_code"`
 	CurrencyName       string `json:"currency_name"`
-	Rooms              []struct {
+	Rooms []struct {
 		RoomCode            int           `json:"room_code"`
 		RoomName            string        `json:"room_name"`
 		RateName            string        `json:"rate_name"`
@@ -245,7 +245,7 @@ type HotelPricingResponse struct {
 		AvailabilityCode   int    `json:"availability_code"`
 		AvailabilityName   string `json:"availability_name"`
 		RoomsAvailable     int    `json:"rooms_available"`
-		RoomAmenities      []struct {
+		RoomAmenities []struct {
 			Name string `json:"name"`
 			ID   string `json:"id"`
 		} `json:"room_amenities"`
@@ -289,46 +289,46 @@ type OrderInfoResponse struct {
 	PersonPhone       string `json:"person_phone"`
 	PersonFax         string `json:"person_fax"`
 	PersonEmail       string `json:"person_email"`
-	Rooms             []struct {
-		RoomCode           string  `json:"room_code"`
-		ArrivalDate        string  `json:"arrival_date"`
-		ArrivalTime        string  `json:"arrival_time"`
-		DepartureDate      string  `json:"departure_date"`
-		DepartureTime      string  `json:"departure_time"`
-		NumberOfNights     string  `json:"number_of_nights"`
-		NumberOfRooms      string  `json:"number_of_rooms"`
-		NumberOfGuests     string  `json:"number_of_guests"`
-		AdditionalInfo     string  `json:"additional_info"`
-		SupplierInfo       string  `json:"supplier_info"`
-		ConfirmationNumber string  `json:"confirmation_number"`
-		Price              float64 `json:"price"`
-		RoomPrice          string  `json:"room_price"`
-		Commission         float64 `json:"comission"`
-		Penalty            string  `json:"penalty"`
-		PenaltyNote        string  `json:"penalty_note"`
-		DeadlineDate       string  `json:"deadline_date"`
-		PossiblePenalty    string  `json:"possible_penalty"`
-		CancelledCode      string  `json:"cancelled_code"`
-		CancelledName      string  `json:"cancelled_name"`
-		ChangeCode         string  `json:"change_code"`
-		ChangeName         string  `json:"change_name"`
-		HotelCode          string  `json:"hotel_code"`
-		Vat                string  `json:"vat"`
-		TimeZone           string  `json:"time_zone"`
-		CountryCode        string  `json:"country_code"`
-		CountryName        string  `json:"country_name"`
-		CityCode           string  `json:"city_code"`
-		CityName           string  `json:"city_name"`
-		StatusCode         string  `json:"status_code"`
-		StatusName         string  `json:"status_name"`
-		AllowCancelCode    int     `json:"allow_cancel_code"`
-		AllowCancelName    string  `json:"allow_cancel_name"`
-		AllowChangeCode    int     `json:"allow_change_code"`
-		AllowChangeName    string  `json:"allow_change_name"`
-		RoomName           string  `json:"room_name"`
-		MealCode           int     `json:"meal_code"`
-		MealName           string  `json:"meal_name"`
-		Persons            []struct {
+	Rooms []struct {
+		RoomCode           string      `json:"room_code"`
+		ArrivalDate        string      `json:"arrival_date"`
+		ArrivalTime        string      `json:"arrival_time"`
+		DepartureDate      string      `json:"departure_date"`
+		DepartureTime      string      `json:"departure_time"`
+		NumberOfNights     MustString  `json:"number_of_nights"`
+		NumberOfRooms      string      `json:"number_of_rooms"`
+		NumberOfGuests     string      `json:"number_of_guests"`
+		AdditionalInfo     string      `json:"additional_info"`
+		SupplierInfo       string      `json:"supplier_info"`
+		ConfirmationNumber string      `json:"confirmation_number"`
+		Price              MustFloat64 `json:"price"`
+		RoomPrice          string      `json:"room_price"`
+		Commission         float64     `json:"comission"`
+		Penalty            string      `json:"penalty"`
+		PenaltyNote        string      `json:"penalty_note"`
+		DeadlineDate       string      `json:"deadline_date"`
+		PossiblePenalty    string      `json:"possible_penalty"`
+		CancelledCode      string      `json:"cancelled_code"`
+		CancelledName      string      `json:"cancelled_name"`
+		ChangeCode         string      `json:"change_code"`
+		ChangeName         string      `json:"change_name"`
+		HotelCode          string      `json:"hotel_code"`
+		Vat                string      `json:"vat"`
+		TimeZone           string      `json:"time_zone"`
+		CountryCode        string      `json:"country_code"`
+		CountryName        string      `json:"country_name"`
+		CityCode           string      `json:"city_code"`
+		CityName           string      `json:"city_name"`
+		StatusCode         string      `json:"status_code"`
+		StatusName         string      `json:"status_name"`
+		AllowCancelCode    int         `json:"allow_cancel_code"`
+		AllowCancelName    string      `json:"allow_cancel_name"`
+		AllowChangeCode    int         `json:"allow_change_code"`
+		AllowChangeName    string      `json:"allow_change_name"`
+		RoomName           string      `json:"room_name"`
+		MealCode           int         `json:"meal_code"`
+		MealName           string      `json:"meal_name"`
+		Persons []struct {
 			Lastname  string `json:"lastname"`
 			Firstname string `json:"firstname"`
 		} `json:"persons"`
