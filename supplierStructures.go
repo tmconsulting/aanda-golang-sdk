@@ -5,7 +5,7 @@ type HotelSearchResponse struct {
 	HotelName      string       `json:"hotel_name"`
 	Address        string       `json:"address"`
 	ImageUrl       string       `json:"image_url"`
-	Vat            int          `json:"vat"`
+	Vat            MustInt      `json:"vat"`
 	Description    string       `json:"description"`
 	Amenities      string       `json:"amenities"`
 	CheckInTime    string       `json:"check-in_time"`
@@ -26,13 +26,13 @@ type HotelSearchResponse struct {
 	Rooms          []HotelRooms `json:"rooms"`
 }
 type HotelRooms struct {
-	RoomCode           int          `json:"room_code"`
+	RoomCode           MustString   `json:"room_code"`
 	RoomName           string       `json:"room_name"`
 	NumberOfGuests     MustString   `json:"number_of_guests"`
-	Price              float64      `json:"price"`
-	Rackrate           float64      `json:"rackrate"`
-	Comission          float64      `json:"comission"`
-	PenaltySize        float64      `json:"penalty_size"`
+	Price              MustFloat64  `json:"price"`
+	Rackrate           MustFloat64  `json:"rackrate"`
+	Comission          MustFloat64  `json:"comission"`
+	PenaltySize        MustFloat64  `json:"penalty_size"`
 	DeadlineDate       string       `json:"deadline_date"`
 	DeadlineTime       string       `json:"deadline_time"`
 	PenaltyInfo        string       `json:"penalty_info"`
@@ -41,28 +41,29 @@ type HotelRooms struct {
 	MealCategoryCode   MustString   `json:"meal_category_code"`
 	MealCategoryName   string       `json:"meal_category_name"`
 	MealName           string       `json:"meal_name"`
-	MealPrice          int          `json:"meal_price"`
-	MealIsIncludedCode int          `json:"meal_is_included_code"`
+	MealPrice          MustInt      `json:"meal_price"`
+	MealIsIncludedCode MustInt      `json:"meal_is_included_code"`
 	MealIsIncludedName string       `json:"meal_is_included_name"`
-	AvailabilityCode   int          `json:"availability_code"`
+	AvailabilityCode   MustInt      `json:"availability_code"`
 	AvailabilityName   string       `json:"availability_name"`
 	PaymentTermsCode   MustString   `json:"payment_terms_code"`
 	PaymentTermsName   string       `json:"payment_terms_name"`
 	Periods            []RoomPeriod `json:"periods"`
 }
 type RoomComission struct {
-	Room          float64 `json:"room"`
-	Meal          float64 `json:"meal"`
-	Total         float64 `json:"total"`
-	TotalMealfree float64 `json:"total_mealfree"`
+	Room          MustFloat64 `json:"room"`
+	Meal          MustFloat64 `json:"meal"`
+	Total         MustFloat64 `json:"total"`
+	TotalMealfree MustFloat64 `json:"total_mealfree"`
 }
+
 type RoomPeriod struct {
 	PeriodStart     string      `json:"period_start"`
 	PeriodEnd       string      `json:"period_end"`
-	PeriodDays      int         `json:"period_days"`
-	PeriodSummRoom  int         `json:"period_summ_room"`
+	PeriodDays      MustInt     `json:"period_days"`
+	PeriodSummRoom  MustInt     `json:"period_summ_room"`
 	PeriodSummMeal  interface{} `json:"period_summ_meal"`
-	PeriodSummTotal int         `json:"period_summ_total"`
+	PeriodSummTotal MustInt     `json:"period_summ_total"`
 }
 
 type CountryListResponse struct {
@@ -139,12 +140,12 @@ type HotelDescriptionResponse struct {
 	RatingName string     `json:"rating_name"`
 	StarsCode  MustString `json:"stars_code"`
 	StarsName  MustString `json:"stars_name"`
-	Images []struct {
+	Images     []struct {
 		URL  string `json:"Url"`
 		Desc string `json:"desc"`
 	} `json:"images"`
-	CurrencyCode MustString `json:"currency_code"`
-	CurrencyName string     `json:"currency_name"`
+	CurrencyCode   MustString `json:"currency_code"`
+	CurrencyName   string     `json:"currency_name"`
 	HotelAmenities []struct {
 		Name string     `json:"name"`
 		Id   MustString `json:"id"`
@@ -155,7 +156,7 @@ type HotelDescriptionResponse struct {
 		NumberOfGuests  MustString `json:"number_of_guests"`
 		RoomDescription string     `json:"room_description"`
 		Images          string     `json:"images"`
-		RoomAmenities []struct {
+		RoomAmenities   []struct {
 			Name string     `json:"name"`
 			Id   MustString `json:"id"`
 		} `json:"room_amenities"`
@@ -207,7 +208,7 @@ type HotelPricingResponse struct {
 	AllowEarlyCheckOut string `json:"allow_early_check-out"`
 	CurrencyCode       string `json:"currency_code"`
 	CurrencyName       string `json:"currency_name"`
-	Rooms []struct {
+	Rooms              []struct {
 		RoomCode            int           `json:"room_code"`
 		RoomName            string        `json:"room_name"`
 		RateName            string        `json:"rate_name"`
@@ -245,7 +246,7 @@ type HotelPricingResponse struct {
 		AvailabilityCode   int    `json:"availability_code"`
 		AvailabilityName   string `json:"availability_name"`
 		RoomsAvailable     int    `json:"rooms_available"`
-		RoomAmenities []struct {
+		RoomAmenities      []struct {
 			Name string `json:"name"`
 			ID   string `json:"id"`
 		} `json:"room_amenities"`
@@ -264,9 +265,9 @@ type HotelPricingResponse struct {
 }
 
 type OrderRequestResponse struct {
-	Status  string  `json:"Status" validate:"required"`
-	OrderId string  `json:"order_id" validate:"required"`
-	Time    float64 `json:"Time" validate:"required"`
+	Status  string      `json:"Status" validate:"required"`
+	OrderId string      `json:"order_id" validate:"required"`
+	Time    MustFloat64 `json:"Time" validate:"required"`
 }
 
 type OrderInfoResponse struct {
@@ -289,7 +290,7 @@ type OrderInfoResponse struct {
 	PersonPhone       string `json:"person_phone"`
 	PersonFax         string `json:"person_fax"`
 	PersonEmail       string `json:"person_email"`
-	Rooms []struct {
+	Rooms             []struct {
 		RoomCode           string      `json:"room_code"`
 		ArrivalDate        string      `json:"arrival_date"`
 		ArrivalTime        string      `json:"arrival_time"`
@@ -303,7 +304,7 @@ type OrderInfoResponse struct {
 		ConfirmationNumber string      `json:"confirmation_number"`
 		Price              MustFloat64 `json:"price"`
 		RoomPrice          string      `json:"room_price"`
-		Commission         float64     `json:"comission"`
+		Commission         MustFloat64 `json:"comission"`
 		Penalty            string      `json:"penalty"`
 		PenaltyNote        string      `json:"penalty_note"`
 		DeadlineDate       string      `json:"deadline_date"`
@@ -328,7 +329,7 @@ type OrderInfoResponse struct {
 		RoomName           string      `json:"room_name"`
 		MealCode           int         `json:"meal_code"`
 		MealName           string      `json:"meal_name"`
-		Persons []struct {
+		Persons            []struct {
 			Lastname  string `json:"lastname"`
 			Firstname string `json:"firstname"`
 		} `json:"persons"`
