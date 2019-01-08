@@ -66,10 +66,7 @@ type SendOrderMessageRequest struct {
 }
 
 type OrderListRequest struct {
-	BuyerId              string `json:"BuyerId"`
-	UserId               string `json:"UserId"`
-	Password             string `json:"Password"`
-	Language             string `json:"Language"`
+	Auth
 	LastName             string `json:"LastName"` //Доп параметры
 	ArrivalDateFrom      string `json:"ArrivalDateFrom"`
 	ArrivalDateTo        string `json:"ArrivalDateTo"`
