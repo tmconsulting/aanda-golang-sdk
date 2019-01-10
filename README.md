@@ -108,7 +108,7 @@ if err == nil {
 
 ### Example OrderInfoRequest
 ```golang
-data, err := aApi.OrderInfoRequest(2213397) // 2213397 is OrderId
+data, err := aApi.OrderInfoRequest(ctx, 2213397) // 2213397 is OrderId
 if err == nil {
 	//Work with data
 }
