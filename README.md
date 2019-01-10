@@ -9,7 +9,12 @@ go get github.com/tmconsulting/aanda-golang-sdk
 
 ### Import
 ```golang
-import "github.com/tmconsulting/aanda-golang-sdk"
+import (
+    "context"
+    "log"
+    
+    "github.com/tmconsulting/aanda-golang-sdk"
+)
 ```
 
 ### Example init variables
@@ -22,7 +27,22 @@ var (
 		Language: "ru",
 	}
 	aApi = aandaSdk.NewApi(auth)
+	
+	ctx = context.WithValue(context.Backround(), "requestId", "b5cd6a4a-efee-4146-8bec-bf5457558750")
 )
+```
+
+### Example init hooks/handlers
+```golang
+	aApi.RegisterEventHandler(aandaSdk.BeforeRequestSend, func(ctx context.Context, methodName, mimeType string, data []byte) {
+	    requestId := ctx.Value("requestId").(string)
+	
+        log.Println("request: ", requestId, methodName, mimeType, string(data))
+	}).RegisterEventHandler(aandaSdk.AfterResponseReceive, func(ctx context.Context, methodName, mimeType string, data []byte) {
+	    requestId := ctx.Value("requestId").(string)
+
+        log.Println("response: ", requestId, methodName, mimeType, string(data))
+	})
 ```
 
 ### Example HotelSearchRequest
@@ -38,7 +58,7 @@ searchReq := aandaSdk.HotelSearchRequest{
 	PriceTo:        "3000",
 	NumberOfGuests: "1",
 }
-data, err := aApi.HotelSearchRequest(searchReq)
+data, err := aApi.HotelSearchRequest(ctx, searchReq)
 if err == nil {
 	//Work with data
 }
@@ -57,7 +77,7 @@ priceReq := aandaSdk.HotelPricingRequest{
 	DepartureTime:  "3000",
 	NumberOfGuests: "1",
 }
-data, err := aApi.HotelPricingRequest(priceReq)
+data, err := aApi.HotelPricingRequest(ctx, priceReq)
 if err == nil {
 	//Work with data
 }
@@ -80,7 +100,7 @@ orderReq := aandaSdk.OrderRequest{
 		LastName:  "Name",
 	}},
 }
-data, err := aApi.OrderRequest(orderReq)
+data, err := aApi.OrderRequest(ctx, orderReq)
 if err == nil {
 	//Work with data
 }
@@ -104,7 +124,7 @@ orderReq := aandaSdk.OrderListRequest{
 	//RegistrationDateFrom: "23.02.2018",
 	//RegistrationDateTo: "22.02.2018",
 	}
-data, err := aApi.OrderListRequest(orderReq)
+data, err := aApi.OrderListRequest(ctx, orderReq)
 if err == nil {
 	//Work with data
 }
@@ -116,7 +136,7 @@ somReq := aandaSdk.SendOrderMessageRequest{
 	OrderId: 2213397,
 	Message: "test message 2 3 4 22 22",
 }
-data, err := aApi.SendOrderMessageRequest(somReq)
+data, err := aApi.SendOrderMessageRequest(ctx, somReq)
 if err == nil {
 	//Work with data
 }
@@ -124,7 +144,7 @@ if err == nil {
 
  ### Example OrderMessagesRequest
 ```golang
-data, err := aApi.OrderMessagesRequest(2213397) // 2213397 is OrderId
+data, err := aApi.OrderMessagesRequest(ctx, 2213397) // 2213397 is OrderId
 if err == nil {
 	//Work with data
 }
@@ -132,7 +152,7 @@ if err == nil {
 
 ### Example CountryListRequest
 ```golang
-data, err := aApi.CountryListRequest()
+data, err := aApi.CountryListRequest(ctx)
 if err == nil {
 	//Work with data
 }
@@ -140,7 +160,7 @@ if err == nil {
 
 ### Example CityListRequest
 ```golang
-data, err := aApi.CityListRequest(9)//9 is CountryCode
+data, err := aApi.CityListRequest(ctx, 9)//9 is CountryCode
 if err == nil {
 	//Work with data
 }
@@ -148,7 +168,7 @@ if err == nil {
 
 ### Example HotelListRequest
 ```golang
-data, err := aApi.HotelListRequest(1)//1 is CityCode == Moscow
+data, err := aApi.HotelListRequest(ctx, 1)//1 is CityCode == Moscow
 if err == nil {
 	//Work with data
 }
@@ -156,7 +176,7 @@ if err == nil {
 
  ### Example HotelDescriptionRequest
 ```golang
-data, err := aApi.HotelDescriptionRequest(2150)//2150 is HotelCode
+data, err := aApi.HotelDescriptionRequest(ctx, 2150)//2150 is HotelCode
 if err == nil {
 	//Work with data
 }
@@ -164,7 +184,7 @@ if err == nil {
 
 ### Example CurrencyListRequest
 ```golang
-data, err := aApi.CurrencyListRequest()
+data, err := aApi.CurrencyListRequest(ctx)
 if err == nil {
 	//Work with data
 }
@@ -172,7 +192,7 @@ if err == nil {
 
  ### Example MealTypeRequest
 ```golang
-data, err := aApi.MealTypeRequest()
+data, err := aApi.MealTypeRequest(ctx)
 if err == nil {
 	//Work with data
 }
@@ -180,7 +200,7 @@ if err == nil {
 
  ### Example MealCategoryeRequest
 ```golang
-data, err := aApi.MealCategoryRequest()
+data, err := aApi.MealCategoryRequest(ctx)
 if err == nil {
 	//Work with data
 }
@@ -188,7 +208,7 @@ if err == nil {
 
   ### Example ClientStatusRequest
  ```golang
- data, err := aApi.ClientStatusRequest()
+ data, err := aApi.ClientStatusRequest(ctx)
  if err == nil {
  	//Work with data
  }

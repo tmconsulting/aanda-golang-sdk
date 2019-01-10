@@ -1,6 +1,9 @@
 package aandaSdk
 
-import "sync"
+import (
+	"context"
+	"sync"
+)
 
 const (
 	BeforeRequestSend    EventType = 1
@@ -9,7 +12,7 @@ const (
 
 type EventType int
 
-type EventHandler func(methodName, mimeType string, data []byte)
+type EventHandler func(ctx context.Context, methodName, mimeType string, data []byte)
 
 type EventListener struct {
 	listeners map[EventType][]EventHandler
@@ -25,7 +28,7 @@ func (o *EventListener) RegisterEventHandler(et EventType, handler EventHandler)
 	return o
 }
 
-func (o *EventListener) raiseEvent(et EventType, methodName, mimeType string, data []byte) {
+func (o *EventListener) raiseEvent(et EventType, ctx context.Context, methodName, mimeType string, data []byte) {
 	var wait sync.WaitGroup
 
 	for _, handler := range o.listeners[et] {
@@ -33,7 +36,7 @@ func (o *EventListener) raiseEvent(et EventType, methodName, mimeType string, da
 		go func() {
 			defer wait.Done()
 
-			handler(methodName, mimeType, data)
+			handler(ctx, methodName, mimeType, data)
 		}()
 	}
 

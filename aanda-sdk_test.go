@@ -1,13 +1,16 @@
 package aandaSdk
 
 import (
+	"context"
 	"encoding/json"
-	"github.com/nbio/st"
+	"math/rand"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
 	"reflect"
 	"testing"
+
+	"github.com/nbio/st"
 )
 
 func TestApi_CityListRequest(t *testing.T) {
@@ -27,7 +30,7 @@ func TestApi_CityListRequest(t *testing.T) {
 	api := NewApi(auth)
 	api.url = server.URL
 
-	_, err := api.CityListRequest(3)
+	_, err := api.CityListRequest(context.Background(), 3)
 
 	st.Expect(t, err, nil)
 }
@@ -73,16 +76,18 @@ func TestApi_OrderListRequest(t *testing.T) {
 		reqMethodName string
 		reqMimeType   string
 		reqData       []byte
+		reqCtxValue   int
 
 		respMethodName string
 		respMimeType   string
 		respData       []byte
+		respCtxValue   int
 	)
 
 	api := NewApi(auth)
 	api.url = server.URL
 
-	api.RegisterEventHandler(BeforeRequestSend, func(methodName, mimeType string, data []byte) {
+	api.RegisterEventHandler(BeforeRequestSend, func(ctx context.Context, methodName, mimeType string, data []byte) {
 		reqMethodName = methodName
 		reqMimeType = mimeType
 
@@ -90,15 +95,23 @@ func TestApi_OrderListRequest(t *testing.T) {
 
 		reqData = []byte(params.Get("JSON"))
 
-	}).RegisterEventHandler(AfterResponseReceive, func(methodName, mimeType string, data []byte) {
+		reqCtxValue = ctx.Value("value").(int)
+
+	}).RegisterEventHandler(AfterResponseReceive, func(ctx context.Context, methodName, mimeType string, data []byte) {
 		respMethodName = methodName
 		respMimeType = mimeType
 
 		respData = data
 
+		respCtxValue = ctx.Value("value").(int)
+
 	})
 
-	_, err := api.OrderListRequest(OrderListRequest{
+	value := rand.Intn(99999) + 1
+
+	ctx := context.WithValue(context.Background(), "value", value)
+
+	_, err := api.OrderListRequest(ctx, OrderListRequest{
 		LastName: "last name",
 	})
 
@@ -107,8 +120,10 @@ func TestApi_OrderListRequest(t *testing.T) {
 	st.Expect(t, reqMethodName, "OrderListRequest")
 	st.Expect(t, reqMimeType, "application/x-www-form-urlencoded")
 	testAuth(reqData)
+	st.Expect(t, reqCtxValue, value)
 
 	st.Expect(t, respMethodName, "OrderListRequest")
 	st.Expect(t, respMimeType, "text/json")
 	st.Expect(t, string(respData), "[]")
+	st.Expect(t, respCtxValue, value)
 }
