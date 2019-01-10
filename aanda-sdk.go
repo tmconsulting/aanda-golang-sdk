@@ -2,6 +2,7 @@ package aandaSdk
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
@@ -82,11 +83,11 @@ func (self *Api) createReqWithAuth(requestName string, requestObj interface{}, a
 	return data, nil
 }
 
-func (self *Api) sendReq(requestName string, params url.Values) ([]byte, error) {
+func (self *Api) sendReq(ctx context.Context, requestName string, params url.Values) ([]byte, error) {
 	reqContentType := "application/x-www-form-urlencoded"
 	reqData := []byte(params.Encode())
 
-	self.EventListener.raiseEvent(BeforeRequestSend, requestName, reqContentType, reqData)
+	self.EventListener.raiseEvent(BeforeRequestSend, ctx, requestName, reqContentType, reqData)
 
 	req, err := http.NewRequest("POST", self.url, bytes.NewBuffer(reqData))
 	if err != nil {
@@ -95,7 +96,7 @@ func (self *Api) sendReq(requestName string, params url.Values) ([]byte, error) 
 
 	req.Header.Add("Content-Type", reqContentType)
 
-	resp, err := (&http.Client{}).Do(req)
+	resp, err := (&http.Client{}).Do(req.WithContext(ctx))
 	if err != nil {
 		return nil, err
 	}
@@ -112,27 +113,27 @@ func (self *Api) sendReq(requestName string, params url.Values) ([]byte, error) 
 			respContentType = strings.TrimSpace(parts[0])
 		}
 
-		self.EventListener.raiseEvent(AfterResponseReceive, requestName, respContentType, respData)
+		self.EventListener.raiseEvent(AfterResponseReceive, ctx, requestName, respContentType, respData)
 	}
 
 	return respData, err
 }
 
-func (self *Api) sendReqParams(requestName string, params map[string]string) ([]byte, error) {
-	return self.sendReq(requestName, self.createReq(requestName, params))
+func (self *Api) sendReqParams(ctx context.Context, requestName string, params map[string]string) ([]byte, error) {
+	return self.sendReq(ctx, requestName, self.createReq(requestName, params))
 }
 
-func (self *Api) sendReqWithAuth(requestName string, requestObj interface{}, auth *Auth, params map[string]string) ([]byte, error) {
+func (self *Api) sendReqWithAuth(ctx context.Context, requestName string, requestObj interface{}, auth *Auth, params map[string]string) ([]byte, error) {
 	p, err := self.createReqWithAuth(requestName, requestObj, auth, params)
 	if err != nil {
 		return nil, err
 	}
 
-	return self.sendReq(requestName, p)
+	return self.sendReq(ctx, requestName, p)
 }
 
-func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
-	body, err := self.sendReqParams("CountryListRequest", nil)
+func (self *Api) CountryListRequest(ctx context.Context) ([]CountryListResponse, error) {
+	body, err := self.sendReqParams(ctx, "CountryListRequest", nil)
 
 	resp := []CountryListResponse{}
 	if err == nil {
@@ -142,8 +143,8 @@ func (self *Api) CountryListRequest() ([]CountryListResponse, error) {
 	return resp, err
 }
 
-func (self *Api) CityListRequest(countryCode int) (CityListResponse, error) {
-	body, err := self.sendReqParams("CityListRequest", map[string]string{
+func (self *Api) CityListRequest(ctx context.Context, countryCode int) (CityListResponse, error) {
+	body, err := self.sendReqParams(ctx, "CityListRequest", map[string]string{
 		"CountryCode": strconv.Itoa(countryCode),
 	})
 
@@ -158,8 +159,8 @@ func (self *Api) CityListRequest(countryCode int) (CityListResponse, error) {
 	return resp, err
 }
 
-func (self *Api) HotelListRequest(cityCode int) ([]HotelListResponse, error) {
-	body, err := self.sendReqParams("HotelListRequest", map[string]string{
+func (self *Api) HotelListRequest(ctx context.Context, cityCode int) ([]HotelListResponse, error) {
+	body, err := self.sendReqParams(ctx, "HotelListRequest", map[string]string{
 		"CityCode": strconv.Itoa(cityCode),
 	})
 
@@ -171,8 +172,8 @@ func (self *Api) HotelListRequest(cityCode int) ([]HotelListResponse, error) {
 	return resp, err
 }
 
-func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionResponse, error) {
-	body, err := self.sendReqParams("HotelDescriptionRequest", map[string]string{
+func (self *Api) HotelDescriptionRequest(ctx context.Context, hotelCode int) (HotelDescriptionResponse, error) {
+	body, err := self.sendReqParams(ctx, "HotelDescriptionRequest", map[string]string{
 		"HotelCode": strconv.Itoa(hotelCode),
 	})
 
@@ -186,8 +187,8 @@ func (self *Api) HotelDescriptionRequest(hotelCode int) (HotelDescriptionRespons
 	return resp, err
 }
 
-func (self *Api) CurrencyListRequest() ([]CurrencyListResponse, error) {
-	body, err := self.sendReqParams("CurrencyListRequest", nil)
+func (self *Api) CurrencyListRequest(ctx context.Context) ([]CurrencyListResponse, error) {
+	body, err := self.sendReqParams(ctx, "CurrencyListRequest", nil)
 
 	resp := []CurrencyListResponse{}
 	if err == nil {
@@ -197,8 +198,8 @@ func (self *Api) CurrencyListRequest() ([]CurrencyListResponse, error) {
 	return resp, err
 }
 
-func (self *Api) MealTypeRequest() ([]MealTypeResponse, error) {
-	body, err := self.sendReqParams("MealTypeRequest", nil)
+func (self *Api) MealTypeRequest(ctx context.Context) ([]MealTypeResponse, error) {
+	body, err := self.sendReqParams(ctx, "MealTypeRequest", nil)
 	resp := []MealTypeResponse{}
 
 	if err == nil {
@@ -208,8 +209,8 @@ func (self *Api) MealTypeRequest() ([]MealTypeResponse, error) {
 	return resp, err
 }
 
-func (self *Api) MealCategoryRequest() ([]MealCategoryResponse, error) {
-	body, err := self.sendReqParams("MealCategoryRequest", nil)
+func (self *Api) MealCategoryRequest(ctx context.Context) ([]MealCategoryResponse, error) {
+	body, err := self.sendReqParams(ctx, "MealCategoryRequest", nil)
 
 	resp := []MealCategoryResponse{}
 	if err == nil {
@@ -219,8 +220,8 @@ func (self *Api) MealCategoryRequest() ([]MealCategoryResponse, error) {
 	return resp, err
 }
 
-func (self *Api) ServiceTypeRequest() ([]ServiceTypeResponse, error) {
-	body, err := self.sendReqParams("ServiceTypeRequest", nil)
+func (self *Api) ServiceTypeRequest(ctx context.Context) ([]ServiceTypeResponse, error) {
+	body, err := self.sendReqParams(ctx, "ServiceTypeRequest", nil)
 
 	resp := []ServiceTypeResponse{}
 	if err == nil {
@@ -230,8 +231,8 @@ func (self *Api) ServiceTypeRequest() ([]ServiceTypeResponse, error) {
 	return resp, err
 }
 
-func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricingResponse, error) {
-	body, err := self.sendReqWithAuth("HotelSearchRequest", &priceReq, &priceReq.Auth, nil)
+func (self *Api) HotelPricingRequest(ctx context.Context, priceReq HotelPricingRequest) (HotelPricingResponse, error) {
+	body, err := self.sendReqWithAuth(ctx, "HotelSearchRequest", &priceReq, &priceReq.Auth, nil)
 
 	resp := HotelPricingResponse{}
 	if err == nil {
@@ -241,8 +242,8 @@ func (self *Api) HotelPricingRequest(priceReq HotelPricingRequest) (HotelPricing
 	return resp, err
 }
 
-func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearchResponse, error) {
-	body, err := self.sendReqWithAuth("HotelSearchRequest", &searchReq, &searchReq.Auth, nil)
+func (self *Api) HotelSearchRequest(ctx context.Context, searchReq HotelSearchRequest) ([]HotelSearchResponse, error) {
+	body, err := self.sendReqWithAuth(ctx, "HotelSearchRequest", &searchReq, &searchReq.Auth, nil)
 
 	resp := []HotelSearchResponse{}
 	if err == nil {
@@ -252,8 +253,8 @@ func (self *Api) HotelSearchRequest(searchReq HotelSearchRequest) ([]HotelSearch
 	return resp, err
 }
 
-func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestResponse, error) {
-	body, err := self.sendReqWithAuth("OrderRequest", &orderReq, &orderReq.Auth, nil)
+func (self *Api) OrderRequest(ctx context.Context, orderReq OrderRequest) (OrderRequestResponse, error) {
+	body, err := self.sendReqWithAuth(ctx, "OrderRequest", &orderReq, &orderReq.Auth, nil)
 
 	resp := OrderRequestResponse{}
 	if err == nil {
@@ -263,12 +264,12 @@ func (self *Api) OrderRequest(orderReq OrderRequest) (OrderRequestResponse, erro
 	return resp, err
 }
 
-func (self *Api) OrderInfoRequest(id int) (OrderInfoResponse, error) {
+func (self *Api) OrderInfoRequest(ctx context.Context, id int) (OrderInfoResponse, error) {
 	orderInfoReq := &OrderInfoRequest{
 		Id: strconv.Itoa(id),
 	}
 
-	body, err := self.sendReqWithAuth("OrderInfoRequest", orderInfoReq, &orderInfoReq.Auth, nil)
+	body, err := self.sendReqWithAuth(ctx, "OrderInfoRequest", orderInfoReq, &orderInfoReq.Auth, nil)
 
 	resp := OrderInfoResponse{}
 	if err == nil {
@@ -280,8 +281,8 @@ func (self *Api) OrderInfoRequest(id int) (OrderInfoResponse, error) {
 	return resp, err
 }
 
-func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesResponse, error) {
-	body, err := self.sendReqParams("OrderMessagesRequest", map[string]string{
+func (self *Api) OrderMessagesRequest(ctx context.Context, orderId int) ([]OrderMessagesResponse, error) {
+	body, err := self.sendReqParams(ctx, "OrderMessagesRequest", map[string]string{
 		"order_id": strconv.Itoa(orderId),
 	})
 
@@ -293,8 +294,8 @@ func (self *Api) OrderMessagesRequest(orderId int) ([]OrderMessagesResponse, err
 	return resp, err
 }
 
-func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOrderMessageResponse, error) {
-	body, err := self.sendReqParams("SendOrderMessageRequest", map[string]string{
+func (self *Api) SendOrderMessageRequest(ctx context.Context, somReq SendOrderMessageRequest) (SendOrderMessageResponse, error) {
+	body, err := self.sendReqParams(ctx, "SendOrderMessageRequest", map[string]string{
 		"order_id": strconv.Itoa(somReq.OrderId),
 		"Message":  somReq.Message,
 	})
@@ -309,8 +310,8 @@ func (self *Api) SendOrderMessageRequest(somReq SendOrderMessageRequest) (SendOr
 	return resp, err
 }
 
-func (self *Api) OrderListRequest(orderReq OrderListRequest) ([]OrderListResponse, error) {
-	body, err := self.sendReqWithAuth("OrderListRequest", &orderReq, &orderReq.Auth, nil)
+func (self *Api) OrderListRequest(ctx context.Context, orderReq OrderListRequest) ([]OrderListResponse, error) {
+	body, err := self.sendReqWithAuth(ctx, "OrderListRequest", &orderReq, &orderReq.Auth, nil)
 
 	resp := []OrderListResponse{}
 	if err == nil {
@@ -320,8 +321,8 @@ func (self *Api) OrderListRequest(orderReq OrderListRequest) ([]OrderListRespons
 	return resp, err
 }
 
-func (self *Api) ClientStatusRequest() ([]ClientStatusResponse, error) {
-	body, err := self.sendReqParams("ClientStatusRequest", nil)
+func (self *Api) ClientStatusRequest(ctx context.Context) ([]ClientStatusResponse, error) {
+	body, err := self.sendReqParams(ctx, "ClientStatusRequest", nil)
 
 	resp := []ClientStatusResponse{}
 	if err == nil {
@@ -331,8 +332,8 @@ func (self *Api) ClientStatusRequest() ([]ClientStatusResponse, error) {
 	return resp, err
 }
 
-func (self *Api) HotelAmenitiesRequest() ([]HotelAmenitiesResponse, error) {
-	body, err := self.sendReqParams("HotelAmenitiesRequest", nil)
+func (self *Api) HotelAmenitiesRequest(ctx context.Context) ([]HotelAmenitiesResponse, error) {
+	body, err := self.sendReqParams(ctx, "HotelAmenitiesRequest", nil)
 
 	resp := []HotelAmenitiesResponse{}
 	if err == nil {
@@ -342,8 +343,8 @@ func (self *Api) HotelAmenitiesRequest() ([]HotelAmenitiesResponse, error) {
 	return resp, err
 }
 
-func (self *Api) RoomAmenitiesRequest() ([]RoomAmenitiesResponse, error) {
-	body, err := self.sendReqParams("RoomAmenitiesRequest", nil)
+func (self *Api) RoomAmenitiesRequest(ctx context.Context) ([]RoomAmenitiesResponse, error) {
+	body, err := self.sendReqParams(ctx, "RoomAmenitiesRequest", nil)
 
 	resp := []RoomAmenitiesResponse{}
 	if err == nil {

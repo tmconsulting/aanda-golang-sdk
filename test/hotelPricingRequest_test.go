@@ -1,6 +1,7 @@
 package test
 
 import (
+	"context"
 	"testing"
 
 	"github.com/nbio/st"
@@ -10,7 +11,7 @@ import (
 func TestHotelPricingRequest_ok(t *testing.T) {
 	testRequest("hotelPricingRequest_answOk.txt")
 	priceReq := aandaSdk.HotelPricingRequest{}
-	data, err := zApi.HotelPricingRequest(priceReq)
+	data, err := zApi.HotelPricingRequest(context.Background(), priceReq)
 
 	st.Expect(t, err, nil)
 	st.Expect(t, data.HotelCode, "2150")
