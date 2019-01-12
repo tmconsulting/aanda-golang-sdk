@@ -87,14 +87,14 @@ func (self *Api) sendReq(ctx context.Context, requestName string, params url.Val
 	reqContentType := "application/x-www-form-urlencoded"
 	reqData := []byte(params.Encode())
 
-	self.EventListener.raiseEvent(BeforeRequestSend, ctx, requestName, reqContentType, reqData)
-
 	req, err := http.NewRequest("POST", self.url, bytes.NewBuffer(reqData))
 	if err != nil {
 		return nil, err
 	}
 
 	req.Header.Add("Content-Type", reqContentType)
+
+	self.EventListener.raiseEvent(BeforeRequestSend, ctx, requestName, reqContentType, reqData)
 
 	resp, err := (&http.Client{}).Do(req.WithContext(ctx))
 	if err != nil {
