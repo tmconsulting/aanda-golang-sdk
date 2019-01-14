@@ -150,18 +150,8 @@ type HotelDescriptionResponse struct {
 		Name string     `json:"name"`
 		Id   MustString `json:"id"`
 	} `json:"hotel_amenities"`
-	Rooms []struct {
-		RoomCode        MustString `json:"room_code"`
-		RoomName        string     `json:"room_name"`
-		NumberOfGuests  MustString `json:"number_of_guests"`
-		RoomDescription string     `json:"room_description"`
-		Images          string     `json:"images"`
-		RoomAmenities   []struct {
-			Name string     `json:"name"`
-			Id   MustString `json:"id"`
-		} `json:"room_amenities"`
-	} `json:"rooms"`
-	Conference []interface{} `json:"conference"`
+	Rooms      []HotelDescriptionRoom `json:"rooms"`
+	Conference []interface{}          `json:"conference"`
 	Group      struct {
 		Qty      MustString `json:"qty"`
 		Type     MustString `json:"type"`
@@ -169,6 +159,18 @@ type HotelDescriptionResponse struct {
 		Note     string     `json:"note"`
 		Rule     string     `json:"rule"`
 	} `json:"group"`
+}
+
+type HotelDescriptionRoom struct {
+	RoomCode        MustString `json:"room_code"`
+	RoomName        string     `json:"room_name"`
+	NumberOfGuests  MustString `json:"number_of_guests"`
+	RoomDescription string     `json:"room_description"`
+	Images          string     `json:"images"`
+	RoomAmenities   []struct {
+		Name string     `json:"name"`
+		Id   MustString `json:"id"`
+	} `json:"room_amenities"`
 }
 
 type CurrencyListResponse struct {
