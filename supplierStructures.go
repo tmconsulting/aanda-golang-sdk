@@ -1,13 +1,16 @@
 package aandaSdk
 
 type HotelSearchResponse struct {
-	HotelCode      MustString   `json:"hotel_code"`
-	HotelName      string       `json:"hotel_name"`
-	Address        string       `json:"address"`
-	ImageUrl       string       `json:"image_url"`
-	Vat            MustInt      `json:"vat"`
-	Description    string       `json:"description"`
-	Amenities      string       `json:"amenities"`
+	HotelCode   MustString `json:"hotel_code"`
+	HotelName   string     `json:"hotel_name"`
+	Address     string     `json:"address"`
+	ImageUrl    string     `json:"image_url"`
+	Vat         MustInt    `json:"vat"`
+	Description string     `json:"description"`
+	Amenities   []struct {
+		Name string     `json:"name"`
+		Id   MustString `json:"id"`
+	} `json:"hotel_amenities"`
 	CheckInTime    string       `json:"check-in_time"`
 	CheckOutTime   string       `json:"check-out_time"`
 	Timezone       string       `json:"timezone"`
@@ -26,29 +29,33 @@ type HotelSearchResponse struct {
 	Rooms          []HotelRooms `json:"rooms"`
 }
 type HotelRooms struct {
-	RoomCode           MustString   `json:"room_code"`
-	RoomName           string       `json:"room_name"`
-	NumberOfGuests     MustString   `json:"number_of_guests"`
-	Price              MustFloat64  `json:"price"`
-	Rackrate           MustFloat64  `json:"rackrate"`
-	Comission          MustFloat64  `json:"comission"`
-	PenaltySize        MustFloat64  `json:"penalty_size"`
-	DeadlineDate       string       `json:"deadline_date"`
-	DeadlineTime       string       `json:"deadline_time"`
-	PenaltyInfo        string       `json:"penalty_info"`
-	MealTypeCode       MustString   `json:"meal_type_code"`
-	MealTypeName       string       `json:"meal_type_name"`
-	MealCategoryCode   MustString   `json:"meal_category_code"`
-	MealCategoryName   string       `json:"meal_category_name"`
-	MealName           string       `json:"meal_name"`
-	MealPrice          MustInt      `json:"meal_price"`
-	MealIsIncludedCode MustInt      `json:"meal_is_included_code"`
-	MealIsIncludedName string       `json:"meal_is_included_name"`
-	AvailabilityCode   MustInt      `json:"availability_code"`
-	AvailabilityName   string       `json:"availability_name"`
-	PaymentTermsCode   MustString   `json:"payment_terms_code"`
-	PaymentTermsName   string       `json:"payment_terms_name"`
-	Periods            []RoomPeriod `json:"periods"`
+	RoomCode           MustString  `json:"room_code"`
+	RoomName           string      `json:"room_name"`
+	NumberOfGuests     MustString  `json:"number_of_guests"`
+	Price              MustFloat64 `json:"price"`
+	Rackrate           MustFloat64 `json:"rackrate"`
+	Comission          MustFloat64 `json:"comission"`
+	PenaltySize        MustFloat64 `json:"penalty_size"`
+	DeadlineDate       string      `json:"deadline_date"`
+	DeadlineTime       string      `json:"deadline_time"`
+	PenaltyInfo        string      `json:"penalty_info"`
+	MealTypeCode       MustString  `json:"meal_type_code"`
+	MealTypeName       string      `json:"meal_type_name"`
+	MealCategoryCode   MustString  `json:"meal_category_code"`
+	MealCategoryName   string      `json:"meal_category_name"`
+	MealName           string      `json:"meal_name"`
+	MealPrice          MustInt     `json:"meal_price"`
+	MealIsIncludedCode MustInt     `json:"meal_is_included_code"`
+	MealIsIncludedName string      `json:"meal_is_included_name"`
+	AvailabilityCode   MustInt     `json:"availability_code"`
+	AvailabilityName   string      `json:"availability_name"`
+	PaymentTermsCode   MustString  `json:"payment_terms_code"`
+	PaymentTermsName   string      `json:"payment_terms_name"`
+	Amenities          []struct {
+		Name string     `json:"name"`
+		Id   MustString `json:"id"`
+	} `json:"room_amenities"`
+	Periods []RoomPeriod `json:"periods"`
 }
 type RoomComission struct {
 	Room          MustFloat64 `json:"room"`
