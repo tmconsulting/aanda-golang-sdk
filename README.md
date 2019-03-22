@@ -37,11 +37,11 @@ var (
 	aApi.RegisterEventHandler(aandaSdk.BeforeRequestSend, func(ctx context.Context, methodName, mimeType string, data []byte) {
 	    requestId := ctx.Value("requestId").(string)
 	
-        log.Println("request: ", requestId, methodName, mimeType, string(data))
+            log.Println("request: ", requestId, methodName, mimeType, string(data))
 	}).RegisterEventHandler(aandaSdk.AfterResponseReceive, func(ctx context.Context, methodName, mimeType string, data []byte) {
 	    requestId := ctx.Value("requestId").(string)
 
-        log.Println("response: ", requestId, methodName, mimeType, string(data))
+            log.Println("response: ", requestId, methodName, mimeType, string(data))
 	})
 ```
 
@@ -108,7 +108,7 @@ if err == nil {
 
 ### Example OrderInfoRequest
 ```golang
-data, err := aApi.OrderInfoRequest("2213397") // 2213397 is OrderId
+data, err := aApi.OrderInfoRequest(ctx, "2213397") // 2213397 is OrderId
 if err == nil {
 	//Work with data
 }
