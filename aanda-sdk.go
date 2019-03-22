@@ -14,7 +14,7 @@ import (
 const apiUrl = "http://api.aanda.ru/xml_gateway/"
 
 const (
-	TestOrderId = 2213397
+	TestOrderId = "2213397"
 )
 
 type Api struct {
@@ -264,9 +264,9 @@ func (self *Api) OrderRequest(ctx context.Context, orderReq OrderRequest) (Order
 	return resp, err
 }
 
-func (self *Api) OrderInfoRequest(ctx context.Context, id int) (OrderInfoResponse, error) {
+func (self *Api) OrderInfoRequest(ctx context.Context, orderId string) (OrderInfoResponse, error) {
 	orderInfoReq := &OrderInfoRequest{
-		Id: strconv.Itoa(id),
+		Id: orderId,
 	}
 
 	body, err := self.sendReqWithAuth(ctx, "OrderInfoRequest", orderInfoReq, &orderInfoReq.Auth, nil)
@@ -281,9 +281,9 @@ func (self *Api) OrderInfoRequest(ctx context.Context, id int) (OrderInfoRespons
 	return resp, err
 }
 
-func (self *Api) OrderMessagesRequest(ctx context.Context, orderId int) ([]OrderMessagesResponse, error) {
+func (self *Api) OrderMessagesRequest(ctx context.Context, orderId string) ([]OrderMessagesResponse, error) {
 	body, err := self.sendReqParams(ctx, "OrderMessagesRequest", map[string]string{
-		"order_id": strconv.Itoa(orderId),
+		"order_id": orderId,
 	})
 
 	resp := []OrderMessagesResponse{}
@@ -296,7 +296,7 @@ func (self *Api) OrderMessagesRequest(ctx context.Context, orderId int) ([]Order
 
 func (self *Api) SendOrderMessageRequest(ctx context.Context, somReq SendOrderMessageRequest) (SendOrderMessageResponse, error) {
 	body, err := self.sendReqParams(ctx, "SendOrderMessageRequest", map[string]string{
-		"order_id": strconv.Itoa(somReq.OrderId),
+		"order_id": somReq.OrderId,
 		"Message":  somReq.Message,
 	})
 
