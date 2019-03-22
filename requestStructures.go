@@ -61,7 +61,7 @@ type OrderInfoRequest struct {
 }
 
 type SendOrderMessageRequest struct {
-	OrderId int
+	OrderId string
 	Message string
 }
 

@@ -108,7 +108,7 @@ if err == nil {
 
 ### Example OrderInfoRequest
 ```golang
-data, err := aApi.OrderInfoRequest(2213397) // 2213397 is OrderId
+data, err := aApi.OrderInfoRequest("2213397") // 2213397 is OrderId
 if err == nil {
 	//Work with data
 }
@@ -133,7 +133,7 @@ if err == nil {
 ### Example SendOrderMessageRequest
 ```golang
 somReq := aandaSdk.SendOrderMessageRequest{
-	OrderId: 2213397,
+	OrderId: "2213397",
 	Message: "test message 2 3 4 22 22",
 }
 data, err := aApi.SendOrderMessageRequest(ctx, somReq)
@@ -144,7 +144,7 @@ if err == nil {
 
  ### Example OrderMessagesRequest
 ```golang
-data, err := aApi.OrderMessagesRequest(ctx, 2213397) // 2213397 is OrderId
+data, err := aApi.OrderMessagesRequest(ctx, "2213397") // 2213397 is OrderId
 if err == nil {
 	//Work with data
 }
