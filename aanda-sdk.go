@@ -25,6 +25,7 @@ type Api struct {
 	Password string
 	Language string
 	url      string
+	urlInfo  *url.URL
 }
 
 func NewApi(auth Auth) *Api {
@@ -39,6 +40,8 @@ func NewApi(auth Auth) *Api {
 
 func (self *Api) init() *Api {
 	self.EventListener.Init()
+
+	self.urlInfo, _ = url.Parse(self.url)
 
 	return self
 }
@@ -94,7 +97,7 @@ func (self *Api) sendReq(ctx context.Context, requestName string, params url.Val
 
 	req.Header.Add("Content-Type", reqContentType)
 
-	self.EventListener.raiseEvent(BeforeRequestSend, ctx, requestName, reqContentType, reqData)
+	self.EventListener.raiseEvent(BeforeRequestSend, ctx, requestName, self.urlInfo.RawQuery, reqContentType, reqData)
 
 	resp, err := (&http.Client{}).Do(req.WithContext(ctx))
 	if err != nil {
@@ -113,7 +116,7 @@ func (self *Api) sendReq(ctx context.Context, requestName string, params url.Val
 			respContentType = strings.TrimSpace(parts[0])
 		}
 
-		self.EventListener.raiseEvent(AfterResponseReceive, ctx, requestName, respContentType, respData)
+		self.EventListener.raiseEvent(AfterResponseReceive, ctx, requestName, self.urlInfo.RawQuery, respContentType, respData)
 	}
 
 	return respData, err

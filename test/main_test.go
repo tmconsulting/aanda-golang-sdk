@@ -3,7 +3,7 @@ package test
 import (
 	"io/ioutil"
 
-	"github.com/tmconsulting/aanda-golang-sdk"
+	aandaSdk "github.com/tmconsulting/aanda-golang-sdk"
 	"gopkg.in/h2non/gock.v1"
 )
 

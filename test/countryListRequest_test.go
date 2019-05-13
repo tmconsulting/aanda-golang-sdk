@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/nbio/st"
-	"github.com/tmconsulting/aanda-golang-sdk"
+	aandaSdk "github.com/tmconsulting/aanda-golang-sdk"
 )
 
 func TestCountryListRequest_ok(t *testing.T) {
@@ -22,5 +22,5 @@ func TestCountryListRequest_err(t *testing.T) {
 	searchReq := aandaSdk.HotelSearchRequest{}
 	_, err := zApi.HotelSearchRequest(context.Background(), searchReq)
 
-	st.Expect(t, err, errors.New("Authorization error"))
+	st.Expect(t, err.Error(), errors.New("Authorization error").Error())
 }
