@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/nbio/st"
-	"github.com/tmconsulting/aanda-golang-sdk"
+	aandaSdk "github.com/tmconsulting/aanda-golang-sdk"
 )
 
 func TestHotelSearchRequest_ok(t *testing.T) {
@@ -23,5 +23,5 @@ func TestHotelSearchRequest_err(t *testing.T) {
 	searchReq := aandaSdk.HotelSearchRequest{}
 	_, err := zApi.HotelSearchRequest(context.Background(), searchReq)
 
-	st.Expect(t, err, errors.New("Некорректная ArrivalDate[21.11.2017]"))
+	st.Expect(t, err.Error(), errors.New("Некорректная ArrivalDate[21.11.2017]").Error())
 }

@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/nbio/st"
-	"github.com/tmconsulting/aanda-golang-sdk"
+	aandaSdk "github.com/tmconsulting/aanda-golang-sdk"
 )
 
 func TestSendOrderMessagesRequest_ok(t *testing.T) {

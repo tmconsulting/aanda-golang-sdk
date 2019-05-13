@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/nbio/st"
-	"github.com/tmconsulting/aanda-golang-sdk"
+	aandaSdk "github.com/tmconsulting/aanda-golang-sdk"
 )
 
 func TestOrderRequest_ok(t *testing.T) {
@@ -23,7 +23,7 @@ func TestOrderRequest_err1(t *testing.T) {
 	orderReq := aandaSdk.OrderRequest{}
 	_, err := zApi.OrderRequest(context.Background(), orderReq)
 
-	st.Expect(t, err, errors.New("Количество гостей не равно NumberOfGuests"))
+	st.Expect(t, err.Error(), errors.New("Количество гостей не равно NumberOfGuests").Error())
 }
 
 func TestOrderRequest_err2(t *testing.T) {
@@ -31,7 +31,7 @@ func TestOrderRequest_err2(t *testing.T) {
 	orderReq := aandaSdk.OrderRequest{}
 	_, err := zApi.OrderRequest(context.Background(), orderReq)
 
-	st.Expect(t, err, errors.New("Неверный формат DepartureDate[]"))
+	st.Expect(t, err.Error(), errors.New("Неверный формат DepartureDate[]").Error())
 }
 
 func TestOrderRequest_err3(t *testing.T) {
@@ -39,7 +39,7 @@ func TestOrderRequest_err3(t *testing.T) {
 	orderReq := aandaSdk.OrderRequest{}
 	_, err := zApi.OrderRequest(context.Background(), orderReq)
 
-	st.Expect(t, err, errors.New("Ошибка! - Номер 1642 неактивен! Выберите другой номер."))
+	st.Expect(t, err.Error(), errors.New("Ошибка! - Номер 1642 неактивен! Выберите другой номер.").Error())
 }
 
 func TestOrderRequest_err4(t *testing.T) {
@@ -47,5 +47,5 @@ func TestOrderRequest_err4(t *testing.T) {
 	orderReq := aandaSdk.OrderRequest{}
 	_, err := zApi.OrderRequest(context.Background(), orderReq)
 
-	st.Expect(t, err, errors.New("Не верный статус"))
+	st.Expect(t, err.Error(), errors.New("Не верный статус").Error())
 }

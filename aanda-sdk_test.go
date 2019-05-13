@@ -74,11 +74,13 @@ func TestApi_OrderListRequest(t *testing.T) {
 
 	var (
 		reqMethodName string
+		reqQuery      string
 		reqMimeType   string
 		reqData       []byte
 		reqCtxValue   int
 
 		respMethodName string
+		respQuery      string
 		respMimeType   string
 		respData       []byte
 		respCtxValue   int
@@ -87,8 +89,9 @@ func TestApi_OrderListRequest(t *testing.T) {
 	api := NewApi(auth)
 	api.url = server.URL
 
-	api.RegisterEventHandler(BeforeRequestSend, func(ctx context.Context, methodName, mimeType string, data []byte) {
+	api.RegisterEventHandler(BeforeRequestSend, func(ctx context.Context, methodName, query, mimeType string, data []byte) {
 		reqMethodName = methodName
+		reqQuery = query
 		reqMimeType = mimeType
 
 		params, _ := url.ParseQuery(string(data))
@@ -97,8 +100,9 @@ func TestApi_OrderListRequest(t *testing.T) {
 
 		reqCtxValue = ctx.Value("value").(int)
 
-	}).RegisterEventHandler(AfterResponseReceive, func(ctx context.Context, methodName, mimeType string, data []byte) {
+	}).RegisterEventHandler(AfterResponseReceive, func(ctx context.Context, methodName, query, mimeType string, data []byte) {
 		respMethodName = methodName
+		respQuery = query
 		respMimeType = mimeType
 
 		respData = data
@@ -118,11 +122,13 @@ func TestApi_OrderListRequest(t *testing.T) {
 	st.Expect(t, err, nil)
 
 	st.Expect(t, reqMethodName, "OrderListRequest")
+	st.Expect(t, reqQuery, "")
 	st.Expect(t, reqMimeType, "application/x-www-form-urlencoded")
 	testAuth(reqData)
 	st.Expect(t, reqCtxValue, value)
 
 	st.Expect(t, respMethodName, "OrderListRequest")
+	st.Expect(t, respQuery, "")
 	st.Expect(t, respMimeType, "text/json")
 	st.Expect(t, string(respData), "[]")
 	st.Expect(t, respCtxValue, value)
