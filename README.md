@@ -34,14 +34,14 @@ var (
 
 ### Example init hooks/handlers
 ```golang
-	aApi.RegisterEventHandler(aandaSdk.BeforeRequestSend, func(ctx context.Context, methodName, mimeType string, data []byte) {
+	aApi.RegisterEventHandler(aandaSdk.BeforeRequestSend, func(ctx context.Context, methodName, query, mimeType string, data []byte) {
 	    requestId := ctx.Value("requestId").(string)
 	
-            log.Println("request: ", requestId, methodName, mimeType, string(data))
-	}).RegisterEventHandler(aandaSdk.AfterResponseReceive, func(ctx context.Context, methodName, mimeType string, data []byte) {
+            log.Println("request: ", requestId, methodName, query, mimeType, string(data))
+	}).RegisterEventHandler(aandaSdk.AfterResponseReceive, func(ctx context.Context, methodName, query, mimeType string, data []byte) {
 	    requestId := ctx.Value("requestId").(string)
 
-            log.Println("response: ", requestId, methodName, mimeType, string(data))
+            log.Println("response: ", requestId, methodName, query, mimeType, string(data))
 	})
 ```
 
